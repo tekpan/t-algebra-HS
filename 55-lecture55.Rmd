@@ -1,12 +1,12 @@
 # Technical Memo {#memo}
 
-This note is created by `bookdown` package on RStudio.
+This note was created with the `bookdown` package on RStudio.
 
-For `bookdown` See [@xie2015], [@xie2017], [@xie2018].
+For `bookdown` see [@xie2015], [@xie2017], [@xie2018].
 
 **The following is a memo.**
 
-A. Install R and R Studio with necessary packages if needed
+A. Install R and RStudio with necessary packages if needed
 
 B. Create and setup ssh key by `ssh-keygen`
 

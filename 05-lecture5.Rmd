@@ -20,11 +20,11 @@ Observe that
 $$\tilde{W} = E^*_rW + \cdots + E^*_jW$$
 is $T$-invariant with 
 $$0 \subsetneq \tilde{W} \subsetneq W.$$
-Becase $A\tilde{W} \subseteq \tilde{W}$ since $AE_j^*W \subseteq E^*_{j-1}W + E^*_jW$, 
+Because $A\tilde{W} \subseteq \tilde{W}$ (since $AE_j^*W \subseteq E^*_{j-1}W + E^*_jW$) and 
 $$E_k^*\tilde{W} \subseteq \tilde{W} \quad\text{for all }\; k,$$
-we have $T\tilde{W} \subseteq{W}$.
+we have $T\tilde{W} \subseteq \tilde{W}$.
 
-Suppose $E_{i-1}^*AE_i^*W = 0$ for some $i$ with $r \leq i < r+d$. 
+Suppose $E_{i-1}^*AE_i^*W = 0$ for some $i$ with $r < i \leq r+d$. 
 
 Similarly,
 $$\tilde{W} = E^*_iW + \cdots + E^*_{r+d}W$$
@@ -52,22 +52,22 @@ E & = \{xy\mid x, y\in X, \; x, y \;\text{ differ in exactly 1 coordinate}\}.
 \end{align}
 Find $T$-modules.
 
-Claim: $H(D,2)$ is bipartite with a partition $X = X^+ \cup X^-$, where
+Claim: $H(D,2)$ is bipartite with a bipartition $X = X^+ \cup X^-$, where
 \begin{align}
 X^+ & = \{a_1\cdots a_D\in X\mid \prod a_i > 0\}\\
 X^- & = \{a_1\cdots a_D \in X \mid \prod a_i < 0\}
 \end{align}
 
 Observe: for all $y, z\in X$, 
-$$\partial(y,z) = i \Leftrightarrow y, z \; \text{ differ in exactly in }\; i\; \text{ coorinates with }\; 0\leq i\leq D.$$
-Here, the diameter of $H(D, 2) = D = d$ for all $x\in X$.
+$$\partial(y,z) = i \Leftrightarrow y, z \; \text{ differ in exactly }\; i\; \text{ coordinates with }\; 0\leq i\leq D.$$
+Here, the diameter of $H(D, 2) = D = d(x)$ for all $x\in X$.
 
 :::{.theorem #hd2-modules}
 Let $\Gamma = H(D,2)$ be as above. Fix $x\in X$, and write $E_i^* = E^*_i(x)$, and $T = T(x)$. 
 
 Let $W$ be an irreducible $T$-module with endpoint $r$, and diameter $d$ with $0\leq r \leq r+d\leq D$.
 
-| $(i)$ $W$ has a basis $w_0, w_1, \ldots, w_d$ with $w_i\in E^*_{i+r}W$ for $0\leq i\leq d$. With respect to which the matrix representing $A$ is 
+| $(i)$ $W$ has a basis $w_0, w_1, \ldots, w_d$ with $w_i\in E^*_{i+r}W$ for $0\leq i\leq d$, with respect to which the matrix representing $A$ is 
 $$
 \begin{pmatrix}
 0 & d & 0 & \cdots & 0 & 0 & 0\\
@@ -83,10 +83,10 @@ $$
 
 | $(ii)$ $d= D-2r$. In particular, $0\leq r\leq D/2$.
 
-| $(iii)$ Let $W'$ denote an irreducible $T$-module with endpoint $r'$. Then $W$ and $W'$ are isormorphic as $T$-modules if and only if $r = r'$.
+| $(iii)$ Let $W'$ denote an irreducible $T$-module with endpoint $r'$. Then $W$ and $W'$ are isomorphic as $T$-modules if and only if $r = r'$.
 
 | $(iv)$ The multiplicity of the irreducible $T$-module with endpoint $r$ is 
-$$\binom{D}{r} - \binom{D}{r-1} \quad \text{if } 1\leq r \leq R/2,$$
+$$\binom{D}{r} - \binom{D}{r-1} \quad \text{if } 1\leq r \leq D/2,$$
 and $1$ if $r = 0$.
 :::
 
@@ -97,12 +97,12 @@ Hence without loss of generality, we may assume that
 $x = \overbrace{11\cdots 1}^{D}$.
 
 Notation: Set $\Omega = \{1, 2, \ldots, D\}$. For every subset $S \subseteq \Omega$, let 
-$$\hat{S} = a_1\cdots a_d \in X \quad a_i = \begin{cases} -1 & \text{if }\; i\in S\\ 1 & \text{if } i\not\in S.\end{cases}$$
+$$\hat{S} = a_1\cdots a_D \in X, \quad \text{where }\; a_i = \begin{cases} -1 & \text{if }\; i\in S\\ 1 & \text{if } i\not\in S.\end{cases}$$
 In particular, $\hat{\emptyset} = x$ and 
 $$|S| = i \Leftrightarrow \partial(x, \hat{S}) = i \Leftrightarrow \hat{S}\in E^*_iV.$$
 For all $S, T\subseteq \Omega$, we say $S$ covers $T$ if and only if $S\supseteq T$ and $|S| = |T| +1$.
 
-Observe that $\hat{S}, \hat{T}$ are adjacent in $\Gamma$ if and only if either $T$ coverse $S$ or $S$ coverr $T$.
+Observe that $\hat{S}, \hat{T}$ are adjacent in $\Gamma$ if and only if either $T$ covers $S$ or $S$ covers $T$.
 
 Define the 'raising matrix'
 $$R = \sum_{i=0}^D E^*_{i+1}AE^*_i.$$
@@ -136,13 +136,13 @@ Claim: The following hold.
 | $(b)$ $A^*L - LA^* = 2L$.
 | $(c)$ $A^*R - RA^* = -2R$.
 
-In particular $\mathrm{Span}(R,L, A^*)$ is a 'representation of Lie algebra $\mathrm{sl}_2(\mathbb{C})$.
+In particular $\mathrm{Span}(R,L, A^*)$ is a representation of the Lie algebra $\mathrm{sl}_2(\mathbb{C})$.
 
 
 :::{.hs name="Lie Algebra sl2(C)"}
 **HS MEMO**
 
-$$\mathrm{sl}_2(\mathbb{C}) = \{X\mid \mathrm{Mat}(\mathbb{C} \mid \mathrm{tr}(X) = 0\}.$$
+$$\mathrm{sl}_2(\mathbb{C}) = \{X\in \mathrm{Mat}_2(\mathbb{C}) \mid \mathrm{tr}(X) = 0\}.$$
 For $X, Y\in \mathrm{sl}_2(\mathbb{C})$, define a binary operation $[X, Y] = XY - YX$.
 $$A^*\sim \begin{pmatrix} 1 & 0 \\ 0 & -1\end{pmatrix}, \quad L\sim \begin{pmatrix} 0 & 1 \\ 0 & 0\end{pmatrix}, \quad R\sim \begin{pmatrix} 0 & 0 \\ 1 & 0\end{pmatrix}.$$
 Then these satisfy the relations $(a)$ - $(c)$ above.
@@ -190,7 +190,7 @@ Define
 $$w_i = \frac{1}{i!}R^iw \in E^*_{r+i}W \quad (0\leq i \leq d).$$
 Then,
 \begin{align}
-Rw_i & = (i+1)w_{i+1}\quad (0\leq i \leq d)\\
+Rw_i & = (i+1)w_{i+1}\quad (0\leq i \leq d-1)\\
 Rw_d & = 0 \quad (\text{by definition of }d)
 \end{align}
 
@@ -198,12 +198,12 @@ Claim: $Lw_0 = 0$ and
 $$Lw_i = (D-2r-i+1)w_{i-1} \quad (1\leq i\leq d).$$
 
 _Pf._ We prove by induction on $i$.
-The case $i=0$ is trivial, and the case $i=1$ follows from above claim. 
+The case $i=0$ is trivial, and the case $i=1$ follows from the above claim. 
 Let $i\geq 2$, 
 \begin{align}
 Lw_i & = \frac{1}{i}LRw_{i-1} = \frac{1}{i}(A^*+RL)w_{i-1} \quad (\text{by Claim (a)})\\
 & \quad \text{(by induction hypothesis)}\\
-& = \frac{1}{i}((D-2(r+i-1))w_{i-1} + (D-2r-(i-1)+1)Rw_{i-2} \quad (Rw_{i-2} = (i-1)w_{i-1})\\
+& = \frac{1}{i}((D-2(r+i-1))w_{i-1} + (D-2r-(i-1)+1)Rw_{i-2}) \quad (Rw_{i-2} = (i-1)w_{i-1})\\
 & = \frac{1}{i}i(D-2r-i+1)w_{i-1}\\
 & = (D-2r-i+1)w_{i-1}.
 \end{align}
@@ -235,7 +235,7 @@ By $(a)$,
 \end{align}
 Hence $d = D-2r$.
 
-Therefore, with respect to a bais $w_0, w_1, \ldots, w_d$, 
+Therefore, with respect to the basis $w_0, w_1, \ldots, w_d$, 
 $A = L+R$, $w_{-1} = w_{d+1} = 0$,
 $$Lw_i = (d-i+1)w_{i-1}, \quad Rw_i = (i+1)w_{i+1}.$$
 $$L = \begin{pmatrix} 0 & d & 0 & \cdots & 0 & 0\\
@@ -247,7 +247,7 @@ $$L = \begin{pmatrix} 0 & d & 0 & \cdots & 0 & 0\\
 R = \begin{pmatrix} 0 & 0 & 0 & \cdots & 0 & 0\\
 1 & 0 & 0 & \cdots & 0 & 0\\
 0 & 2 & 0 & \cdots & \vdots & \vdots\\
-\vdots & \vdots & \ddots  & \ddots & 0 & 1\\
+\vdots & \vdots & \ddots  & \ddots & 0 & 0\\
 0 & 0 & 0 & \cdots & d & 0
 \end{pmatrix}.$$
 This completes the proof of $(i)$ and $(ii)$.

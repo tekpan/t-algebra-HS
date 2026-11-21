@@ -17,18 +17,18 @@ Pick $x\in X$ and write $E_i^* \equiv E_i^*(x)$ and $T \equiv T(x)$.
 
 Let $W$ be an irreducible thin $T$-module with endpoint $r$, diameter $d$.
 
-Let $a_i = a_i(W)\in \mathbb{C}$ satisfying
-$$E_{r+i}^*A{E^*_{r+i}|}_{E_{r+i}^*W} = a_i1|_{E_{r+i}^*} \quad (0\leq i\leq d).$$
-Let $x_i = x_i(W)\in \mathbb{C}$ satisfying
-$$E_{r+i-1}^*A{E^*_{r+i}AE^*_{r+i-1}|}_{E_{r+i-1}^*W} = x_i1|_{E_{r+i-1}^*} \quad (0\leq i\leq d).$$
+Let $a_i = a_i(W)\in \mathbb{C}$ satisfy
+$$E_{r+i}^*A{E^*_{r+i}|}_{E_{r+i}^*W} = a_i1|_{E_{r+i}^*W} \quad (0\leq i\leq d).$$
+Let $x_i = x_i(W)\in \mathbb{C}$ satisfy
+$$E_{r+i-1}^*A{E^*_{r+i}AE^*_{r+i-1}|}_{E_{r+i-1}^*W} = x_i1|_{E_{r+i-1}^*W} \quad (1\leq i\leq d).$$
 :::
 
 :::{.lemma #thin-module-structure}
-With above notation, the following hold.
+With the above notation, the following hold.
 
 | $(i)$ $a_i\in \mathbb{R} \quad (0\leq i\leq d)$.
 
-| $(ii)$ $x_i\in \mathbb{R}^{>0} \quad (0\leq i\leq d)$.
+| $(ii)$ $x_i\in \mathbb{R}^{>0} \quad (1\leq i\leq d)$.
 
 | $(iii)$ Pick $0\neq w_0\in E^*_rW$. Set $w_i = E^*_{r+i}A^iw_0$ for all $i$. Then  
 
@@ -45,7 +45,7 @@ $$p_0 = 1, \quad \lambda p_i = p_{i+1} + a_i p_i + x_i p_{i-1} \quad (0\leq i\le
 :::{.proof}
 $(i)$ $a_i$ is an eigenvalue of a real symmetric matrix $E_{r+i}^*AE^*_{r+i}$.
 
-$(ii)$ $x_i$ is an eigenvalue of a real symmetrix matrix $B^\top B$, where 
+$(ii)$ $x_i$ is an eigenvalue of a real symmetric matrix $B^\top B$, where 
 $$B = E^*_{r+i}AE^*_{r+i-1}.$$
 Hence, $x_i\in \mathbb{R}$.
 
@@ -63,7 +63,7 @@ So $w_i \neq 0 \quad (0\leq i \leq d)$ by Lemma \@ref(lem:irreducible) $(iv)$.
 
 Hence,
 $$W = \mathrm{Span}(w_0, \ldots, w_d)$$
-by Lemma \@ref(lem:irreducible). $(iii)$.
+by Lemma \@ref(lem:irreducible) $(iii)$.
 
 $(iiib)$ We have that
 \begin{align}
@@ -100,14 +100,14 @@ Then,
 $$q = \sum_{i=0}^d\beta_ip_i \quad \text{for some }\beta_i\in \mathbb{C}.$$
 We have, 
 $$0  = q(A)w_0  = \sum_{i=0}^d \beta_iw_i.$$
-Hence $\beta_0 = \cdots = \beta_d = 0$ by $(iiia)$. Thus $q = 0$, and a contradiction.
+Hence $\beta_0 = \cdots = \beta_d = 0$ by $(iiia)$. Thus $q = 0$, a contradiction.
 :::
 
 :::{.corollary #thin-is-dualthin}
 Let $\Gamma$, $W$, $r$, $d$ be as above. Then
 
 | $(i)$ $W$ is dual thin, that is, 
-$$\dim E_iW \leq 1 \quad (1\leq i \leq d).$$
+$$\dim E_iW \leq 1 \quad (0\leq i \leq R).$$
 
 | $(ii)$ $d = |\{i \mid E_iW \neq 0\}| - 1.$
 :::
@@ -123,15 +123,15 @@ $$E_iW = E_iMw_0 = \mathrm{Span}(E_iw_0).$$
 Thus,
 $$\dim E_iW = \begin{cases}1 & \text{if } E_iw_0\neq 0,\\ 0 & \text{if }E_iw_0 = 0.\end{cases}$$
 In particular, 
-$$\dim E^*_iW \leq 1.$$
+$$\dim E_iW \leq 1.$$
 
 $(ii)$ Immediate as 
 $$\dim W = d+1.$$
-This proves the lemma.
+This proves the corollary.
 :::
 
 :::{.lemma #measure-wi}
-Given an irreducible $T(x)$-module $W$ with endpoint $r = r(W)$, diameter $d = d(W)$. Write
+Given a thin irreducible $T(x)$-module $W$ with endpoint $r = r(W)$, diameter $d = d(W)$. Write
 $$x_i = x_i(W) \; (0\leq i\leq d), \quad w_i = p_i(A)w_0\in E^*_{r+i}W \; (0\leq i\leq d), \quad 0\neq w_0 \in E^*_rW.$$
 Then, 
 $$\frac{\|w_i\|^2}{\|w_0\|^2} = x_1x_2\cdots x_i \quad (1\leq i\leq d).$$
@@ -159,7 +159,7 @@ This proves the lemma.
 :::
 
 :::{.definition #measure}
-Let $W$ be an irreducible thin $T(x)$ module with endpoint $r$, $E^*_i \equiv E_i^*(x)$. 
+Let $W$ be an irreducible thin $T(x)$-module with endpoint $r$, $E^*_i \equiv E_i^*(x)$. 
 
 The measure \index{measure} $m = m_W$ is the function
 $$m: \mathbb{R} \to \mathbb{R}$$

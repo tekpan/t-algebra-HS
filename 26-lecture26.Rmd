@@ -22,9 +22,9 @@ Claim 6. Let $i$ be a node in $D_E$. Then $i$ is adjacent to at most $2$ arcs.
 _Proof of Claim 6._
 Suppose the node $j$ is adjacent to $i$ in $D_E$. By Claim 4,
 \begin{align}
-0 & = E_i(A^3A^* - A^*A^3 - (\beta+1)(A^2A^*A-AA^*A^2) - \gamma(A^2A^*-A^*A) - \delta(AA^*-A^*A))E_j\\
-& = E_iA^*E_j(\theta^3_i-\theta^3_j-(\beta+1)(\theta^2\theta_j - \theta_i\theta_j^2)-\gamma(\theta_i^2-\theta_j^2)-\delta(\theta_i-\theta_j))\\
-& = E_iA^*A_j(\theta_i-\theta_j)p(\theta_i, \theta_j),
+0 & = E_i(A^3A^* - A^*A^3 - (\beta+1)(A^2A^*A-AA^*A^2) - \gamma(A^2A^*-A^*A^2) - \delta(AA^*-A^*A))E_j\\
+& = E_iA^*E_j(\theta^3_i-\theta^3_j-(\beta+1)(\theta_i^2\theta_j - \theta_i\theta_j^2)-\gamma(\theta_i^2-\theta_j^2)-\delta(\theta_i-\theta_j))\\
+& = E_iA^*E_j(\theta_i-\theta_j)p(\theta_i, \theta_j),
 \end{align}
 where
 $$p(s,t) = s^2 - \beta st + t^2 - \gamma(s+t) - \delta.$$
@@ -34,7 +34,7 @@ $$p(s,t) = s^2 - \beta st + t^2 - \gamma(s+t) - \delta.$$
 
 \begin{align}
 & (\theta_i-\theta_j)(\theta_i^2 - \beta \theta_i\theta_j + \theta_j^2 - \gamma(\theta_i + \theta_j) - \delta)\\
-& = \quad \theta^3_i-\theta^3_j-(\beta+1)(\theta^2\theta_j - \theta_i\theta_j^2)-\gamma(\theta_i^2-\theta_j^2)-\delta(\theta_i-\theta_j)
+& = \quad \theta^3_i-\theta^3_j-(\beta+1)(\theta_i^2\theta_j - \theta_i\theta_j^2)-\gamma(\theta_i^2-\theta_j^2)-\delta(\theta_i-\theta_j)
 \end{align}
 :::
 
@@ -45,7 +45,7 @@ Since $Y$ is $P$-polynomial,
 $$\theta_i \neq \theta_j \quad \text{ if }\; i\neq j.$$
 Hence $p(\theta_i,\theta_j) = 0$. But $p$ is quadratic in $t$. So $p(\theta_i,t) = 0$ has at most two solutions for $\theta_j$.
 
-Now $D_E$ is a pth, and $\Gamma$ is $Q$-polynomial with respect to $E$. 
+Now $D_E$ is a path, and $Y$ is $Q$-polynomial with respect to $E$. 
 
 This proves Theorem \@ref(thm:balanced).
 :::
@@ -71,14 +71,14 @@ and $p^3_{12} = c_3$.
 
 Since $p^3_{i,i+3} \neq 0$, there exists $w\in X$ such that $(x,w)\in R_{i+3}$, $(y,w) \in R_i$.
 
-Take inner product of \@ref(eq:c3) with $\rho(w)$. We have
+Take the inner product of \@ref(eq:c3) with $\rho(w)$. We have
 \begin{align}
 P^3_{12}(x,y) & \subseteq P^{i+3}_{1,i+2}(x,w)\cap P^i_{2,i+2}(y,w)\\
-P^3_{21}(x,y) & \subseteq P^{i+3}_{2,i+1}(x,w)\cap P^i_{2,i+1}(y,w).
+P^3_{21}(x,y) & \subseteq P^{i+3}_{2,i+1}(x,w)\cap P^i_{1,i+1}(y,w).
 \end{align}
 Hence,
 $$\left\langle \sum_{z\in X, (x,z)\in R_1, (y,z)\in R_2}\rho(z) - \sum_{z'\in X, (x,z')\in R_2, (y,z')\in R_1}\rho(z'), \rho(w)\right\rangle = |X|^{-1}c_3(\theta^*_{i+2}-\theta^*_{i+1}),$$
-$$\left\langle \frac{c_3(\theta^*_1-\theta^*_2)}{\theta^*_0-\theta^*_3}(\rho(x)-\rho(y)), \rho(w)\right\rangle = \frac{c_3(\theta^*_1-\theta^*_2)}{\theta^*_0-\theta^*_3}|X|^{-1}(\theta^*_{i+3}-\theta^*_{i+1}).$$
+$$\left\langle \frac{c_3(\theta^*_1-\theta^*_2)}{\theta^*_0-\theta^*_3}(\rho(x)-\rho(y)), \rho(w)\right\rangle = \frac{c_3(\theta^*_1-\theta^*_2)}{\theta^*_0-\theta^*_3}|X|^{-1}(\theta^*_{i+3}-\theta^*_{i}).$$
 We have,
 $$\sigma = \frac{\theta^*_{i+1}-\theta^*_{i+2}}{\theta^*_i-\theta^*_{i+3}} = \frac{\theta^*_1-\theta^*_2}{\theta^*_0-\theta^*_3}.$$
 
@@ -94,7 +94,7 @@ We have the assertion.
 :::
 
 
-Given the intersection number of a distance-regular graph $\Gamma$. The following two lemmas give an efficient method to determine if $\Gamma$ is $Q$-polynomial with respect to some primitive idempotent.
+Given the intersection numbers of a distance-regular graph $\Gamma$, the following two lemmas give an efficient method to determine if $\Gamma$ is $Q$-polynomial with respect to some primitive idempotent.
 
 :::{.lemma #dual-eigenvalues}
 Let $\Gamma$ be a distance-regular graph of diameter $D\geq 1$.
@@ -103,7 +103,7 @@ $$E = \frac{1}{|X|}\sum_{i=0}^D\theta^*_iA_i.$$
 
 | $(i)$ The following are equivalent.
 
-| $\quad (ia)$ $\theta$ is an eigenvalue of $\Gamma$, and $E$ is a corresponding primitive idempotent.
+| $\quad (ia)$ $\theta$ is an eigenvalue of $\Gamma$, and $E$ is the corresponding primitive idempotent.
 
 | $\quad (ib)$
 $$\begin{pmatrix} a_0 & b_0 & 0 & \cdots & \cdots & 0\\
@@ -147,13 +147,13 @@ $\leftarrow$: By the first condition, $AE = \theta E$. So $E$ is a scalar multip
 
 $i = 0$ is trivial.
 
-$i=1$: Set $j = 0$ above $c_0 = 0, a_0 = 0, b_0 = k$. We have
+$i=1$: Set $j = 0$ above; since $c_0 = 0, a_0 = 0, b_0 = k$, we have
 $$k\theta^*_1 = \theta \theta^*_0.$$
 So
 $$\frac{\theta^*_1}{\theta^*_0} = \frac{\theta}{k} = \frac{p_1(\theta)}{k}.$$
 
 $i\geq 2$: Set $j=i-1$ above. We have
-$$c_{i-2}\theta^*_{i-2} + a_{i-1}\theta^*_{i-1} + b_{i-1}\theta^*_i = \theta \theta^*_{i-1}.$$
+$$c_{i-1}\theta^*_{i-2} + a_{i-1}\theta^*_{i-1} + b_{i-1}\theta^*_i = \theta \theta^*_{i-1}.$$
 So,
 \begin{align}
 \frac{\theta^*_i}{\theta^*_0} & = \frac{\theta\theta^*_{i-1}-a_{i-1}\theta^*_{i-1}-c_{i-1}\theta^*_{i-2}}{b_{i-1}\theta^*_0}\\

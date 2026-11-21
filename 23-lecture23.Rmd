@@ -4,7 +4,7 @@
 :::{.theorem #q-polynomial-space}
 Let $Y = (X, \{R_i\}_{0\leq i\leq D})$ be a symmetric scheme. (View the standard module $V$ as an algebra of functions from $X$ to $\mathbb{C}$.) Then the following are equivalent.
 
-| $(i)$ $Y$ is $Q$-polynomial with respect to ordering $E_0, E_1, \ldots, E_D$ of primitive idempotents.
+| $(i)$ $Y$ is $Q$-polynomial with respect to the ordering $E_0, E_1, \ldots, E_D$ of primitive idempotents.
 
 | $(ii)$ For all $i$ $\:(0\leq i\leq D)$,
 $$E_0V + E_1V + (E_1V)^2 + \cdots + (E_1V)^i = E_0V + E_1V + \cdots + E_iV.$$
@@ -25,7 +25,7 @@ E_{j+1}(E_1V\circ E_jV) = E_{j+1}V \quad (0\leq j\leq D-1), (\#eq:ej1e1vejv)
 \end{equation}
 by Lemma \@ref(lem:vector-function-product).
 
-Also $E_0V \subseteq \mathrm{Span}(\delta)$, where $\delta$ is all 1's vector, i.e., $1$ as a function $X\to \mathbb{C}$.
+Also $E_0V = \mathrm{Span}(\delta)$, where $\delta$ is the all 1's vector, i.e., $1$ as a function $X\to \mathbb{C}$.
 So,
 \begin{equation}
 E_0V\circ E_jV = E_jV \quad (0\leq j\leq D). (\#eq:e0vejv)
@@ -52,9 +52,9 @@ $$E_i(E_1V \circ E_{i-1}V) = E_iV.$$
 For all $v\in E_i V$, there exists $u\in E_1V\circ E_{i-1}V$ such that $E_iu = v$.
 
 On the other hand, by \@ref(eq:e1vejv),
-$$E_1V\circ E_{i-1}V \subseteq E_{i-2}V + E_{i-1}V + E_{i-2}V.$$
+$$E_1V\circ E_{i-1}V \subseteq E_{i-2}V + E_{i-1}V + E_{i}V.$$
 So, $u = w+v$, where $w\in E_{i-2}V + E_{i-1}V$. We have,
-$$w = u-v \in E_1V \circ E_{i-1}V + E_{i-1}V + E_{i-2}V$$
+$$v = u-w \in E_1V \circ E_{i-1}V + E_{i-1}V + E_{i-2}V$$
 as desired.
 
 :::{.hs}
@@ -63,11 +63,11 @@ as desired.
 $$E_iV \circ E_jV = \mathrm{Span}(u\circ v \mid u\in E_iV, v\in E_jV).$$
 :::
 
-By claim,
+By the claim,
 \begin{align}
 & E_0V + E_1V + \cdots + E_iV\\
 & \quad \subseteq E_0V + E_1V + \cdots + E_{i-1}V + E_1V\circ E_{i-1}V\\
-& \quad \subseteq E_0V + E_1V + \cdots + (E_{1}V)^{i-1} + E_1V(E_0V + E_1V + \cdots + (E_{1}V)^{i-1})\\
+& \quad \subseteq E_0V + E_1V + \cdots + (E_{1}V)^{i-1} + E_1V\circ(E_0V + E_1V + \cdots + (E_{1}V)^{i-1})\\
 & \quad \subseteq E_0V  + E_1V + \cdots + (E_{1}V)^{i-1} + (E_1V)^{i}.
 \end{align}
 
@@ -77,7 +77,7 @@ Claim 1. Pick $i, j$ $(0\leq i,j\leq D)$ with $j>i+1$. Then $q^j_{1i} = 0$.
 
 _Proof of Claim 1._
 \begin{align}
-E_j(E_1\circ E_jV) & \subseteq E_j(E_1V\circ(E_0V + E_1V + (E_1V)^2 + \cdots + (E_1V)^i))\\
+E_j(E_1V\circ E_iV) & \subseteq E_j(E_1V\circ(E_0V + E_1V + (E_1V)^2 + \cdots + (E_1V)^i))\\
 & \subseteq E_j(E_0V + E_1V + (E_1V)^2 + \cdots + (E_1V)^{i+1})\\
 & = E_j(E_0V + E_1V + \cdots + E_{i+1}V)\\
 & = 0.
@@ -118,12 +118,12 @@ $\rho: X\to H$ is a map satisfying the following.
 | $\mathrm{R3}$. For every $x\in X$ and for all $i$ $(0\leq i\leq D)$,
 $$\sum_{y\in X, (y,x)\in R_i}\rho(y)\in \mathrm{Span}(\rho(x)).$$
 
-Above representation is nondegenerate if $\{\rho(x)\mid x\in X\}$ are distinct.
+The above representation is nondegenerate if $\{\rho(x)\mid x\in X\}$ are distinct.
 :::
 
 :::{.example #representation-of-hd2}
 $Y = H(D,2)$, $X = \{a_1\cdots a_D\mid a_i\in \{1,-1\}, 1\leq i\leq D\}$.
-Let $H = \mathbb{C}^D$ and $\langle \;, \;\rangle$ usual Hermitean dot product.
+Let $H = \mathbb{C}^D$ and $\langle \;, \;\rangle$ the usual Hermitean dot product.
 
 For a vertex $x = a_1\cdots a_D\in X$, define
 $$\rho(x) = a_1\cdots a_D\in H.$$
@@ -146,12 +146,12 @@ Hence,
 $$\sum_{y\in X, (y,x)\in R_i}\rho(y) = \left(\binom{D-1}{i} - \binom{D-1}{i-1}\right)\rho(x).$$
 :::
 
-Let $(\rho, H)$ be a representation of arbitrary commutative scheme $Y$. Set
+Let $(\rho, H)$ be a representation of an arbitrary commutative scheme $Y$. Set
 $$E = (\langle \rho(x),\rho(y)\rangle)_{x,y\in X}$$
-Gram matrix of the representation.
+to be the Gram matrix of the representation.
 
 :::{.definition #equivalence-of-representation}
-Representations $(\rho, H)$, $(\rho', H')$ of $Y$ are equivalent, whenever, Gram matrices are related by 
+Representations $(\rho, H)$, $(\rho', H')$ of $Y$ are equivalent, whenever their Gram matrices are related by 
 $$E'\in \mathrm{Span} E.$$
 We do not distinguish between equivalent representations.
 :::
@@ -163,24 +163,24 @@ Then $(y,x)\in R_j$. So, by $\mathrm{R2}$,
 $$\langle \rho(x), \rho(y)\rangle = \langle \rho(y),\rho(x)\rangle = \overline{\langle \rho(x), \rho(y)\rangle},$$
 since $\langle \;, \;\rangle$ is Hermitean.
 
-Hence, the Gram matrix $E$ of $\rho$ is real symmetirc. Without loss of generality, we can view $H$ as a real Euclidean space in this case.
+Hence, the Gram matrix $E$ of $\rho$ is real symmetric. Without loss of generality, we can view $H$ as a real Euclidean space in this case.
 
 
 :::{.lemma #rep-of-scheme}
-Let $Y = (X, \{R_i\}_{0\leq i\leq D})$ be a commutative scheme and $V$ a standard module.
+Let $Y = (X, \{R_i\}_{0\leq i\leq D})$ be a commutative scheme and $V$ the standard module.
 
 Let $E_j$ be any primitive idempotent of $Y$.
 
-| $(i)$ $(\rho, H)$ is a representation of $Y$, where $H = E_jV$ (with inner product inherited from $Y$).
+| $(i)$ $(\rho, H)$ is a representation of $Y$, where $H = E_jV$ (with inner product inherited from $V$).
 $$\rho: X \to H \quad (x\mapsto E_j\hat{x})$$
 (i.e., $\rho(x)$ is the $x$-th column of $E_j$.)
 
 | $(ii)$ $\langle \rho(x),\rho(y)\rangle = |X|^{-1}q_j(i)$, if $(x,y)\in R_i$,  $(x,y\in X)$.
 
-| $(iii)$ For $0\leq i\leq D$ and $x,y\in X$,
+| $(iii)$ For $0\leq i\leq D$ and $x\in X$,
 $$\sum_{y\in X, (y,x)\in R_i}\rho(y) = p_i(j)\rho(x).$$
 
-| $(iv)$ $(\rho,H)$ is nondegenerate if and only if $q_j(i) \neq q_j(0)$ for all $i$, $(0\leq i\leq D)$.
+| $(iv)$ $(\rho,H)$ is nondegenerate if and only if $q_j(i) \neq q_j(0)$ for all $i$, $(1\leq i\leq D)$.
 
 | $(v)$ Every representation of $Y$ is equivalent to a representation of the above type for some $j$ $(0\leq j\leq D)$, and $j$ is unique.
 :::
@@ -234,7 +234,7 @@ _Pf._
 
 | $(iv)$ By $(ii)$,
 \begin{align}
-\|\rho(x)\|^2 & = \langle \rho(x), \rho(y)\rangle\\
+\|\rho(x)\|^2 & = \langle \rho(x), \rho(x)\rangle\\
 & = |X|^{-1}q_j(0)\\
 & = |X|^{-1}m_j,
 \end{align}

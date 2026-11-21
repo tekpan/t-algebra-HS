@@ -12,7 +12,7 @@ $$Tv = Mv + M^*v^*.$$
 We need a preliminary lemma.
 
 :::{.lemma #mvplusmstarvstar}
-With the atove notation, we have the following.
+With the above notation, we have the following.
 
 | $(i)$ $\tilde{A}_hv = E^*_{h+1}A_hv - E^*_hA_{h+1}v$, $h\in \{0, 1, \ldots, D\}$. 
 $(E^*_{D+1} = A_{D+1} = O)$.
@@ -32,7 +32,7 @@ $(E^*_{D+1} = A_{D+1} = O)$.
 | $(ii)$
 \begin{align}
 E^*_hv^* & = |X|E^*_hE_1v\\
-& = E^*_h\left(\sum_{i=0}^D\theta^*A_i\right)v\\
+& = E^*_h\left(\sum_{i=0}^D\theta^*_iA_i\right)v\\
 & = E^*_h\left(\sum_{i=0}^D\theta^*_i(\tilde{A}_i-\tilde{A}_{i-1})\right)v\\
 & = E^*_h\left(\sum_{i=0}^{D-1}(\theta^*_i-\theta^*_{i+1})\tilde{A}_i\right)v + E^*_h\theta^*_D\tilde{A}_D v\\
 & = E^*_h\left(\sum_{i=0}^{D-1}(\theta^*_i-\theta^*_{i+1})(E^*_{i+1}A_iv - E^*_iA_{i+1}v)\right)\\
@@ -48,7 +48,7 @@ $0^-$: Trivial.
 
 \begin{align}
 \mathrm{LHS} & = (\theta^*_0 - \theta^*_1)E^*_0A_1v \\
-& = (\theta^*_{-1}-\theta^*_1)E^*_0A_{-1}v - E^*_hv^* \quad \text{(by $(ii)$)}\\
+& = (\theta^*_{-1}-\theta^*_0)E^*_0A_{-1}v - E^*_0v^* \quad \text{(by $(ii)$)}\\
 & = -E^*_0v^*\\
 & = \mathrm{RHS}.
 \end{align}
@@ -83,14 +83,14 @@ Mv + M^*v^* & \subseteq \mathrm{Span}\{\tilde{A}_hv, E^*_hv^*\mid 0\leq h\leq D\
 by $(i)$ and $(ii)$.
 
 On the other hand, 
-$$E^*hA_{h-1}v, E^*_{h-1}A_hv\in Mv + M^*v^* \quad i\in \{1, 2, \ldots, D\}$$
+$$E^*_hA_{h-1}v, E^*_{h-1}A_hv\in Mv + M^*v^* \quad h\in \{1, 2, \ldots, D\}$$
 by $(iii)$ and $(iv)$.
 :::
 
 :::{.lemma #tv}
 With the notation of Lemma \@ref(lem:mvplusmstarvstar), assume $0\neq v\in (E^*_1V)_{new}$ is an eigenvector for $\tilde{A}:=E^*_1AE^*_1$. Then
 
-| $(i)$ $Tv = Mv + M^*v$, where $v^* = |X|E_1v$.
+| $(i)$ $Tv = Mv + M^*v^*$, where $v^* = |X|E_1v$.
 
 | $(ii)$ $Tv = \mathrm{Span}\{v^+_1, v^+_2, \ldots, v^+_D, v^-_2, v^-_3, \ldots, v^-_{D-1}\}$, where $v^+_i = E^*_iA_{i-1}v$, $v^-_i = E^*_iA_{i+1}v$.
 
@@ -110,7 +110,7 @@ Show:
 
 | $(a)$ $M^*Mv \subseteq Mv + M^*v^*$.
 
-| $(b)$ $MM^*v \subseteq Mv + M^*v^*$.
+| $(b)$ $MM^*v^* \subseteq Mv + M^*v^*$.
 
 _Proof of $(a)$._
 By the transpose of $(i)$ in Lemma \@ref(lem:eonemmstar),
@@ -122,13 +122,13 @@ Since $E_1v = |X|^{-1}v^*$,
 $$M^*Mv = Mv + M^*v^*$$
 as desired.
 
-| $(b)$ is obtained from the traspose of $(ii)$ in Lemma  \@ref(lem:eonemmstar).
+| $(b)$ is obtained from the transpose of $(ii)$ in Lemma  \@ref(lem:eonemmstar).
 
 :::{.hs}
 **HS MEMO**
 
 \begin{align}
-MM^*v & = MM^*E_1v^*\\
+MM^*v^* & = MM^*E_1v^*\\
 & = M^*E_1v^* + ME^*_0E_1v^* + ME^*_1E_1v^*\\
 & = M^*v^* + ME^*_0v^* + ME^*_1v^*.
 \end{align}
@@ -151,7 +151,7 @@ $$E^*_1v^* \in \mathrm{Span}\{v\}.$$
 Tv & = Mv + M^*v^*\\
 & = \mathrm{Span}\{E^*_iA_{i-1}v, E^*_{i-1}A_iv\mid 1\leq i\leq D\}\\
 & = \mathrm{Span}\{v^+_i, v^-_{i-1}\mid 1\leq i\leq D\}\\
-& = \mathrm{Span}\{v^+_1, v^+_2, \ldots, v^*_D, v_0^-, \ldots, v^-_{D-1}\}
+& = \mathrm{Span}\{v^+_1, v^+_2, \ldots, v^+_D, v_0^-, \ldots, v^-_{D-1}\}
 \end{align}
 by Lemma \@ref(lem:mvplusmstarvstar) $(v)$.
 
@@ -159,7 +159,7 @@ But $v^-_0 = E^*_0A_1v = 0$ since $v\in (E^*_1V)_{new}$, and $v^-_1\in \mathrm{S
 
 Indeed,
 $$v^-_1 = E^*_1A_2v = (-1-a_0(Tv))v^+_1.$$
-where $a_0(Tv)$ is the eigenvalue of $v$ associated with $\tilde{A}$.
+where $a_0(Tv)$ is the eigenvalue of $\tilde{A}$ associated with $v$.
 
 To see this, observe
 \begin{align}
@@ -188,9 +188,9 @@ With the notation of Lemma \@ref(lem:mvplusmstarvstar), assume $0\neq v\in (E^*_
 $$W = Tv'$$
 for some $0\neq v'\in (E^*_1V)_{new}$ that is an eigenvector of $\tilde{A}$.
 
-| $(iii)$ Denote eigenvalue of $\tilde{A}$ associated to $v$ (resp. $v'$) by $a_0(Tv)$ (resp. $a_0(Tv')$). 
+| $(iii)$ Denote the eigenvalue of $\tilde{A}$ associated to $v$ (resp. $v'$) by $a_0(Tv)$ (resp. $a_0(Tv')$). 
 
-Then $Tv$, $Tv'$ are isomorphic $T$-module if and only if $a_0(Tv) = a_0(Tv')$.
+Then $Tv$, $Tv'$ are isomorphic $T$-modules if and only if $a_0(Tv) = a_0(Tv')$.
 
 | $(iv)$ $E^*_1TE^*_1$ has basis
 $$\tilde{J}, E^*_1, \tilde{A}, \tilde{A}^2, \ldots, \tilde{A}^{\ell-1},$$
@@ -218,7 +218,7 @@ In particular,
 $$k = b_0 = d(v-d) > m_1 = v-1 \quad \text{ if }d\geq 2,$$
 and $J(v,d)$ is thin.
 
-So $|X|E_1v = v^*$ may be $0$ sometimes. But as $Tv$ is dual thin of diameter at least $D-2$. The dual endpint $r^*\leq 2$, so in that case, $E_2v \neq 0$. Hence, if $D\geq 3$, $E_2v\neq 0$ always.
+So $|X|E_1v = v^*$ may be $0$ sometimes. But as $Tv$ is dual thin of diameter at least $D-2$, the dual endpoint $r^*\leq 2$, so in that case, $E_2v \neq 0$. Hence, if $D\geq 3$, $E_2v\neq 0$ always.
 :::
 
 :::{.hs}
@@ -233,11 +233,11 @@ Hence, $Tv$ is dual thin.
 Now we can construct a basis,
 $0\neq w^*_0\in E_{r^*}W$, where $r^*$ is the dual endpoint, and 
 $$w^*_0, w^*_1, \ldots, w^*_d\in W = Tv,$$
-where $w^*_i = E^*_{r^*+i}{A^*_1}^iw^*_0$.
+where $w^*_i = E_{r^*+i}{A^*_1}^iw^*_0$.
 $$A^*_1w^*_i = w^*_{i+1}+ a_i^*w^*_i + x^*_iw^*_{i-1},$$
 and $w^*_i = p^*_i(A^*)w^*_0$.
-$$E^*_{r^*+i}A^*_1E_{r^*+i}|_{E_{r^*+i}W} = a^*_i\cdot 1|_{E_{r^*+i}W},$$
-$$E^*_{r^*+i-1}A^*_1E_{r^*+i}A^*E_{r^*+i-1}|_{E_{r^*+i-1}W} = x^*_i\cdot 1|_{E_{r^*+i-1}W}.$$
+$$E_{r^*+i}A^*_1E_{r^*+i}|_{E_{r^*+i}W} = a^*_i\cdot 1|_{E_{r^*+i}W},$$
+$$E_{r^*+i-1}A^*_1E_{r^*+i}A^*E_{r^*+i-1}|_{E_{r^*+i-1}W} = x^*_i\cdot 1|_{E_{r^*+i-1}W}.$$
 See Lemma \@ref(lem:thin-module-structure), and Lemma \@ref(lem:q-conditions).
 
 From above, $Tv = M^*w^*_0$. So,
@@ -247,11 +247,11 @@ Thus, $Tv$ is thin.
 \ast Need to write down the dual at least for Lemma \@ref(lem:thin-module-structure), Corollary \@ref(cor:thin-is-dualthin).
 :::
 
-| $(iii)$ $E^*_1W$ is an $\tilde{A}$-module. So, there exists $0\neq v'\in E^*_1W$ that is an eigenvalue for $\tilde{A}$. Also $Tv' \subseteq W$.
+| $(ii)$ $E^*_1W$ is an $\tilde{A}$-module. So, there exists $0\neq v'\in E^*_1W$ that is an eigenvector for $\tilde{A}$. Also $Tv' \subseteq W$.
 
 Since $W$ is irreducible, $Tv' = W$.
 
-| $(iii)$ Suppose $Tv \to Tv'$ is an isomorsphism of $T$-modules.
+| $(iii)$ Suppose $\sigma: Tv \to Tv'$ is an isomorphism of $T$-modules.
 
 Recall $\sigma s = s\sigma$ for all $s\in T$.
 $$\mathrm{Span}\{\sigma v\} = \sigma E^*_1Tv = E^*_1\sigma Tv = E^*_1Tv' = \mathrm{Span}\{v'\}.$$
@@ -295,14 +295,14 @@ as desired.
 & = \text{the degree of minimal polynomial of $\tilde{A}:(E^*_1V)_{new}\to (E^*_1V)_{new}$.}
 \end{align}
 
-Claim 1. $\tilde{J}. E^*_1, \tilde{A}, \ldots, \tilde{A}^{\ell-1}$ are linearly independent.
+Claim 1. $\tilde{J}, E^*_1, \tilde{A}, \ldots, \tilde{A}^{\ell-1}$ are linearly independent.
 
 _Proof of Claim 1._
 Suppose not. Then
 $$\alpha \tilde{J} + p(\tilde{A}) = O$$
-for some $\alpha\in \mathrm{C}$ and $p(\lambda)\in \mathbb{C}[\lambda]$ with $\deg p \leq \ell -1$.
+for some $\alpha\in \mathbb{C}$ and $p(\lambda)\in \mathbb{C}[\lambda]$ with $\deg p \leq \ell -1$.
 
-But $\tilde{J}|_{(E^*_1V)_{new}} = O$ impiles $p(\tilde{A})|_{(E^*_1V)_{new}}=O$.
+But $\tilde{J}|_{(E^*_1V)_{new}} = O$ implies $p(\tilde{A})|_{(E^*_1V)_{new}}=O$.
 
 Since
 $$\deg p < \text{the degree of minimal polynomial of $\tilde{A}|_{(E^*_1V)_{new}}$},$$
@@ -310,12 +310,12 @@ we find $p$ is identically $0$.
 
 Then $\alpha$ is identically $0$ also. 
 
-Claim 2. $\tilde{J}. E^*_1, \tilde{A}, \ldots, \tilde{A}^{\ell-1}$ span $E^*_iTE^*_i$.
+Claim 2. $\tilde{J}, E^*_1, \tilde{A}, \ldots, \tilde{A}^{\ell-1}$ span $E^*_1TE^*_1$.
 
 _Proof of Claim 2._
-It needs to show
+We need to show
 \begin{equation}
-\tilde{J}. E^*_1, \tilde{A}, \ldots, \tilde{A}^{\ell} \; \text{are linearly dependent}.(\#eq:dependent)
+\tilde{J}, E^*_1, \tilde{A}, \ldots, \tilde{A}^{\ell} \; \text{are linearly dependent}.(\#eq:dependent)
 \end{equation}
 Let $m$ denote the minimal polynomial of $\tilde{A}|_{(E^*_1V)_{new}}$. So,
 $$m(\tilde{A}|_{(E^*_1V)_{new}}) = 0.$$

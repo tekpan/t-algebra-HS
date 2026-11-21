@@ -1,4 +1,4 @@
-# Thin Modoles of a DRG {#lec16}
+# Thin Modules of a DRG {#lec16}
 **Wednesday, February 24, 1993**
 
 Let $\Gamma = (X, E)$ denote any graph of diameter $D$.
@@ -14,7 +14,7 @@ A_0 & = I && (\text{identity})\\
 A_1 & = A && (\text{adjacency matrix})\\
 A_0 + A_1 + \cdots + A_D & = J && (\text{all 1's matrix}).
 \end{align}
-In general, $A_i$ may not belong to Bose-Mesner algebra.
+In general, $A_i$ may not belong to the Bose-Mesner algebra.
 :::
 
 
@@ -25,9 +25,9 @@ Assume $\Gamma = (X, E)$ is distance-regular with diameter $D\geq 1$ and interse
 
 | $(ii)$ ${\displaystyle A_i = \frac{p_i(A)}{c_1c_2\cdots c_i}, \quad (0\leq i\leq D)}$, where $p_0, p_1, \ldots, p_D$ are polynomials for the trivial module from Lemma \@ref(lem:thin-module-structure).
 
-| $(iii)$ $A_0, A_1, \ldots, A_D$ form a bais for Bose-Mesner algebra $M$.
+| $(iii)$ $A_0, A_1, \ldots, A_D$ form a basis for the Bose-Mesner algebra $M$.
 
-| $(iv)$ For all distances $h, i, j \quad (0\leq, i, j, h\leq D)$, and for all vertices $x, y\in X$ with $\partial(x,y) = h$, the constant
+| $(iv)$ For all distances $h, i, j \quad (0\leq h, i, j\leq D)$, and for all vertices $x, y\in X$ with $\partial(x,y) = h$, the constant
 $$p^h_{i,j} = |\{z\in X\mid \partial(x,z) = i, \; \partial(y,z) = j\}|$$
 depends only on $h, i, j$ and not on $x, y$.
 
@@ -35,7 +35,7 @@ depends only on $h, i, j$ and not on $x, y$.
 :::
 
 :::{.proof}
-| $(i)$ Pick $x\in X$. Apply each side to $\hat{x}$, we want to show that
+| $(i)$ Pick $x\in X$. Applying each side to $\hat{x}$, we want to show that
 $$AA_i \hat{x} = c_{i+1}A_{i+1}\hat{x} + a_iA_i\hat{x} + b_{i-1}A_{i-1}\hat{x}.$$
 \begin{align}
 \mathrm{LHS} & = A\left(\sum_{y\in X, \partial(x,y) = i}\hat{y}\right)\\
@@ -68,7 +68,7 @@ A_iA_j = \sum_{\ell = 0}^Dp^\ell_{ij}A_\ell \quad \text{for some }\; p^\ell_{ij}
 \end{equation}
 Fix $h \quad (0\leq h\leq D)$. Pick $x, y\in X$ with $\partial(x,y) = h$. 
 
-Compute $x, y$ entry in \@ref(eq:plij), 
+Compute the $(x, y)$ entry in \@ref(eq:plij), 
 \begin{align}
 (A_iA_j)_{xy} & = \sum_{z\in X}(A_i)_{xz}(A_j)_{zy}\\
 & = \sum_{z\in X, \partial(x,z)=i, \partial(y,z)=j} 1\cdot 1\\
@@ -78,7 +78,7 @@ On the other hand,
 $$\left(\sum_{\ell=0}^D p^\ell_{ij} A_\ell\right)_{xy} = p^h_{ij}(A_h)_{xy} = p^h_{ij}.$$
 
 | $(v)$ $\frac{1}{|X|}J$ is the orthogonal projection onto $\mathrm{Span}(\delta) = E_0V$. Hence,
-$$\frac{1}{|X|} = E_0.$$
+$$\frac{1}{|X|}J = E_0.$$
 This proves the assertions.
 :::
 
@@ -92,7 +92,7 @@ Let $\Gamma = (X, E)$ be distance-regular with diameter $D\geq 2$ and intersecti
 \end{equation}
 $a_i(W), x_i(W)$ are algebraic integers in $\mathbb{Q}[\gamma_0]$. In particular, if $\gamma_0\in \mathbb{Q}$, then $\gamma_i$, $a_i(W)$ and $x_i(W)$ are integers for all $i$.
 
-| $(ii)$ The numbers, $\gamma_i, a_i(W), x_i(W)$ can all be determined from $\gamma_0$ and the intersection numbers of $\Gamma$ in order 
+| $(ii)$ The numbers $\gamma_i, a_i(W), x_i(W)$ can all be determined from $\gamma_0$ and the intersection numbers of $\Gamma$ in order 
 $$x_1(W), \gamma_1, a_1(W), x_2(W), \gamma_2, a_2(W), \ldots $$
 using $(i)$,
 \begin{equation}
@@ -100,13 +100,13 @@ x_i(W) = c_ib_i + \gamma_{i-1}(a_i + c_i - c_{i+1} - a_{i-1}(W)) \quad (1\leq i\
 \end{equation}
 and
 \begin{equation}
-a_i(W) = \gamma_i - \gamma_{i-1} + a_i + c_i - c_{i+1} \quad (1\leq i\leq D). (\#eq:ai)
+a_i(W) = \gamma_i - \gamma_{i-1} + a_i + c_i - c_{i+1} \quad (1\leq i\leq d). (\#eq:ai)
 \end{equation}
 
 :::
 
 **Note.**
-$$p_i = p_1^W + \gamma_{i-1}p^W_{i-1} - c_i(p_{i-1}^W + \gamma_{i-2}p_{i-2}^W), \; (\gamma_{-1} = -\gamma_{-2} = 0, \; 0\leq i\leq d+1).$$
+$$p_i = p_i^W + \gamma_{i-1}p^W_{i-1} - c_i(p_{i-1}^W + \gamma_{i-2}p_{i-2}^W), \; (\gamma_{-1} = \gamma_{-2} = 0, \; 0\leq i\leq d+1).$$
 
 :::{.proof}
 Set
@@ -137,20 +137,20 @@ For all $i$ $(0\leq i\leq D)$, define
 \begin{align}
 B_i & = \tilde{A}_i(\hat{x}- \hat{y})\\
 & = \sum_{z\in X, \partial(x,z)\leq i}\hat{z} - \sum_{z\in X, \partial(y,z)\leq i} \hat{z}\\
-& = \sum_{z\in X, \partial(x,z)=i, \partial(y,z)=i+1}\hat{z} - \sum_{z\in X, \partial(y,z)=i+1, \partial(y,z)=i} \hat{z}.
+& = \sum_{z\in X, \partial(x,z)=i, \partial(y,z)=i+1}\hat{z} - \sum_{z\in X, \partial(x,z)=i+1, \partial(y,z)=i} \hat{z}.
 \end{align}
 Note that $B_D = O$, $B_0 = \hat{x}-\hat{y}$, and 
 $$\langle B_0, w_0\rangle = -\alpha_y \neq 0.$$
 
 From Claim 1, 
-$$AB_i = c_{i+1}B_{i+1}+(a_i-c_{i+1}+c_i)B_i + b_iB_{i-1} \; (0\leq i\leq D), \; B_{-1} = O.$$
-Let $p_0^W, \ldots, p^W_d$ denote polynomials for $W$ from Lemma \@ref(lem:thin-module-structure). So,
+$$AB_i = c_{i+1}B_{i+1}+(a_i-c_{i+1}+c_i)B_i + b_iB_{i-1} \; (0\leq i\leq D-1), \; B_{-1} = O.$$
+Let $p_0^W, \ldots, p^W_d$ denote the polynomials for $W$ from Lemma \@ref(lem:thin-module-structure). So,
 $$w_i = p_i^W(A)w \in E^*_{1+i}(x)W, \quad (0\leq i\leq d).$$
 
 Claim 2. $\langle w_i, B_j \rangle = 0$ if $j\not\in \{i, i+1\}$, $(0\leq i\leq d, 0\leq j\leq D)$.
 
 _Proof of Claim 2._
-$$w_i\in E^*_{1+i}(x)W, \quad B_j\in E^*_j(x)W + E^*_{j+1}(x)W.$$
+$$w_i\in E^*_{1+i}(x)W, \quad B_j\in E^*_j(x)V + E^*_{j+1}(x)V.$$
 ```{r echo=FALSE, fig.width=5, fig.height=1.7, message=FALSE, fig.align="center"}
 library(tidyverse)
 df_eg161 <- data.frame(
@@ -171,11 +171,11 @@ Vertical lines indicate possible non-orthogonality.
 
 Compute 
 \begin{equation}
-\langle Aw_i, B_j\rangle = \langle w_i, AB_j\rangle, \quad (0\leq i\leq D, \; 0\leq j\leq D-1).(\#eq:wibj)
+\langle Aw_i, B_j\rangle = \langle w_i, AB_j\rangle, \quad (0\leq i\leq d, \; 0\leq j\leq D-1).(\#eq:wibj)
 \end{equation}
 \begin{align}
 \text{LHS} & = \langle w_{i+1},B_j\rangle + a_i(W)\langle w_i,B_j\rangle + x_i(W)\langle w_{i-1},B_j\rangle\\
-\text{RHD}& = b_j\langle w_i, B_{j-1}\rangle + (a_j-c_{j+1}+c_j)\langle w_i, B_j\rangle + c_{j+1}\langle w_i, B_{j+1}\rangle.
+\text{RHS}& = b_j\langle w_i, B_{j-1}\rangle + (a_j-c_{j+1}+c_j)\langle w_i, B_j\rangle + c_{j+1}\langle w_i, B_{j+1}\rangle.
 \end{align}
 Evaluate for $i = j-2, j-1, j, j+1$.
 
@@ -207,10 +207,10 @@ Then,
 
 Set $i = j+1$. 
 Then \@ref(eq:wibj) becomes
-$$x_{j+1}(W)\langle w_j, B_j\rangle = c_{j+1}\langle w_0, B_{j+1}\rangle \quad (0\leq j\leq d).$$
+$$x_{j+1}(W)\langle w_j, B_j\rangle = c_{j+1}\langle w_{j+1}, B_{j+1}\rangle \quad (0\leq j\leq d).$$
 Hence,
 \begin{equation}
-\langle w_j, B_j\rangle = \frac{x_1(W)\cdots w_j(W)}{c_1c_2\cdots c_j}\langle w_0, B_0\rangle \quad (0\leq j\leq d). (\#eq:wjbj)
+\langle w_j, B_j\rangle = \frac{x_1(W)\cdots x_j(W)}{c_1c_2\cdots c_j}\langle w_0, B_0\rangle \quad (0\leq j\leq d). (\#eq:wjbj)
 \end{equation}
 
 Set $i = j-1$. 
@@ -224,9 +224,9 @@ Evaluate this using \@ref(eq:wj-1bj) and \@ref(eq:wjbj). $(\langle w_0, B_0\rang
 <!-- \langle w_j, B_j\rangle + a_{j-1}(W)\langle w_{j-1}, B_j\rangle\\ -->
 <!-- & = (a_j-c_{j+1}+c_j)\langle w_{j-1},B_j\rangle + b_j\langle w_{j-1},B_{j-1}\rangle. -->
 <!-- \end{split} -->
-$$\frac{w_1(W)\cdots x_j(W)}{c_1\cdots c_j}+(a_{j-1}(W)-a_j+c_{j+1}-c_j)b_2\cdots b_j\gamma_0 = b_j\frac{x_1(W)\cdots x_{j-1}(W)}{c_1\cdots c_{j-1}},$$
+$$\frac{x_1(W)\cdots x_j(W)}{c_1\cdots c_j}+(a_{j-1}(W)-a_j+c_{j+1}-c_j)b_2\cdots b_j\gamma_0 = b_j\frac{x_1(W)\cdots x_{j-1}(W)}{c_1\cdots c_{j-1}},$$
 $$\left(\gamma_i:=\frac{c_2c_3\cdots c_{i+1}b_2b_3\cdots b_{i+1}\gamma_0}{x_1(W)x_2(W)\cdots x_i(W)} \right).$$
-$$\frac{x_j(W)}{c_j}  = b_j + \frac{c_1c_3\cdots c_{j-1}b_2b_3\cdots b_{j}\gamma_0}{x_1(W)x_2(W)\cdots x_{j-1}(W)}(a_j+c_j-c_{j+1}-a_{j-1}).$$
+$$\frac{x_j(W)}{c_j}  = b_j + \frac{c_1c_2\cdots c_{j-1}b_2b_3\cdots b_{j}\gamma_0}{x_1(W)x_2(W)\cdots x_{j-1}(W)}(a_j+c_j-c_{j+1}-a_{j-1}(W)).$$
 So,
 $$x_j(W)  = c_jb_j + \gamma_{j-1}(a_j+c_j-c_{j+1}-a_{j-1}(W)).$$
 This proves \@ref(eq:xi).
@@ -238,7 +238,7 @@ a_j(W)\langle w_j, B_j\rangle + x_{j}(W)\langle w_{j-1}, B_j\rangle
  = (a_j-c_{j+1}+c_j)\langle w_{j},B_j\rangle + c_{j+1}\langle w_{j},B_{j+1}\rangle.
 $$
 $$
-(a_j(W) - (a_j-c_{j+1}+c_j))\frac{x_1(W)\cdots x_j(W)}{c_1\cdots c_j}
+(a_j(W) - (a_j-c_{j+1}+c_j))\frac{x_1(W)\cdots x_j(W)}{c_1\cdots c_j} +
 x_j(W)b_2\cdots b_j\gamma_0 - c_{j+1}b_2\cdots b_{j+1}\gamma_0 = 0.
 $$
 Thus,
@@ -257,7 +257,7 @@ $$\gamma_0 = 1 + a_0(W).$$
 Both $a_i(W)$ and $x_i(W)$ are algebraic integers, since they are eigenvalues of matrices with integer entries, namely,
 $$E^*_{i+1}(x)AE^*_{i+1}(x) \; \text{ and }\; E^*_i(x)AE^*_{i+1}(x)AE^*_i(x).$$
 
-Also $\gamma_0 = 1+a_0(W)$ is an algebraic integer, and $\gamma_i - \gamma_{i-1}$ is an algebraic integer by \@ref(eq:xi).
+Also $\gamma_0 = 1+a_0(W)$ is an algebraic integer, and $\gamma_i - \gamma_{i-1}$ is an algebraic integer by \@ref(eq:ai).
 
 Hence, $\gamma_i$ is an algebraic integer by induction.
 
@@ -277,7 +277,7 @@ $a_0(W)$: free.
 \begin{align}
 x_1(W) & = c_1b_1 + (a_0(W) + 1)(a_1 + c_1 - c_2 - a_0(W))\\
 & = k - a_1 - 1 + a_1a_0(W) + a_0(W) - c_2a_0(W) - a_0(W)^2\\
-& \qquad + a_1 + a - c_2 - a_0(W)\\
+& \qquad + a_1 + 1 - c_2 - a_0(W)\\
 & = a_1a_0(W) - c_2a_0(W) + k - c_2 - a_0(W)^2,\\
 \gamma_1 & = 0,\\
 a_1(W) & = -(a_0(W)+1) + a_1 + c_1 - c_2\\
@@ -285,7 +285,7 @@ a_1(W) & = -(a_0(W)+1) + a_1 + c_1 - c_2\\
 \end{align}
 
 Then the matrix has eigenvalues $\theta, \theta_1$.
-There is one feasible condition: $a_0(W)$ is an algebraic integer.
+There is one feasibility condition: $a_0(W)$ is an algebraic integer.
 :::
 
 
@@ -293,7 +293,7 @@ There is one feasible condition: $a_0(W)$ is an algebraic integer.
 Free parameters $c_2, c_3, k, a_1, a_2$. The matrix representation becomes
 $$
 A|_{W} = \begin{pmatrix} a_0(W) & x_1(W) & 0 \\ 1 & a_1(W) & x_2(W)\\ 0 & 1 & a_2(W) \end{pmatrix}.$$
-Here, $a_0(W)$ is free $(=\gamma - 1)$
+Here, $a_0(W)$ is free $(=\gamma_0 - 1)$
 \begin{align}
 x_1(W) & = k - 1 - a_1 + \gamma_0(a_1 + 1 - c_2 - a_0(W))\\
 & = \gamma_0(a_1 - c_2 - a_0(W)) + k - a_1 + a_0(W).
@@ -303,7 +303,7 @@ $$\gamma_1(W) = \frac{c_2b_2\gamma_0}{x_1(W)}.$$
 \begin{align}
 a_1(W) & = \gamma_1 - \gamma_0 + a_1 + 1 - c_2\\
 x_2(W) & = \gamma_1(a_2 - c_3 - a_1(W)) + c_2(\gamma_0 + b_1 - a_2 + a_1(W))\\
-a_2(W) & = -\gamma_1 + a_2 + c_2 - c_2.
+a_2(W) & = -\gamma_1 + a_2 + c_2 - c_3.
 \end{align}
 The matrix has eigenvalues, $\theta, \theta_2, \theta_3$.
 

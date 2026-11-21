@@ -16,11 +16,11 @@ description: "This is a lecture note using the bookdown package. The output form
 # About {-}
 
 * Original Hand Written Note Edited by Hiroshi Suzuki: https://icu-hsuzuki.github.io/lecturenote/
-* PDF of this lecturenote: https://icu-hsuzuki.github.io/t-algebra/t-algebra.pdf
+* PDF of this lecture note: https://icu-hsuzuki.github.io/t-algebra/t-algebra.pdf
   - You can download from the download icon on the top menu.
   - The style is a bit different from the HTML version
-* This digital book is created by `bookdown` package on RStudio.  
-  - For `bookdown` See [@xie2015], [@xie2017], [@xie2018].
+* This digital book was created with the `bookdown` package on RStudio.  
+  - For `bookdown` see [@xie2015], [@xie2017], [@xie2018].
   - See [technical memo](#memo)
 
 
@@ -29,7 +29,7 @@ description: "This is a lecture note using the bookdown package. The output form
 
 This book is a lecture note based on a series of lectures by Paul Terwilliger in 1993. The original is a manuscript written by Paul Terwilliger. 
 
-This note was rewritten by Hirosh Suzuki when he studied the lecture note during the following period.
+This note was rewritten by Hiroshi Suzuki when he studied the lecture note during the following period.
 
 January 13, 1995 -- March 4, 1995.
 
@@ -43,13 +43,13 @@ hsuzuki@icu.a.jp
 
 ## Preface by P. Terwilliger {-}
 
-This book attempts to prepare the way for an eventual classification of the graphs that are both thin and $Q$-polynomial. These graphs are distance-regular or bi-distance-regular, and since the distance-regular case is somewhat easier to handle, the focus will be on that case. (It is assumed the bi-distance-regular case is not too different). In the core of this book, we take a vertex $x$ in a distance-regular graph, and study the irreducible modules for the subconstituent algebra $T(x)$ that have endpoint at most $2$. (The modules with endpoint at most $3$ seems too complicated to consider, and do not seem to play much of a role anyway). The thin condition and the $Q$-polynomial property each affect the structure of these momdules, so these assumptions are first considered separately, and then jointly.
+This book attempts to prepare the way for an eventual classification of the graphs that are both thin and $Q$-polynomial. These graphs are distance-regular or bi-distance-regular, and since the distance-regular case is somewhat easier to handle, the focus will be on that case. (It is assumed the bi-distance-regular case is not too different). In the core of this book, we take a vertex $x$ in a distance-regular graph, and study the irreducible modules for the subconstituent algebra $T(x)$ that have endpoint at most $2$. (The modules with endpoint at most $3$ seem too complicated to consider, and do not seem to play much of a role anyway). The thin condition and the $Q$-polynomial property each affect the structure of these modules, so these assumptions are first considered separately, and then jointly.
 
 1. Introduction (Chapters \@ref(lec1) - \@ref(lec8))
 
 $\quad$ 1a. The subconstituent algebra $T(x)$ associated with any vertex $x$ in a graph
 
-$\quad$ 1b. Example: The D-dimensional cube and the Lie algebra $sl_2(\mathbb{C})$
+$\quad$ 1b. Example: The $D$-dimensional cube and the Lie algebra $sl_2(\mathbb{C})$
 
 $\quad$ 1c. The graphs of thin type: definition and characterizations
 
@@ -76,13 +76,13 @@ $\quad$ 3b. The trivial $T(x)$ modules
 $\quad$ 3c. A graph is distance-regular with respect to each vertex if and only if the trivial $T(x)$-module is thin if and only if the graph is distance-regular or bi-distance-regular
 
 |
-4. The structure of a thin irreducible $T(x)$-module $W$ with endpoint $1$ in a distance-regular graph (Chapters \@ref(lec14) - \@ref(lec17))
+4. The structure of a thin irreducible $T(x)$-module $W$ with endpoint $1$ in a distance-regular graph (Chapters \@ref(lec14) - \@ref(lec16))
 
 $\quad$ 4a. The isomorphism class of $W$ is determined by the intersection numbers and $a_0(W)$
 
-$\quad$ 4b. $\mathrm{Span}(\{v_1^+, v_2^+, \ldots, v^+_D\})$ is thin irreducible $T(x)$-module if and only if $v^+_i, v^-_i$ are dependent, for all $i$
+$\quad$ 4b. $\mathrm{Span}(\{v_1^+, v_2^+, \ldots, v^+_D\})$ is a thin irreducible $T(x)$-module if and only if $v^+_i, v^-_i$ are dependent, for all $i$
 
-$\quad$ 4c. If $m_1 < k_1$, there exist at least one thin, irreducible $T(x)$-module with endpoint $1$
+$\quad$ 4c. If $m_1 < k_1$, there exists at least one thin, irreducible $T(x)$-module with endpoint $1$
 
 $\quad$ 4d. Formula for $a_i(W)$, $x_i(W)$, $\gamma_i(W)$
 
@@ -179,9 +179,9 @@ $\quad$ 13a. The constant $\psi = \psi(x,y)$ is independent of the edge $xy$
 
 $\quad$ 13b. $E^*_1TE^*_1$ is spanned by the all $1$'s matrix and $4$ generalized adjacency matrices
 
-$\quad$ 13c. $T(x)\hat{y} = T(y)\hat{x}$ if $\partial(x.y)=1$. Complete description of this $T(x,y)$-module in terms of $\psi$ and the intersection numbers (?)
+$\quad$ 13c. $T(x)\hat{y} = T(y)\hat{x}$ if $\partial(x,y)=1$. Complete description of this $T(x,y)$-module in terms of $\psi$ and the intersection numbers (?)
 
-$\quad$ 13d. The $z_i$ are constatn functions
+$\quad$ 13d. The $z_i$ are constant functions
 
 $\quad$ 13e. Feasibility conditions forced by the integrality and non-negativity of the $z_i$ (?)
 
@@ -203,7 +203,7 @@ $\quad$ 15a. Similar to 13 (?)
 |
 17. Bi-distance-regular graphs
 
-$\quad$ 17a. If a bipartite graphs is thin then so are the halved graphs
+$\quad$ 17a. If a bipartite graph is thin then so are the halved graphs
 
 $\quad$ 17b. For any thin $T(x)$-module $W$, $m_W(\theta) = m_W(-\theta)$
 

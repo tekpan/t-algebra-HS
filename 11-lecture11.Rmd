@@ -3,9 +3,9 @@
 
 Let $\Gamma = (X, E)$ be a connected graph.
 
-Let $\theta_0$ be the maximal eigenvalue of $\Gamma$, and $\delta$ its corresponding eigenvector.
+Let $\theta_0$ be the maximal eigenvalue of $\Gamma$, and $\delta$ a corresponding eigenvector.
 $$\delta = \sum_{y\in X}\delta_y \hat{y}.$$
-Without loss of generality, we may assume that $\delta_y\in \mathbb{R}^*$ for all $y\in X$.
+Without loss of generality, we may assume that $\delta_y\in \mathbb{R}^{>0}$ for all $y\in X$.
 
 :::{.lemma #principal-module}
 Fix a vertex $x\in X$. Write $T \equiv T(x)$, $E^*_i\equiv E^*_i(x)$.
@@ -27,7 +27,7 @@ So, $E_0W_i \neq 0$ for some $i$. Then,
 $$\delta \in E_0W_i \subseteq W_i.$$
 Observe: $T\delta$ is an irreducible $T$-module.
 
-Since $\delta\in W$, where $W$ is a $T$-module. As $T\delta \subseteq W$ and $W$ is irreducible, $T\delta = W$.
+Since $\delta\in W$ and $W$ is a $T$-module, $T\delta \subseteq W$. As $W$ is irreducible, $T\delta = W$.
 
 Observe: $T\delta = T\hat{x}$.
 
@@ -47,7 +47,7 @@ $(c)\to (a)$:
 Since $r(W) = 0$, $E^*_0W \neq 0$.
 Hence, $\hat{x}\in W$ and $T\hat{x} \subseteq W$. 
 
-By the irreduciblity, we have $T\hat{x} = W$.
+By the irreducibility, we have $T\hat{x} = W$.
 :::
 
 :::{.lemma #baiparite-principal}
@@ -62,7 +62,7 @@ $$\delta_x = \begin{cases} \alpha^+ & \text{if }\: x\in X^+\\
 $$k(x) = \begin{cases} k^+ & \text{if }\: x\in X^+\\
 k^- & \text{if } x\in X^-.
 \end{cases}$$
-In this xase, $k^+k^- = \theta_0^2$, and $\Gamma$ is called bi-regular.
+In this case, $k^+k^- = \theta_0^2$, and $\Gamma$ is called bi-regular.
 :::
 
 :::{.proof}
@@ -103,7 +103,7 @@ Moreover, $k^+k^- = \theta_0^2$.
 
 $(ii)\to(i)$
 Set 
-$$\delta' = \sum_{y\in X}\alpha_y\hat{y} \quad \text{where}\; \alpha = \begin{cases} 1/\sqrt{k^-} & \text{if }\; y\in X^+\\ 1/\sqrt{k^+} & \text{if }\; y\in X^-.\end{cases}$$
+$$\delta' = \sum_{y\in X}\alpha_y\hat{y} \quad \text{where}\; \alpha_y = \begin{cases} 1/\sqrt{k^-} & \text{if }\; y\in X^+\\ 1/\sqrt{k^+} & \text{if }\; y\in X^-.\end{cases}$$
 Then one checks
 \begin{align}
 A\delta' & = A\left(\frac{1}{\sqrt{k^-}}\sum_{y\in X^+}\hat{y} + \frac{1}{\sqrt{k^+}}\sum_{y\in X^-}\hat{y}\right)\\
@@ -122,7 +122,7 @@ c_i(x) & := |\{z\in X \mid \partial(x,z) = i-1, \; \partial(y,z) = 1\}|,\\
 a_i(x) & := |\{z\in X \mid \partial(x,z) = i, \; \partial(y,z) = 1\}|,\\
 b_i(x) & := |\{z\in X \mid \partial(x,z) = i+1, \; \partial(y,z) = 1\}|
 \end{align}
-depends only on $i$, $x$, and not on $y$.
+depend only on $i$, $x$, and not on $y$.
 
 (In this case, $c_0(x) = a_0(x) = b_d(x) = 0$, $c_1(x) = 1$, $b_0(x) = k(x)$ is the valency of $x$.)
 
@@ -140,7 +140,7 @@ ggplot(df_eg112, aes(x, y)) + geom_point() + geom_path() + theme_bw() + theme(pa
   annotate("text", x=-0.3, y = 0, label = "x") 
 ```
 \begin{align}
-c_0 &= 1, & c_1 &= 1, & c_2 &= 1,\\
+c_0 &= 0, & c_1 &= 1, & c_2 &= 1,\\
 a_0 &= 0, & a_1 &= 1, & a_2 &= 1,\\
 b_0 &= 2, & b_1 &= 1, & b_2 &= 0.
 \end{align}

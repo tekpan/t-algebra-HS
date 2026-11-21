@@ -5,10 +5,10 @@
 
 Let $\Gamma = (X, E)$ be a distance-regular graph of diameter $D\geq 2$. Pick a vertex $x\in X$. 
 
-Let $W$ be a thin irreducible $T(x)$-module with endpoint $r = 1$, diameter $d = D-1$ or $D-2$, and $r_0 = a_0(W) + 1$.
+Let $W$ be a thin irreducible $T(x)$-module with endpoint $r = 1$, diameter $d = D-1$ or $D-2$, and $\gamma_0 = a_0(W) + 1$.
 
 Show
-$$\gamma_i = \frac{c_2c_2\cdots c_{i+1}b_2b_3\cdots b_{i+1}\gamma_0}{x_1(W)\cdots x_i(W)},$$
+$$\gamma_i = \frac{c_2c_3\cdots c_{i+1}b_2b_3\cdots b_{i+1}\gamma_0}{x_1(W)\cdots x_i(W)},$$
 $a_i(W)$ and $x_i(W)$ are all algebraic integers in $\mathbb{Q}[\gamma_0]$, where
 \begin{align}
 x_i(W) & = c_ib_i + \gamma_{i-1}(a_i + c_i - c_{i+1}-a_{i-1}(W)) && (1\leq i\leq d)\\
@@ -16,13 +16,13 @@ a_i(W) & = \gamma_i - \gamma_{i-1} + a_i + c_i - c_{i+1} && (1\leq i\leq d)
 \end{align}
 
 Certainly, $x_i(W)$, $\gamma_i$, and $a_i(W)$ are in $\mathbb{Q}[\gamma_0]$ by the above lines and so on.
-$$\gamma_0 \to a_0(W) \to x_1(W) \to \gamma_1 \to a_1(W)\to x_1(W) \to \cdots .$$
-Recall some $B\in \mathrm{Mat}_n(\mathbb{C})$ is integral whenever
+$$\gamma_0 \to a_0(W) \to x_1(W) \to \gamma_1 \to a_1(W)\to x_2(W) \to \cdots .$$
+Recall that a matrix $B\in \mathrm{Mat}_n(\mathbb{C})$ is integral whenever
 $$B\in \mathrm{Mat}_n(\mathbb{Z}).$$
 In this case, the characteristic polynomial
 $$\det(\lambda I - B) = \lambda^n + \alpha_{n-1}\lambda^{n-1} + \cdots + \alpha_0, \; \text{ for some }\; \alpha_0, \ldots, \alpha_{n-1}\in \mathbb{Z}.$$
 Hence, eigenvalues of $B$ are algebraic integers.
-But $a_i(W)$ is an eigenvalue of an integral matrices, 
+But $a_i(W)$ is an eigenvalue of an integral matrix, 
 $$B = E^*_{i+1}(x)AE^*_{i+1}(x).$$
 Hence, $a_i(W)$ is an algebraic integer.
 
@@ -42,7 +42,7 @@ $R_0, R_1, \ldots, R_D$ are nonempty subsets of $X\times X$ such that
 
 | $(ii)$ $R_0 \cup \cdots \cup R_D = X\times X \quad (\text{disjoint union})$,
 
-| $(iii)$ for every $i$, $R_i^\top = \{(y,x)\mid xy\in R\} = R_{i'}$ for some $i'\in \{0,1,\ldots, D\}$,
+| $(iii)$ for every $i$, $R_i^\top = \{(y,x)\mid (x,y)\in R_i\} = R_{i'}$ for some $i'\in \{0,1,\ldots, D\}$,
 
 | $(iv)$ for every $h, i, j$ ($0\leq h, i, j\leq D$), and every $x,y\in X$ such that $(x,y)\in R_h$, 
 $$p^h_{ij} = |\{z\in X\mid (x,z)\in R_i, \; (z,y)\in R_j\}|$$
@@ -50,8 +50,8 @@ depends only on $h, i, j$ and not on $x,y$; and
 
 | $(v)$ $p^h_{ij} = p^h_{ji}$ for all $h,i, j$.
 
-If $i' = i$ for all $i$, we say $Y$ is symmetric\index{symmetrix}.
-We call $D$ the class of scheme and $R_i$, the $i$th relation of $Y$. We say vertices $x,y\in X$ are $i$-related, or 'at distance $i$', whenever $(x,y)\in R_i$.
+If $i' = i$ for all $i$, we say $Y$ is symmetric\index{symmetric}.
+We call $D$ the class of the scheme and $R_i$, the $i$th relation of $Y$. We say vertices $x,y\in X$ are $i$-related, or 'at distance $i$', whenever $(x,y)\in R_i$.
 
 We always assume that a 'scheme' is a commutative association scheme.
 :::
@@ -59,7 +59,7 @@ We always assume that a 'scheme' is a commutative association scheme.
 Let $Y = (X, \{R_i\}_{0\leq i\leq D})$ be an association scheme.
 
 :::{.definition #incidencemat-of-as}
-The $i$-the association matrix\index{association matrix} $A_i\in \mathbb{Mat}_X(\mathbb{C})$
+The $i$-th association matrix\index{association matrix} $A_i\in \mathrm{Mat}_X(\mathbb{C})$
 \begin{align}
 (A_i)_{xy} & = \begin{cases} 1 & \text{if}\; (x,y)\in R_i\\
 0 & \text{if}\; (x,y)\not\in R_i,\end{cases} && (x,y\in X, 0\leq i\leq D)
@@ -95,26 +95,26 @@ $$i\text{-th association matrix} = i\text{-th distance matrix} \quad \text{for a
 
 
 :::{.example #gen-tr}
-Suppose a group $G$ acts transitively on a seet $X$. Assume $G$ is generously transitive, i.e., 
+Suppose a group $G$ acts transitively on a set $X$. Assume $G$ is generously transitive, i.e., 
 $$\text{for all }x,y\in X, \text{ there exists }g\in G \text{ such that }gx = y, gy = x.$$
-Then $G$ acts on $X\times X$ by rule;
+Then $G$ acts on $X\times X$ by the rule
 $$g(x,y) = (gx, gy), \quad \text{for all }\; g\in G, \text{ and for all }x,y\in X.$$
-Let $R_0, \ldots, R_D$ denote orbits of $G$ on $X\times X$. 
+Let $R_0, \ldots, R_D$ denote the orbits of $G$ on $X\times X$. 
 
-Observe that $R_i^\top = R_i$ for all $i$ by generously transitivity, and
+Observe that $R_i^\top = R_i$ for all $i$ by generous transitivity, and
 $$Y = (X, \{R_i\}_{0\leq i\leq D})$$
 is a symmetric scheme.
 :::
 
 
 :::{.exercise #gen-tr-case}
-In Example Example \@ref(exm:gen-tr), Bose-Mesner algebra
+In Example \@ref(exm:gen-tr), the Bose-Mesner algebra
 \begin{align}
 M & = \{B\in \mathrm{Mat}_X(\mathbb{C}) \mid Bg = gB, \text{ for all }g\in G\}\\
 & = \text{the commuting algebra of $G$ on $X$.}
 \end{align}
 Here, we view each $g\in G$ as a permutation matrix in $\mathrm{Mat}_X(\mathbb{C})$ satisfying
-$$g\hat{x} = \widehat{gx} \quad \text{for all }x\in G.$$
+$$g\hat{x} = \widehat{gx} \quad \text{for all }x\in X.$$
 :::
 
 :::{.example #centralizer-alg}
@@ -130,7 +130,7 @@ Claim that $Y = (X, \{R_i\}_{0\leq i\leq D})$ is a commutative scheme (not symme
 | $(iii)$ $R_i^\top = R_{i'}$, where $C_{i'} = \{g^{-1}\mid g\in C_i\}$.
 
 | $(iv)$ Set $H = G\oplus G$, the direct sum. Then $H$ acts on $X = G$:
-$$\text{for all }h = (g,gz), \text{for all }x\in X, \quad h(x) = gx(gx)^{-1} = gxz^{-1}g^{-1}.$$
+$$\text{for all }h = (g,gz), \text{for all }x\in X, \quad h(x) = gx(gz)^{-1} = gxz^{-1}g^{-1}.$$
 $$R_i = \{(x,y)\mid x^{-1}y\in C_i\}, \; h_i\in C_i, \; x^{-1}y = gh_ig^{-1}.$$
 \begin{align}
 (x,y) & = (x, xgh_ig^{-1})\\
@@ -152,8 +152,8 @@ $$\text{For all }z\in S, \text{ set } \hat{z} = xz^{-1}y.$$
 Observe, $\hat{z}\in T$.
 \begin{align}
 x^{-1}z\in C_i \quad  & x^{-1}\hat{z} = x^{-1}xz^{-1}y\in C_j\\
-z^{-1}y\in C_j \quad  & \hat{z}^{-1}y = y^{-1}zx^{-1}x^{-1}y = y^{-1}x(x^{-1}z)x^{-1}y \in C_i.
+z^{-1}y\in C_j \quad  & \hat{z}^{-1}y = y^{-1}zx^{-1}y = y^{-1}x(x^{-1}z)x^{-1}y \in C_i.
 \end{align}
 Observe
-$$S\to T \quad (z\mapsto z^{-1}) \quad \text{is one-to-one and onto.}$$
+$$S\to T \quad (z\mapsto \hat{z}) \quad \text{is one-to-one and onto.}$$
 :::

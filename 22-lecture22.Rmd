@@ -4,7 +4,7 @@
 :::{.lemma #phijqhij2}
 Let $Y = (X, \{R_i\}_{0\leq i\leq D})$ be a commutative scheme.
 
-| $(i)$ $p^h_{0j} = p^h_{j0} = \delta_{jh}$..
+| $(i)$ $p^h_{0j} = p^h_{j0} = \delta_{jh}$.
 
 | $(ii)$ $p^0_{ij} = \delta_{ij'}k_i$.
 
@@ -49,7 +49,7 @@ So,
 \sum_{j=0}^D E_i\circ E_j & = |X|^{-1}\sum_{h=0}^D \left(\sum_{j=0}^D q^h_{ij}\right) E_h\\
 & = E_i \circ \sum_{j=0}^D E_j\\
 & = E_i\circ I\\
-& = |X|^{-1}(q_i(0)A_0 + q_i(1)A_1 + \cdots + q_i(0)A_D)\circ I\\
+& = |X|^{-1}(q_i(0)A_0 + q_i(1)A_1 + \cdots + q_i(D)A_D)\circ I\\
 & = |X|^{-1}q_i(0)I\\
 & = |X|^{-1}m_i(E_0 + E_1 + \cdots + E_D).
 \end{align}
@@ -60,7 +60,7 @@ This proves the assertions.
 :::{.definition #q-polynomial}
 Let $Y = (X, \{R_i\}_{0\leq i\leq D})$ be a commutative scheme.
 
-$Y$ is $Q$-polynomial \index{$Q$-polynomial} with respect to ordering $E_0, E_1, \ldots, E_D$ of primitive idempotents, if
+$Y$ is $Q$-polynomial \index{$Q$-polynomial} with respect to the ordering $E_0, E_1, \ldots, E_D$ of primitive idempotents, if
 $$q^h_{ij} \begin{cases} = 0 & \text{if one of $h, i, j$ is greater than the sum of the other two,}\\
 \neq 0 & \text{if one of $h,i,j$ is equal to the sum of the other two.}\end{cases}$$
 In this case, set
@@ -83,24 +83,24 @@ Observe: If $Y$ is $Q$-polynomial,
 $$c^*_i + a^*_i + b^*_i = m_1 \quad (0\leq i\leq D)$$
 (just as $c_i + a_i + b_i = k$ for $P$-polynomial.)
 
-By Lemma \@ref(lem:phijqhij2) $(iv)$,
+By Lemma \@ref(lem:phijqhij2) $(vi)$,
 $$m_1 = q^i_{10} + q^i_{11} + \cdots + q^i_{1,i-1} + q^i_{1i} + q^i_{1,i+1} + \cdots $$
 and $q^i_{10} = q^i_{11} = 0$, $q^i_{1,i-1} = c^*_i$, $q^i_{1i} = a^*_i$, and $q^i_{1,i+1} = b^*_i$.
 
 :::{.lemma #q-conditions}
-Assume $Y = (X, \{R_i\}_{0\leq i\leq D})$ is a symmetric scheme. Pick $x\in X$, and set $E^*_i\equiv E^*_i(x)$, $A^*\equiv A^*(x)$. Then the following are equivalent.
+Assume $Y = (X, \{R_i\}_{0\leq i\leq D})$ is a symmetric scheme. Pick $x\in X$, and set $E^*_i\equiv E^*_i(x)$, $A^*_i\equiv A^*_i(x)$. Then the following are equivalent.
 
-| $(i)$ $\Gamma$ is $Q$-polynomial with respect to $E_0, \ldots, E_D$.
+| $(i)$ $Y$ is $Q$-polynomial with respect to $E_0, \ldots, E_D$.
 
 | $(ii)$ The condition
-$$q^h_{1j} \begin{cases} = 0 & \text{if $\; |h-j| > 0$} \\
+$$q^h_{1j} \begin{cases} = 0 & \text{if $\; |h-j| > 1$} \\
 \neq 0 & \text{if $\; |h-j| = 1$}. \end{cases} \quad (0\leq h,j\leq D).$$
 
-| $(iii)$ There exists $f_i^*\in \mathbb{C}[\lambda]$, $\deg f^*_i = i$, and 
+| $(iii)$ There exists $f_i^*\in \mathbb{C}[\lambda]$, $\deg f^*_i = i$, such that 
 $$A^*_i = f^*_i(A^*_1) \quad (0\leq i\leq D).$$
 
 | $(iv)$ $E^*_0V, \ldots, E^*_DV$ are maximal eigenspaces of $A^*_1$, and 
-$$E_iA^*_1E_j = O \quad \text{if }\; |i-j|>0, \quad (0\leq i,j\leq D).$$
+$$E_iA^*_1E_j = O \quad \text{if }\; |i-j|>1, \quad (0\leq i,j\leq D).$$
 (Compare $(iv)$ with the definition of $Q$-polynomial in Definition \@ref(def:q-polynomial-graph).)
 :::
 
@@ -124,7 +124,7 @@ $$q^h_{ij} \; \begin{cases} = 0 & \text{if }\; h> i+j\\
 \end{cases}$$
 \begin{align}
 A^*_iA^*_j & = \sum_{h=0}^D q^h_{ij}A^*_h\\
-f^*_i(A_1)f^*_j(A_1) & = \sum_{h=0}^D q^h_{ij}f^*_h(A_1^*).
+f^*_i(A^*_1)f^*_j(A^*_1) & = \sum_{h=0}^D q^h_{ij}f^*_h(A_1^*).
 \end{align}
 Hence,
 $$f^*_i(\lambda)f^*_j(\lambda) = \sum_{h=0}^Dq^h_{ij}f^*_h(\lambda).$$
@@ -138,7 +138,7 @@ $q_1(0), q_1(1), \ldots, q_1(D)$ are distinct.
 
 So, $E^*_0V, \ldots, E^*_DV$ are maximal eigenspaces.
 
-Also, $|i-j|>1$ implies $q^j_{11} = 0$.
+Also, $|i-j|>1$ implies $q^j_{1i} = 0$.
 
 Thus, $E_iA^*_1E_j = 0$ by Lemma \@ref(lem:vanishing-condition) $(ii)$.
 
@@ -148,12 +148,12 @@ $E_iA^*_1E_j = O$ implies $q^i_{1j} = 0$ by Lemma \@ref(lem:vanishing-condition)
 
 Suppose $q^{j+1}_{1j} = 0$ for some $j$ $(0\leq j\leq D-1)$.
 
-Without loss of generalith, choose $j$ minimum. Then
+Without loss of generality, choose $j$ minimum. Then
 $A^*_h$ is a polynomial of degree $h$ in $A^*_1$ $(0\leq h\leq j)$, and
 $$A^*_1A^*_j - q^{j-1}_{1j}A^*_{j-1} - q^j_{1j}A^*_j = O.$$
-the left hand side is a polynomial in $A^*_1$ of degree $j+1$. 
+The left hand side is a polynomial in $A^*_1$ of degree $j+1$. 
 
-Hence, the minimal polynomial of $A^*_1$ has degree less than or equal to $j+1 \leq D$. But $A^*_1$ has $D+1$ distince eigenvalues. 
+Hence, the minimal polynomial of $A^*_1$ has degree less than or equal to $j+1 \leq D$. But $A^*_1$ has $D+1$ distinct eigenvalues. 
 
 This is a contradiction.
 :::

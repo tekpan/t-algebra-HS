@@ -66,7 +66,7 @@ But,
 \end{align}
 Thus,
 $$\sigma_2 = -\frac{1+a_0(W)}{kb_1}.$$
-This proves Claim.
+This proves the claim.
 
 Case: $a_0(W) = -1$.
 
@@ -111,9 +111,9 @@ So,
 & = \frac{(\theta-k)(\theta-\beta)}{k(\beta+1)}.
 \end{align}
 Either
-$$\beta+1 >0 \to \theta-\beta \leq 0 \;\text{ or }\; \beta \geq \theta_1,$$
+$$\beta+1 >0 \to \theta-\beta \leq 0 \;\text{ i.e., }\; \beta \geq \theta_1,$$
 or
-$$\beta+1 < 0 \to \theta-\beta \geq 0 \;\text{ or }\; \beta \leq \theta_D.$$
+$$\beta+1 < 0 \to \theta-\beta \geq 0 \;\text{ i.e., }\; \beta \leq \theta_D.$$
 If $\beta = \theta_1$,
 \begin{align}
 a_0(W) & = - \frac{b_1}{\beta+1}-1 = -\frac{b_1}{\theta_1+1}-1\\
@@ -132,7 +132,6 @@ If $\beta \not\in \{\theta_1, \theta_D\}$,
 $$\beta \in (-\infty, \theta_D) \cup (\theta_1, \infty),$$
 we have $(iv)$.
 
-Note using \@ref(eq:a0W), we have $(iv)$.
 :::
 
 **Note.** 
@@ -143,13 +142,13 @@ $$a_0(W) \to \beta \to f_W \to m_W \to \text{isomorphism class of $W$}.$$
 In fact, $\theta_1 > -1$, $\theta_D < -1$ if $D\geq 2$.
 
 :::{.definition #complete-graph}
-The complete graph \index{complete graph} $K_n$ has $n$ vertices and diameter $D = 1$, i.e., $xy\in E$ for all vertices $x,t$.
+The complete graph \index{complete graph} $K_n$ has $n$ vertices and diameter $D = 1$, i.e., $xy\in E$ for all distinct vertices $x,y$.
 :::
 
 $K_n$ is distance-regular with valency $k = n-1$ and $a_1 = n-2$, $D = 1$.
-Moreover, it has two distince eigenvalues $\theta_0$, $\theta_1$.
+Moreover, it has two distinct eigenvalues $\theta_0$, $\theta_1$.
 
-Recall, $\theta_0, \ldots, \theta_D$ are roots of $p_{D+1}$, i.e., $D+1$ st polynomial for the trivial module.
+Recall, $\theta_0, \ldots, \theta_D$ are roots of $p_{D+1}$, i.e., the $(D+1)$-st polynomial for the trivial module.
 \begin{align}
 p_0 & = 1,\\
 p_1 & = \lambda,\\
@@ -174,10 +173,10 @@ $(i)$ Suppose $\theta_D \geq -1$.
 
 Then $I + A$ is positive semi-definite.
 
-By Lemma \@ref(lem:pfl), there exists vectors $\{v_x\mid x\in X\}$ in a Euclidean space such that
+By Lemma \@ref(lem:pfl), there exist vectors $\{v_x\mid x\in X\}$ in a Euclidean space such that
 \begin{align}
 \langle v_x,v_y\rangle & = (I+A)_{xy}\\
-& = \begin{cases} 1 & \text{if $x = y$ or $xy\in E$,}\\0 & \text{othewise}.
+& = \begin{cases} 1 & \text{if $x = y$ or $xy\in E$,}\\0 & \text{otherwise}.
 \end{cases}
 \end{align}
 For every $xy\in E$, 
@@ -188,7 +187,7 @@ Thus $\langle v_x,v_y\rangle = 1$ for all $x,y\in X$.
 
 We have $I + A = J$, (all 1's matrix), and $D = 1$.
 
-$(ii)$ Let $m$ be the trivial measure. Then,
+$(ii)$ Suppose $\theta_1 \leq -1$. Let $m$ be the trivial measure. Then,
 \begin{align}
 1 & = \sum_{\theta\in \mathbb{R}}m(\theta) + \sum_{\theta\in \mathbb{R}}m(\theta)\theta \\
 & = \sum_{\theta\in \mathbb{R}}m(\theta)(\theta+1)\\
@@ -202,4 +201,4 @@ $xy\in E$ for every $x,y\in X$, and $D = 1$.
 :::
 
 **Note.**
-Lemma \@ref(lem:sedond-and-largest-ev) does not require distance-regular assumption.
+Lemma \@ref(lem:sedond-and-largest-ev) does not require the distance-regular assumption.

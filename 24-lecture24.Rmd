@@ -1,5 +1,5 @@
 # Balanced Conditions, I {#lec24}
-**Wednesday, March 23, 1993**
+**Wednesday, March 24, 1993**
 
 No Class on Friday (another conference).
 
@@ -7,12 +7,12 @@ No Class on Friday (another conference).
 Let $E_j$ be a primitive idempotent, $H = E_jV$ and 
 $$\rho: X\to H \quad (x\mapsto E_j\hat{x}).$$
 
-| $(v)$ Every representation $(\rho, H)$ of $Y$ is equivalent to a representation of above type, for some $j$ $(0\leq j\leq D)$ and $j$ is unique.
+| $(v)$ Every representation $(\rho, H)$ of $Y$ is equivalent to a representation of the above type, for some $j$ $(0\leq j\leq D)$ and $j$ is unique.
 
-Let $E:=(\langle \rho(x), \rho(y))_{x,y\in X}$.
+Let $E:=(\langle \rho(x), \rho(y)\rangle)_{x,y\in X}$.
 
 By $\mathrm{R2}$,
-$$E = \sum_{i = 0}^D \sigma_i A_i, \quad \text{some}\; \sigma_0, \sigma_1, \ldots, \sigma_D\in \mathbb{C}.$$
+$$E = \sum_{i = 0}^D \sigma_i A_i, \quad \text{for some}\; \sigma_0, \sigma_1, \ldots, \sigma_D\in \mathbb{C}.$$
 Hence, $E$ belongs to the Bose-Mesner algebra $M$ of $Y$.
 
 We want to show that $E$ is a scalar multiple of a primitive idempotent.
@@ -21,11 +21,11 @@ Fix $x\in X$ and fix $i$ $(0\leq i\leq D)$.
 
 By $\mathrm{R3}$, 
 \begin{equation}
-\sum_{y\in X, (y,x)\in R_i}\rho(y) = \alpha \rho(x), \quad \text{some }\; \alpha\in \mathbb{C}. (\#eq:sumrhoy)
+\sum_{y\in X, (y,x)\in R_i}\rho(y) = \alpha \rho(x), \quad \text{for some }\; \alpha\in \mathbb{C}. (\#eq:sumrhoy)
 \end{equation}
 So,
 $$k_i\overline{\sigma_i} = \left\langle \sum_{y\in X, (y,x)\in R_i}\rho(y),\rho(x)\right\rangle = \bar{\alpha}\langle \rho(x), \rho(x)\rangle = \bar{\alpha}\sigma_0.$$
-Hence, $\alpha$ is independent of $x$. In maatrix form \@ref(eq:sumrhoy) becomes 
+Hence, $\alpha$ is independent of $x$. In matrix form \@ref(eq:sumrhoy) becomes 
 $$EA_i\hat{x} = \alpha E\hat{x}.$$
 
 :::{.hs}
@@ -45,7 +45,7 @@ Since $x$ is arbitrary,
 $$EA_i = \alpha E.$$
 So, 
 $$EA_i \in \mathrm{Span} E\; \text{ and }\; EM = \mathrm{Span} E.$$
-We have $E\in \mathrm{E_j}$ for unique $j$ $(0\leq j\leq D)$.
+We have $E\in \mathrm{Span}(E_j)$ for a unique $j$ $(0\leq j\leq D)$.
 :::
 
 :::{.hs}
@@ -71,7 +71,7 @@ Assume $Y = (X, \{R_i\}_{0\leq i\leq D})$ is $P$-polynomial (i.e., $(X, R_1)$ is
 
 | $(i)$ The following are equivalent.
 
-| $\quad (ia)$ $Y$ is $Q$-polyonimial with respect to $E$.
+| $\quad (ia)$ $Y$ is $Q$-polynomial with respect to $E$.
 
 | $\quad (ib)$ $(\rho, H)$ is nondegenerate and for all $x,y\in X$, and for all $i,j$ $(0\leq i,j\leq D)$,
 $$\sum_{z\in X, (x,z)\in R_i, (y,z)\in R_j}\rho(z) - \sum_{z'\in X, (x,z')\in R_j, (y,z')\in R_i}\rho(z')\in \mathrm{Span}(\rho(x)-\rho(y)).$$
@@ -102,7 +102,7 @@ _Proof of Claim 1._
 L & = \mathrm{Span}(E_iA^*E_j - E_jA^*E_i \mid 0\leq i<j\leq D)\\
 & = \mathrm{Span}(E_iA^*E_{i+1} - E_{i+1}A^*E_i \mid 0\leq i\leq D-1).
 \end{align}
-Since $E_iA^*E_j = 0$ if $q^1_{ij} = 0$ by Lemma \@ref(lem:phijqhij) and Lemma \@ref(lem:vanishing-condition),
+This holds since $E_iA^*E_j = 0$ if $q^1_{ij} = 0$ by Lemma \@ref(lem:phijqhij) and Lemma \@ref(lem:vanishing-condition),
 and this occurs if $|i-j|>1$ by $Q$-polynomial property.
 
 Hence, $\dim L \leq D$.
@@ -119,10 +119,10 @@ _Proof of Claim 2._
 :::{.hs}
 **HS MEMO**
 
-$$ ((A^*A_h - A_hA^*)\hat{x})_y = E_{xy}(A_h)_{yx}- (A_h)_{yx}E_{xx} = (\theta^*_h-\theta^*_0)(A_h)_{yz}.$$
+$$ ((A^*A_h - A_hA^*)\hat{x})_y = |X|E_{xy}(A_h)_{yx}- (A_h)_{yx}|X|E_{xx} = (\theta^*_h-\theta^*_0)(A_h)_{yx}.$$
 :::
 
-Also the column $x$ of $A_0, A_1, \ldots, A_D$ are linearly independent.
+Also the columns $x$ of $A_0, A_1, \ldots, A_D$ are linearly independent.
 
 Hence, the matrices given are linearly independent.
 
@@ -160,16 +160,16 @@ $$p^\ell_{ij}(\theta^*_i-\theta^*_j) - r^\ell_{ij}(\theta^*_0-\theta^*_\ell) = 0
 
 Claim 4. For all $h$ $(1\leq h\leq D)$, for all $i,j$ $(0\leq i,j\leq D)$, for all $w,y\in X$, $(w,y)\in R_h$,
 \begin{equation}
-\sum_{z\in X,(w,z)\in R_i, (y,z)\in R_j}\rho(z)-\sum_{z'\in X, (w,z')\in R_j, (y,z)\in R_i}\rho(z') - r^h_{ij}(\rho(w)-\rho(y))=0. (\#eq:rhozrhoz)
+\sum_{z\in X,(w,z)\in R_i, (y,z)\in R_j}\rho(z)-\sum_{z'\in X, (w,z')\in R_j, (y,z')\in R_i}\rho(z') - r^h_{ij}(\rho(w)-\rho(y))=0. (\#eq:rhozrhoz)
 \end{equation}
 
 _Proof of Claim 4._
-Set $L = \langle \mathrm{LHS}$ of \@ref(eq:rhozrhoz), $\rho(x)\rangle$
+Set $L = \langle \mathrm{LHS}$ of \@ref(eq:rhozrhoz), $\rho(x)\rangle$.
 It suffices to show that $L = 0$.
 
-Note that since $x$ is arbitrary, if $\mathrm{LHS}$ of \@ref(eq:rhozrhoz) is zero.
+Since $x$ is arbitrary and the $\rho(x)$ span $H$, this shows that the $\mathrm{LHS}$ of \@ref(eq:rhozrhoz) is zero.
 \begin{align}
-L & = \sum_{z\in X,(w,z)\in R_i, (y,z)\in R_j}\langle \rho(z), \rho(x)\rangle -\sum_{z'\in X, (w,z')\in R_j, (y,z)\in R_i}\langle\rho(z'),\rho(x)\rangle \\
+L & = \sum_{z\in X,(w,z)\in R_i, (y,z)\in R_j}\langle \rho(z), \rho(x)\rangle -\sum_{z'\in X, (w,z')\in R_j, (y,z')\in R_i}\langle\rho(z'),\rho(x)\rangle \\
 & \qquad - r^h_{ij}\langle \rho(w)-\rho(y), \rho(x)\rangle\\
 & = |X|^{-1}(A_iA^*A_j)_{wy} - |X|^{-1}(A_jA^*A_i)_{wy}-|X|^{-1}\sum_{\ell=1}^Dr^\ell_{ij}(A^*A_\ell - A_\ell A^*)_{wy}\\
 & = |X|^{-1} \text{times $wy$ entry of a matrix known to be zero by Claim 2}\\

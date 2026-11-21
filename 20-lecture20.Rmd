@@ -65,13 +65,13 @@ With the above notation
  & = (A_iA_j)^\top  \\
 & = A_j^\top A_i^\top\\
 & = A_{j'}A_{i'} \\
-& = \sum_{h=0}^D p^{h'}_{j'i'}A_h'.
+& = \sum_{h=0}^D p^{h'}_{j'i'}A_{h'}.
 \end{align}
 
 | $(ii)$ Count the following number,
 \begin{align} 
 & |\{xyz\in X^3 \mid (x,y)\in R_h, (x,z)\in R_i, (z,y)\in R_j\}| \\
-& \quad =  |X|k_hp^h_{ij} = |X|k_jp^j_{i'h} = |X|k^i_{hj'}.
+& \quad =  |X|k_hp^h_{ij} = |X|k_jp^j_{i'h} = |X|k_ip^i_{hj'}.
 \end{align}
 
 | $(iii)$ 
@@ -79,7 +79,7 @@ With the above notation
 \frac{1}{|X|}\sum_{h = 0}^D q^h_{ij} E_{\hat{h}} & = \left(\frac{1}{|X|}\sum_{h=0}^D q^h_{ij}E_h\right)^\top \\
  & = (E_i\circ E_j)^\top  \\
 & = E_j^\top \circ E_i^\top\\
-& = E_{\hat{j}}E_{\hat{i}} \\
+& = E_{\hat{j}}\circ E_{\hat{i}} \\
 & = \frac{1}{|X|}\sum_{h=0}^D q^{\hat{h}}_{\hat{j}\hat{i}}E_{\hat{h}}.
 \end{align}
 
@@ -93,8 +93,8 @@ Compute each one.
 \begin{align}
 \tau(E_i\circ E_j \circ E_{\hat{k}}) & = \mathrm{trace}((E_i\circ E_j)E_k) = \mathrm{trace}\left(\left(\frac{1}{|X|}\sum_{h} q^h_{ij}E_h\right)E_k\right)\\
 & = \mathrm{trace}\left(\frac{1}{|X|} q^k_{ij}E_k\right) = \frac{1}{|X|}m_kq^k_{ij},\\
-\tau(E_{\hat{i}}\circ E_k \circ E_{\hat{j}}) & = \mathrm{trace}((E_{\hat{i}}\circ E_k)E_{\hat{j}}) = \mathrm{trace}\left(\left(\frac{1}{|X|}\sum_{h} q^h_{\hat{i}k}E_h\right)E_{\hat{j}}\right)\\
-& = \mathrm{trace}\left(\frac{1}{|X|} q^j_{\hat{i}k}E_k\right) = \frac{1}{|X|}m_jq^j_{\hat{i}k},\\
+\tau(E_{\hat{i}}\circ E_k \circ E_{\hat{j}}) & = \mathrm{trace}((E_{\hat{i}}\circ E_k)E_j) = \mathrm{trace}\left(\left(\frac{1}{|X|}\sum_{h} q^h_{\hat{i}k}E_h\right)E_j\right)\\
+& = \mathrm{trace}\left(\frac{1}{|X|} q^j_{\hat{i}k}E_j\right) = \frac{1}{|X|}m_jq^j_{\hat{i}k},\\
 \tau(E_k\circ E_{\hat{j}}\circ E_{\hat{i}}) & = \mathrm{trace}((E_k\circ E_{\hat{j}})E_i) = \mathrm{trace}\left(\left(\frac{1}{|X|}\sum_{h} q^h_{k\hat{j}}E_h\right)E_i\right)\\
 & = \mathrm{trace}\left(\frac{1}{|X|} q^i_{k\hat{j}}E_i\right) = \frac{1}{|X|}m_iq^i_{k\hat{j}}.
 \end{align}
@@ -102,7 +102,7 @@ Hence, we have $(iv)$.
 :::
 
 :::{.lemma #vanishing-condition}
-Let $Y = (X, \{R_i\}_{0\leq i\leq D})$ be a commutative scheme. Fix a vertex $x\in X$, and set $E^*_i\equiv E^*_i(x)$ and $A^*_i \equiv A^*(x)$.
+Let $Y = (X, \{R_i\}_{0\leq i\leq D})$ be a commutative scheme. Fix a vertex $x\in X$, and set $E^*_i\equiv E^*_i(x)$ and $A^*_i \equiv A^*_i(x)$.
 Then the following hold.
 
 | $(i)$ $E^*_iA_jE^*_k = O$ if and only if $p^k_{ij} = 0$ for $0\leq i,j,k\leq D$.
@@ -120,19 +120,19 @@ Hence this submatrix is zero if and only if there exists no $y,z\in X$ such that
 
 | $(ii)$ The sum of the squares of norms of entries in $E_iA^*_jE_k$
 \begin{align}
-& = \tau((E_iA^*_jE_k)\circ (\overline{E_jA^*_jE_k}))\\
-& = \mathrm{trace}(E_iA^*_jE_k(\overline{E_jA^*_jE_k})^\top)\\
+& = \tau((E_iA^*_jE_k)\circ (\overline{E_iA^*_jE_k}))\\
+& = \mathrm{trace}(E_iA^*_jE_k(\overline{E_iA^*_jE_k})^\top)\\
 & = \mathrm{trace}(E_iA^*_jE_kA^*_{\hat{j}}E_i)\\
 & = \mathrm{trace}(E_iA^*_jE_kA^*_{\hat{j}}) && \text{as $\mathrm{trace}(XY) = \mathrm{trace}(YX)$}\\
 & = \sum_{y\in X}(E_iA^*_jE_kA^*_{\hat{j}})_{yy}\\
 & = \sum_{y\in X}\left(\sum_{z\in X} (E_i)_{yz}(A^*_j)_{zz}(E_k)_{zy}(A^*_{\hat{j}})_{yy}\right)\\
 & = \sum_{y\in X}\left(\sum_{z\in X} (E_{\hat{i}})_{zy}(|X|(E_j)_{xz})(E_k)_{zy}(|X|(E_j)_{yx})\right)\\
-& = |X|^2(E_j(E_{\hat{i}}\circ E_k))E_j)_{xx}\\
+& = |X|^2(E_j(E_{\hat{i}}\circ E_k)E_j)_{xx}\\
 & = |X|q^j_{\hat{i}k}(E_j)_{xx}\\
 & = q^j_{\hat{i}k}m_j \\
 & = m_kq^k_{ij}.
 \end{align}
-Note that since $|X|E_j = q_j(0)A_0 + q_j(1)A_1 + \cdots q_j(D)A_D$, 
+Note that since $|X|E_j = q_j(0)A_0 + q_j(1)A_1 + \cdots + q_j(D)A_D$, 
 $$(E_j)_{xx} = \frac{1}{|X|}q_j(0) = \frac{m_j}{|X|}.$$
 Thus, we have $(ii)$.
 :::
@@ -142,7 +142,7 @@ For any commutative scheme $Y = (X, \{R_i\}_{0\leq i\leq D})$, $q^h_{ij}$ is a n
 :::
 
 :::{.proof}
-Since $q^h_{ij}m_h$ is a non-negative real by the proof of Lemma \@ref(lem:vanishing-condition) $(ii)$.
+Indeed, $q^h_{ij}m_h$ is a non-negative real by the proof of Lemma \@ref(lem:vanishing-condition) $(ii)$.
 
 Note that $m_h$ is a positive integer.
 :::
@@ -156,7 +156,7 @@ Pick a vector $v\in V$ with
 $$v = \sum_{x\in X}\alpha_x \hat{x}.$$
 View $v$ as a function
 $$v: X\longrightarrow \mathbb{C} \quad (x\mapsto \alpha_x).$$
-View $V$ as the set of all functions $V \longrightarrow \mathbb{C}$. Then the vector space $V$ together with product of functions is a $\mathbb{C}$-algebra.
+View $V$ as the set of all functions $X \longrightarrow \mathbb{C}$. Then the vector space $V$ together with product of functions is a $\mathbb{C}$-algebra.
 
 For 
 $$v = \sum_{x\in X}\alpha_x \hat{x}, \quad w = \sum_{x\in X}\beta_x \hat{x} \in V,$$
@@ -171,5 +171,5 @@ With the above notation,
 
 | $(ii)$ $E_iV\circ E_jV \subseteq \sum_{h: q^h_{ij}\neq 0} E_hV$ for all $0\leq i, j\leq D$.
 
-| $(iii)$ $E_h(E_i\circ E_jV) = E_hV$ if $q^h_{ij}\neq 0$ for all $0\leq h, i, j\leq D$.
+| $(iii)$ $E_h(E_iV\circ E_jV) = E_hV$ if $q^h_{ij}\neq 0$ for all $0\leq h, i, j\leq D$.
 :::

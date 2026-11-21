@@ -1,7 +1,7 @@
 # Dual Endpoint {#lec36}
 **Wednesday, April 28, 1993** 
 
-Let $\Gamma = (X, E)$ be distance regular of diameter $D\geq 3$, $Q$-polynomial with respect to $E_0, E_1, \ldots, E_D$. Fix a vertex $x\in X$, write $E^*_i\equiv E^*_i(x)$, $T\equiv T(x)$. 
+Let $\Gamma = (X, E)$ be distance-regular of diameter $D\geq 3$, $Q$-polynomial with respect to $E_0, E_1, \ldots, E_D$. Fix a vertex $x\in X$, write $E^*_i\equiv E^*_i(x)$, $T\equiv T(x)$. 
 
 Let $W$ be an irreducible $T$-module of diameter $d$. 
 
@@ -9,7 +9,7 @@ Recall that the endpoint
 $$r(W) = \min\{i\mid 0\leq i\leq D, E^*_iW \neq 0\}.$$
 
 :::{.definition #dual-endpoint}
-The dual endpoint \index{dual endpoint} (with respect to above ordering $E_0, E_1, \ldots, E_D$),
+The dual endpoint \index{dual endpoint} (with respect to the above ordering $E_0, E_1, \ldots, E_D$),
 $$r^*(W) = \min\{i\mid 0\leq i\leq D, E_iW \neq 0\}.$$
 $$r(W) = 0 \leftrightarrow r^*(W) = 0 \leftrightarrow W: \text{ trivial $T$-module},$$
 (by Lemma \@ref(lem:orthogonality)).
@@ -18,7 +18,7 @@ $$r(W) = 0 \leftrightarrow r^*(W) = 0 \leftrightarrow W: \text{ trivial $T$-modu
 Suppose $W$ is thin. Then $W$ is dual thin.
 (See Corollary \@ref(cor:thin-is-dualthin).)
 
-Moreover, $\{i\mid E_iW \neq 0\}$ is a subinterval of $\{0, 1, \ldots, D\}$. (same proof as for distance regular)
+Moreover, $\{i\mid E_iW \neq 0\}$ is a subinterval of $\{0, 1, \ldots, D\}$. (same proof as for distance-regular)
 
 :::{.hs}
 **HS MEMO**
@@ -26,11 +26,11 @@ Moreover, $\{i\mid E_iW \neq 0\}$ is a subinterval of $\{0, 1, \ldots, D\}$. (sa
 Dual version of Lemma \@ref(lem:irreducible).
 
 **Lemma \@ref(lem:irreducible)'.** 
-Let $A^* \equiv A^*_1(x)$, $W$ an irreducible $T$-moduoe, and $d^* = \{i\mid E_iW\neq 0\}|-1$.
+Let $A^* \equiv A^*_1(x)$, $W$ an irreducible $T$-module, and $d^* = |\{i\mid E_iW\neq 0\}|-1$.
 
-| $(i)$ $E_iA^*E_j = 0 \; \text{ if }\; |i-j|>1, \; E_iA^*E_j\neq 0 \; \text{ if }\; |i-j| = 1, \quad 0\leq i,j\leq d^*(x)$.
-| $(ii)$ $A^*E_jW \subseteq E_{j-1}W + E_jW + E_{j+1}W$, $0\leq j \leq d^*(x)$. $(E_iW = 0 \; \text{ if } i<j$ or $i > d^*(x)$.)
-| $(iii)$ $E_jW \neq 0$ if $r^*\leq j \leq r^*+d^*$, $E_jW=0$ if $0\leq j\leq r^*$ or $r^*+d^* < j \leq d^*(x)$.
+| $(i)$ $E_iA^*E_j = 0 \; \text{ if }\; |i-j|>1, \; E_iA^*E_j\neq 0 \; \text{ if }\; |i-j| = 1, \quad 0\leq i,j\leq D$.
+| $(ii)$ $A^*E_jW \subseteq E_{j-1}W + E_jW + E_{j+1}W$, $0\leq j \leq D$. $(E_iW = 0 \; \text{ if } i<0$ or $i > D$.)
+| $(iii)$ $E_jW \neq 0$ if $r^*\leq j \leq r^*+d^*$, $E_jW=0$ if $0\leq j< r^*$ or $r^*+d^* < j \leq D$.
 | $(iv)$ $E_iA^*E_jW \neq 0$, if $|i-j| = 1$ $(r^* \leq i,j \leq r^*+d^*)$.
 
 _Proof of \@ref(lem:irreducible)'_
@@ -55,7 +55,7 @@ A^*E_jW & = \left(\sum_{i=0}^{D}E_i\right)A^*E_jW\\
 | $(iii)$ Suppose $E_jW = 0$ for some $j\in \{r^*, \ldots, r^*+d^*\}$. Then $r^* < j$ by the definition of $r^*$. Set
 $$\widetilde{W} = E_{r^*}W + E_{r^*+1}W + \cdots + E_{j-1}W.$$
 Observe $0\subsetneq \widetilde{W} \subsetneq W$. 
-Also $A\widetilde{W} \subseteq \widetilde{W}$ by $(ii)$, and $E_i^*\widetilde{W} \subseteq \widetilde{W}$ for every $i$ by construction.
+Also $A^*\widetilde{W} \subseteq \widetilde{W}$ by $(ii)$, and $E_i\widetilde{W} \subseteq \widetilde{W}$ for every $i$ by construction.
 
 Thus, $T\widetilde{W} \subseteq \widetilde{W}$, contradicting $W$ being irreducible.
 
@@ -67,25 +67,25 @@ is $T$-invariant. Moreover, $0 \subsetneq \widetilde{W} \subsetneq W$ in both ca
 
 |
 | 
-**Definition.** Let $W$ be an irreducible dual thin $T$-module with dual endpoint $r^*$ and diameter $d^*$.
+**Definition.** Let $W$ be an irreducible dual thin $T$-module with dual endpoint $r^*$ and dual diameter $d^*$.
 
 Let $a^*_i = a^*_i(W)\in\mathbb{C}$ satisfying
 $$E_{r^*+i}A^*E_{r^*+i}|_{E_{r^*+i}W} = a^*_i\cdot 1|_{E_{r^*+i}W}.$$
 Let $x^*_i = x^*_i(W)\in \mathbb{C}$ satisfying
-$$E_{r^*+i-1}A^*E_{r^*+i}A^*E_{r^*+i-1}|_{E_{r^*+i-1}W} = x^*_i\cdot 1||_{E_{r^*+i-1}W}.$$
+$$E_{r^*+i-1}A^*E_{r^*+i}A^*E_{r^*+i-1}|_{E_{r^*+i-1}W} = x^*_i\cdot 1|_{E_{r^*+i-1}W}.$$
 
 **Lemma \@ref(lem:thin-module-structure)'.** 
-With above notation, the following hold.
+With the above notation, the following hold.
 
 | $(i)$ $a^*_i\in \mathbb{R}$ for all $i\in \{0, \ldots, d^*\}$.
 
 | $(ii)$ $x^*_i\in \mathbb{R}^{>0}$ for all $i\in \{1, \ldots, d^*\}$.
 
-| $(iii)$ Pick $0\neq w^*_0\in E^*_{r^*}W$. Set $w^*_i = E_{r^*+i}{A^*}^iw^*_0$ for all $i$. Then  
+| $(iii)$ Pick $0\neq w^*_0\in E_{r^*}W$. Set $w^*_i = E_{r^*+i}{A^*}^iw^*_0$ for all $i$. Then  
 
 | $\quad (iiia)$ $w^*_0, w^*_1, \ldots, w^*_{d^*}$ is a basis for $W$, $w^*_{-1} = w^*_{d^*+1} = 0$.  
 
-| $\quad (iiib)$ $A^*w^*_i = w^*_{i+1} + a^*_iw_{i} + x^*_iw^*_{i-1}$ for all $i\in \{0, \ldots, d^*\}$.
+| $\quad (iiib)$ $A^*w^*_i = w^*_{i+1} + a^*_iw^*_{i} + x^*_iw^*_{i-1}$ for all $i\in \{0, \ldots, d^*\}$.
 
 | $(iv)$ Define $p^*_0, p^*_1, \ldots, p^*_{d^*+1}\in \mathbb{R}[\lambda]$ by
 $$p^*_0 = 1, \quad \lambda p^*_i = p^*_{i+1} + a^*_i p^*_i + x^*_i p^*_{i-1} \quad \text{ for all } i\in \{0, \ldots, d^*\}, \quad p^*_{-1} = 0.$$
@@ -101,22 +101,22 @@ _Proof of Lemma \@ref(lem:thin-module-structure)'_
 $$A^* = \sum_{j=0}^D\theta^*_jE^*_j, \quad \theta^*_j = q_1(j) = |X|(E_1)_{xy}\in \mathbb{R}, \; \partial(x,y)=j.$$
 $a_i^*$ is an eigenvalue of a real symmetric matrix $E_{r^*+i}A^*E_{r^*+i}$.
 
-| $(ii)$ Let $B = E^*_{r^*+i}AE^*_{r^*+i-1}$. 
-Then, $x^*_i$ is an eigenvalue of a real symmetrix matrix $B^\top B$.
-Let $\mathrm{Span}\{v_{i-1}\} = E_{r^*+i-1}W$, and $Bv_{i-1}\neq 0$ by Lemma \@ref(lem:irreducible)' $(iv)$ for $i\in \{1, \ldots, d^*\}$. So, $x_i\in \mathbb{R}^{>0}$ for all $i\in \{1, \ldots, d^*\}$.
+| $(ii)$ Let $B = E_{r^*+i}A^*E_{r^*+i-1}$. 
+Then, $x^*_i$ is an eigenvalue of a real symmetric matrix $B^\top B$.
+Let $\mathrm{Span}\{v_{i-1}\} = E_{r^*+i-1}W$, and $Bv_{i-1}\neq 0$ by Lemma \@ref(lem:irreducible)' $(iv)$ for $i\in \{1, \ldots, d^*\}$. So, $x^*_i\in \mathbb{R}^{>0}$ for all $i\in \{1, \ldots, d^*\}$.
 
 | $(iiia)$ Observe
-$$w^*_i = E_{r^*+i}A^*E^*_{r^*+i-1}w^*_{i-1} \quad \text{ for all }i\in \{1, \ldots, d^*\}.$$
+$$w^*_i = E_{r^*+i}A^*E_{r^*+i-1}w^*_{i-1} \quad \text{ for all }i\in \{1, \ldots, d^*\}.$$
 So $w^*_i \neq 0$ for all $i\in \{1, \ldots, d^*\}$ by Lemma \@ref(lem:irreducible)' $(iv)$.
 
 Hence,
-$$W = \mathrm{Span}(w^*_0, \ldots, w^*_d)$$
+$$W = \mathrm{Span}(w^*_0, \ldots, w^*_{d^*})$$
 by Lemma \@ref(lem:irreducible)' $(iii)$.
 
 $(iiib)$ We have that
 \begin{align}
 A^*w^*_i & = E_{r^*+i+1}A^*w^*_i + E_{r^*+i}A^*w^*_i + E_{r^*+i-1}A^*w^*_i\\
-& = w^*_{i+1} + E_{r^*+i}A^*E_{r^*+i}w^*_i + E_{r^*+i-1}A^*E_{r^*+i}A^*E_{r^*+i-1}w_{i-1}\\
+& = w^*_{i+1} + E_{r^*+i}A^*E_{r^*+i}w^*_i + E_{r^*+i-1}A^*E_{r^*+i}A^*E_{r^*+i-1}w^*_{i-1}\\
 & = w^*_{i+1} + a^*_iw^*_{i} + x^*_iw^*_{i-1}.
 \end{align}
 
@@ -125,10 +125,10 @@ $$p^*_{i+1}(A^*)w^*_0 = (A^*-a^*_iI)w^*_i - x^*_iw^*_{i-1} = w^*_{i+1}.$$
 
 $(ivb)$ By definition,
 $$p^*_{d^*+1}(A^*)w^*_0 = 0.$$
-Since $W = \{p(A^*)w^*_0\mid p\in \mathbb{C}[\lambda]\}$, $p^*_{d^*+1}(A^*)W = 0$, and $p^*_{d^*+1}$ is a minimal polynomial, as $w^*_0, w^*_1, \ldots, w^*_{d^*}$ is a basis of $W$.
+Since $W = \{p(A^*)w^*_0\mid p\in \mathbb{C}[\lambda]\}$, $p^*_{d^*+1}(A^*)W = 0$, and $p^*_{d^*+1}$ is the minimal polynomial, as $w^*_0, w^*_1, \ldots, w^*_{d^*}$ is a basis of $W$.
 
 **Corollary \@ref(cor:thin-is-dualthin)'.** 
-With the notation above, let $W$ be a dualthin irreducible $T$-module with dual endpoint $r^*(W)$, and dual diameter $d^*$. Then,
+With the notation above, let $W$ be a dual thin irreducible $T$-module with dual endpoint $r^*(W)$, and dual diameter $d^*$. Then,
 
 | $(i)$ $W$ is thin,
 
@@ -136,7 +136,7 @@ With the notation above, let $W$ be a dualthin irreducible $T$-module with dual 
 
 _Proof of Corollary \@ref(cor:thin-is-dualthin)'_
 
-Set as in Lemma {\@ref(lem:irreducible)}'.
+Set as in Lemma \@ref(lem:thin-module-structure)'.
 $$w^*_i = p^*_i(A^*)w^*_0 \in E_{r^*+i}W.$$
 Then, $w^*_0, w^*_1, \ldots, w^*_{d^*}$ is a basis for $W$. We have $W = M^*w^*_0$.
 
@@ -165,7 +165,7 @@ there are at most $3$ thin irreducible $T$-modules with $r(W) =1$ and $r^*(W)=1$
 
 there are at most $1$ thin irreducible $T$-module with $r(W) = 1$ and $r^*(W)=2$,
 
-there are none thin irreducible $T$-modules with $r(W) = 1$ and $r^*(W) > 2$.
+there are no thin irreducible $T$-modules with $r(W) = 1$ and $r^*(W) > 2$.
 
 By dual argument, 
 
@@ -173,10 +173,10 @@ there are at most $3$ thin irreducible $T$-modules with $r^*(W) =1$ and $r(W)=1$
 
 there are at most $1$ thin irreducible $T$-module with $r^*(W) = 1$ and $r(W)=2$,
 
-there are none thin irreducible $T$-modules with $r%*(W) = 1$ and $r(W) > 2$.
+there are no thin irreducible $T$-modules with $r^*(W) = 1$ and $r(W) > 2$.
 
 :::{.conjecture #q-polynomial}
-Let $\Gamma = (X, E)$ be a thin distance regular graph of diameter $D\geq 3$. Let $E_1$ be any primitive idempotent not equal to $E_0$. 
+Let $\Gamma = (X, E)$ be a thin distance-regular graph of diameter $D\geq 3$. Let $E_1$ be any primitive idempotent not equal to $E_0$. 
 
 Then the following are equivalent.
 
@@ -187,7 +187,7 @@ Then the following are equivalent.
 
 
 :::{.conjecture #unimodality}
-Let $\Gamma = (X, E)$ be distance regular of diameter $D\geq 3$, $Q$-polynomial with respect to $E_0, E_1, \ldots, E_D$. 
+Let $\Gamma = (X, E)$ be distance-regular of diameter $D\geq 3$, $Q$-polynomial with respect to $E_0, E_1, \ldots, E_D$. 
 Fix a vertex $x\in X$, and write $E^*_i\equiv E^*_i(x)$, $T\equiv T(x)$. Let $W$ denote an irreducible $T$-module with endpoint $r$, dual endpoint $r^*$, diameter $d$ and dual diameter $d^*$.
 
 Then the following hold.
@@ -202,13 +202,13 @@ $$1 = \dim E_{r^*}W \leq \dim E_{r^*+1}W \leq \cdots \leq \dim E_{s^*}W \geq \cd
 :::
 
 
-Let $\Gamma = (X, E)$ be distance regular of diameter $D\geq 3$, $Q$-polynomial with respect to $E_0, E_1, \ldots, E_D$. Fix a vertex $x\in X$, write $E^*_i\equiv E^*_i(x)$ and $T \equiv T(x)$. Let $W$ denote an irreducible module with endpoint $1$.
+Let $\Gamma = (X, E)$ be distance-regular of diameter $D\geq 3$, $Q$-polynomial with respect to $E_0, E_1, \ldots, E_D$. Fix a vertex $x\in X$, write $E^*_i\equiv E^*_i(x)$ and $T \equiv T(x)$. Let $W$ denote an irreducible module with endpoint $1$.
 
 
 :::{.conjecture #not-thin}
 The following are equivalent.
 
-| $(i)$ The sequence $\dim E^*_1W, \dim E^*_2W, \ldots, E^*_DW$ equals
+| $(i)$ The sequence $\dim E^*_1W, \dim E^*_2W, \ldots, \dim E^*_DW$ equals
 $$1, 2, 2, \ldots, 2, 1.$$
 
 | $(ii)$ $v, Av, A_2v, \ldots, A_{D-2}v$, $v^*, A^*v^*, A^*_2v^*, \ldots, A^*_{D-2}v^*$ is a basis for $W$, where 
@@ -220,12 +220,12 @@ $$v^+_i = E^*_iA_{i-1}v, \quad v^-_i = E^*_iA_{i+1}v.$$
 
 
 **Problem.** 
-Let $B$ denote the orthogonal basis for $W$ obtained by applying the Gram-Schemidt procedure to be basis in $(iv)$.
+Let $B$ denote the orthogonal basis for $W$ obtained by applying the Gram-Schmidt procedure to the basis in $(iv)$.
 
-Find the matrix representation $A$ with respect to this basis.
+Find the matrix representing $A$ with respect to this basis.
 
-I believe the entries are necely foctorable expressions in the basic variables,
-$$q, s, s^*, r_1, r_1.$$
+I believe the entries are nicely factorable expressions in the basic variables,
+$$q, s, s^*, r_1, r_2.$$
 (Hint: use Theorem \@ref(thm:dim5).)
 
 If not, find some nice basis for $W$, and find the matrices representing $A$, $A^*$ with respect to this basis. 
@@ -234,4 +234,4 @@ Perhaps, some orthogonal basis based on $(iii)$.
 
 Algebraically, everything is determined by the intersection numbers and $a_0(W)$.
 
-Combinatorically, certain quantities mulst be nonnegative integers. Does this give some new bounds, or other information on $a_0(W)$?
+Combinatorially, certain quantities must be nonnegative integers. Does this give some new bounds, or other information on $a_0(W)$?

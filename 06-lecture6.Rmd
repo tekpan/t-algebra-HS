@@ -5,13 +5,13 @@
 
 | $(iii)$ Let $r = r'$, 
 
-$w_0,\ldots, w_d$: a basis for $W$ with $w_i\in E^*_iW$, and 
+$w_0,\ldots, w_d$: a basis for $W$ with $w_i\in E^*_{r+i}W$, and 
 
-$w_0', \ldots, w_d'$: a basis for $W'$ with $w_i'\in E^*_iW'$.
+$w_0', \ldots, w_d'$: a basis for $W'$ with $w_i'\in E^*_{r+i}W'$.
 
 Then $d = D-2r = D-2r' = d'$, and
 $$\sigma: W \to W' \quad (w_i\mapsto w_i')$$
-is an isomorsphism of $T$-modules by $(i)$.
+is an isomorphism of $T$-modules by $(i)$.
 
 If $r\neq r'$, then 
 $$d = D-2r \neq D-2r' = d',$$
@@ -54,16 +54,16 @@ Recall that
 
 | $(a)$ $[L, R] = A^*$,
 
-| $(b)$ $[A^*, L] = wL$, 
+| $(b)$ $[A^*, L] = 2L$, 
 
 | $(c)$ $[A^*, R] = -2R$, 
 
 and $A = L + R$.
 
-Write $(a) - (c)$ in terms of $A$ and $A^*$, we have,
+Writing $(a) - (c)$ in terms of $A$ and $A^*$, we have
 $$[A, A^*] = [L, A^*]+ [R, A^*] = 2(R-L).$$
 $$\begin{cases} R + L & = A\\
-R-L & = [A,A^*]/2. \end{cases}.$$
+R-L & = [A,A^*]/2. \end{cases}$$
 Hence, 
 \begin{align}
 R & = \frac{1}{4}(2A + [A, A^*]) \quad \text{ and }\\
@@ -91,33 +91,33 @@ By $(a)$,
 \begin{align}
 -16A^* & = [2A + [A, A^*], 2A - [A, A^*]]\\
 & = (2A + [A, A^*])(2A - [A, A^*]) - (2A - [A,A^*])(2A + [A, A^*])\\
-& = [4A^2 - 2A[A, A^*] + [A, A^*](2A) - [A,A^*]^2\\
+& = 4A^2 - 2A[A, A^*] + [A, A^*](2A) - [A,A^*]^2\\
 & \quad - 4A^2 - 2A[A, A^*] + [A, A^*](2A) + [A, A^*]^2\\
 & = -4A^2A^* + 4AA^*A + 4AA^*A - 4A^*A^2.
 \end{align}
 So, 
 $$A^2A^* - 2AA^*A + A^*A^2 - 4A^* = 0.$$
 
-Claim: $E_i^*A^*E_j = 0$ if $|i-j| \neq 1$ for $0\leq i, j\leq D$.
+Claim: $E_iA^*E_j = 0$ if $|i-j| \neq 1$ for $0\leq i, j\leq D$.
 
 _Pf._ We have,
 \begin{align}
 0 & = E_i(A^2A^* - 2AA^*A + A^*A^2 - 4A^*)E_j\\
 & = E_iA^*E_j(\theta_i^2 - 2\theta_i\theta_j + \theta_j^2 - 4)\\
-& \quad (AE_j = \theta_jE_j, \; E_iA = (AE_j)^\top = (\theta_iE_i)^\top = \theta_iE_i)\\
+& \quad (AE_j = \theta_jE_j, \; E_iA = (AE_i)^\top = (\theta_iE_i)^\top = \theta_iE_i)\\
 & = E_iA^*E_j(\theta_i - \theta_j -2)(\theta_i - \theta_j + 2)\\
 & = E_iA^*E_j(D-2i - (D-2j)-2)(D-2i - (D-2j) + 2)\\
 & \quad (\theta_k = D-2k)\\
 & = E_iA^*E_j \cdot 4(i-j+1)(i-j-1)
 \end{align}
 and $i-j+1 \neq 0$, $i-j-1\neq 0$.
-Hence, $E_i^*A^*E_j = 0$.
+Hence, $E_iA^*E_j = 0$.
 
-Now define "dual raising matrix",
+Now define the "dual raising matrix",
 $$R^* = \sum_{i=0}^D E_{i+1}A^*E_i.$$
 So,
 $$R^*E_iV \subseteq E_{i+1}V, \quad (0\leq i\leq D, \; E_{D+1}V = 0).$$
-Define "dual lowering matrix"
+Define the "dual lowering matrix"
 $$L^* = \sum_{i=0}^D E_{i-1}A^*E_i.$$
 Then 
 $$L^*E_iV \subseteq E_{i-1}V \quad (0\leq i\leq D, \; E_{-1}V = 0).$$
@@ -138,7 +138,7 @@ $(b)$
 \begin{align}
 AL^* - L^*A & = \sum_{i=0}^D(AE_{i-1}A^*E_i - E_{i-1}A^*E_iA)\\
 & = \sum_{i=0}^D E_{i-1}A^*E_i (\theta_{i-1} - \theta_i)\\
-& \quad (\theta_k = D-2k, \quad \theta_{i-1}- \theta_i = 2I - 2(i-1) = 2\\
+& \quad (\theta_k = D-2k, \quad \theta_{i-1}- \theta_i = 2i - 2(i-1) = 2)\\
 & = 2L^*.
 \end{align}
 
@@ -159,7 +159,7 @@ $(a)$ We have, by $(b)$, $(c)$
 [A, A^*] = [A, L^*] + [A, R^*] = 2(L^* - R^*).
 \end{equation}
 Since $A^* = L^* + R^*$, 
-$$R^* = \frac{2A^* + [A^*, A]}{4}, \quad L^* = \frac{2A^* - [A^* - A]}{4}.$$
+$$R^* = \frac{2A^* + [A^*, A]}{4}, \quad L^* = \frac{2A^* - [A^*, A]}{4}.$$
 Now $(a)$ is seen to be equivalent to \@ref(eq:6-2) upon evaluation. 
 This proves Claim 2.
 
@@ -167,7 +167,7 @@ This proves Claim 2.
 **HS MEMO**
 
 \begin{align}
-[L^*,R^*] & = \frac{1}{16}((2A^*-[A^*,A])(2A^*+[A^*,A]) - (2A^*+[A^*,A])(2A^*- [A,A^*]))\\
+[L^*,R^*] & = \frac{1}{16}((2A^*-[A^*,A])(2A^*+[A^*,A]) - (2A^*+[A^*,A])(2A^*- [A^*,A]))\\
 & = \frac{1}{16}(4{A^*}^2 + 2A^*[A^*,A] - [A^*,A]2A^* - [A^*,A]^2 - 4{A^*}^2\\
 & \qquad + 2A^*[A^*,A] - [A^*,A]2A^* + [A^*,A]^2)\\
 & = \frac{1}{4}({A^*}^2A - 2A^*AA^* + A{A^*}^2)\\
@@ -176,14 +176,14 @@ This proves Claim 2.
 by \@ref(eq:6-2).
 :::
 
-Now apply same argument as for \@ref(eq:6-1), \@ref(eq:6-2) of Theorem \@ref(thm:hd2-modules) and observe $A^*$ has $D+1$ distinct eigenvalues. So,
+Now apply the same argument as for \@ref(eq:6-1), \@ref(eq:6-2) of Theorem \@ref(thm:hd2-modules) and observe $A^*$ has $D+1$ distinct eigenvalues. So,
 $$A^* = \sum_{i=0}^D(D-2i)E^*_i$$
 generates 
 $$M^* = \mathrm{Span}(E^*_0, \ldots, E^*_D).$$
-Hence, $E_0, \ldots, E_D, \; A^*$ generates $T$.
+Hence, $E_0, \ldots, E_D, \; A^*$ generate $T$.
 
 Take an irreducible $T$-module $W$ with endpoint $r$ with $0\leq r \leq D/2$. Set
-$t = \min\{i\mid E_iW\}$.
+$t = \min\{i\mid E_iW\neq 0\}$.
 
 Pick $0\neq w_0^*\in E_tW$. Set
 $$w_i^* = \frac{1}{i!}{R^*}^i w_0^* \in E_{t+i}W \quad \text{for all }i.$$
@@ -220,7 +220,7 @@ For any graph $\Gamma = (X, E)$, pick a vertex $x\in X$, and set $E^*_i \equiv E
 
 | $(i)$ An irreducible $T$-module $W$ is thin \index{thin} if $\dim E_i^*W \leq 1$ for every $i$.
 
-| $(ii)$ $\Gamma$ is thin with respet to $x$, if every irreducible $T(x)$-module is thin,
+| $(ii)$ $\Gamma$ is thin with respect to $x$, if every irreducible $T(x)$-module is thin.
 
 | $(iii)$ An irreducible $T$-module $W$ is dual thin \index{dual thin} if $\dim E_iW \leq 1$ for every $i$.
 
@@ -234,13 +234,13 @@ For any graph $\Gamma = (X, E)$, pick a vertex $x\in X$, and set $E^*_i \equiv E
 | 
 
 :::{.definition #q-polynomial-graph}
-With above notation, write $D \equiv D(x)$.
+With the above notation, write $D \equiv D(x)$.
 
 | $(i)$ An ordering $E_0, E_1, \ldots, E_R$ of primitive idempotents of $\Gamma$ is restricted \index{restricted} if $E_0$ corresponds to the maximal eigenvalue.
 
 Fix a restricted ordering,
 
-| $(ii)$ $\Gamma$ is $Q$-polynomial with respect to $x$, above ordering if there exists $A^* \equiv A^*(x)$ such that
+| $(ii)$ $\Gamma$ is $Q$-polynomial with respect to $x$ and the above ordering if there exists $A^* \equiv A^*(x)$ such that
 
 | $\quad (a)$ $E_0^*V, \ldots, E_D^*V$ are the maximal eigenspaces for $A^*$.
 
@@ -248,7 +248,7 @@ Fix a restricted ordering,
 :::
 
 |
-| Observe $H(D,2)$ is $Q$-polynomial with respect to the natural ordering of the idempotents and every vetex.
+| Observe $H(D,2)$ is $Q$-polynomial with respect to the natural ordering of the idempotents and every vertex.
 |   
 | 
 

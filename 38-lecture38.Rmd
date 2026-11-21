@@ -33,7 +33,7 @@ Since $v\in E^*_1(y)V$, we find
 & = E^*_4(y)A^2\left(\sum_{h=0}^D E^*_{h,2}\right)AE^*_{11}v\\
 & = E^*_4(y)A^2(E^*_{12} + E^*_{22})AE^*_{11}v\\
 & = E^*_4(y)A^2E^*_{12}AE^*_{11}v \\
-& = E^*_{34}(y)A^2E^*_{12}AE^*_{11}v,
+& = E^*_{34}A^2E^*_{12}AE^*_{11}v,
 \end{align}
 by \@ref(eq:existence-of-v). 
 This proves the claim.
@@ -122,7 +122,7 @@ The second term is zero.
 0 & = E^*_{21}\delta_{22}\\
 & = E^*_{21}R(\delta^+_{11} + \Psi \hat{y})\\
 & = E^*_{21}AE^*_{11}\delta^+_{11} + \Psi E^*_{21}AE^*_{10}\hat{y}\\
-& = E^*_{21}AE^*_{11} + \Psi \delta_{21}.
+& = E^*_{21}AE^*_{11}\delta^+_{11} + \Psi \delta_{21}.
 \end{align}
 
 | $(iii)$ We have
@@ -143,8 +143,8 @@ $$\langle \delta^+_{11}, \delta_{11}\rangle = b_1^{-1}p^{1}_{22}- \Psi = \frac{a
 $$b^{-1}_1p^1_{22} = b^{-1}_1\frac{k_1}{k_1}p^1_{22} = b^{-1}_1\frac{1}{k_1}k_2p^{2}_{12} = b^{-1}_1\frac{b_1}{c_2}a_2 = \frac{a_2}{c_2}.$$
 :::
 
-| $(iv)$ Interchanging roles of $x, y$ above, we find there exists $\delta^{+'}_{11}\in E^*_{11}V$ such that
-$$R(y)^{-1}E^*_2(y)A_2E^*_1(y)\hat{x} = \delta^{+'}_{11} + \Psi(y,x)\hat{y}.$$
+| $(iv)$ Interchanging the roles of $x, y$ above, we find there exists $\delta^{+'}_{11}\in E^*_{11}V$ such that
+$$R(y)^{-1}E^*_2(y)A_2E^*_1(y)\hat{x} = \delta^{+'}_{11} + \Psi(y,x)\hat{x}.$$
 
 Then,
 $$E^*_{22}AE^*_{11}(\delta^{+'}_{11}) = \delta_{22}.$$

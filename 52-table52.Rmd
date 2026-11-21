@@ -50,7 +50,7 @@ We list Definitions, Theorems, Lemmas, etc. with the numbers in the original han
 | 9       | Lemma \@ref(lem:thin-module-structure)              | Lemma 15       |
 |         | Corollary \@ref(cor:thin-is-dualthin)               | Corollary 16   |
 |         | Lemma \@ref(lem:measure-wi)                         | Lemma 17       |
-|         | Definiton \@ref(def:measure)                        | Definition     |
+|         | Definition \@ref(def:measure)                        | Definition     |
 | 10      | Lemma \@ref(lem:orthogonality)                      | Lemma 18       |
 |         | Lemma \@ref(lem:determined-by-m)                    | Lemma 19       |
 |         | Corollary \@ref(cor:isomorphic)                     | Corollary 20   |
@@ -77,7 +77,7 @@ We list Definitions, Theorems, Lemmas, etc. with the numbers in the original han
 |         | Example \@ref(exm:centralizer-alg)                  | Example 3      |
 | 18      | Lemma \@ref(lem:dr-scheme)                          | Lemma 33       |
 | 19      | Lemma \@ref(lem:ei)                                 | Lemma 34       |
-|         | Definition \@ref(def:dual-bose-mesner)              | Definition:    |
+|         | Definition \@ref(def:dual-bose-mesner)              | Definition    |
 | 20      | Lemma \@ref(lem:pij-qij)                            | Lemma 34-a     |
 |         | Lemma \@ref(lem:phijqhij)                           | Lemma 34-b     |
 |         | Lemma \@ref(lem:vanishing-condition)                | Lemma 35       |
@@ -91,9 +91,9 @@ We list Definitions, Theorems, Lemmas, etc. with the numbers in the original han
 | 23      | Theorem \@ref(thm:q-polynomial-space)               | Theorem 42     |
 |         | Definition \@ref(def:representation-of-y)           | Definition     |
 |         | Example \@ref(exm:representation-of-hd2)            | Example        |
-| 24      | Definition \@ref(def:equivalence-of-representation) | Definition     |
+|         | Definition \@ref(def:equivalence-of-representation) | Definition     |
 |         | Lemma \@ref(lem:rep-of-scheme)                      | Lemma 43       |
-|         | Definition \@ref(def:q-poly-representation)         | Definition     |
+| 24      | Definition \@ref(def:q-poly-representation)         | Definition     |
 |         | Theorem \@ref(thm:balanced)                         | Theorem 44     |
 | 26      | Corollary \@ref(cor:beta)                           | Corollary 45   |
 |         | Lemma \@ref(lem:dual-eigenvalues)                   | Lemma 46       |

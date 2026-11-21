@@ -4,7 +4,7 @@
 Given graphs $\Gamma = (X, E)$ and $\Gamma' = (X', E')$.
 
 :::{.definition #isom}
-A map $\sigma: X \to X'$ is an _isomorphism_\index{isomorophism} of graphs whenever;
+A map $\sigma: X \to X'$ is an _isomorphism_\index{isomorphism} of graphs whenever;
 
 i. $\sigma$ is one-to-one and onto,
 ii. $xy\in E$ if and only if $\sigma x \sigma y \in E'$ for all $x, y\in X$.
@@ -13,17 +13,17 @@ ii. $xy\in E$ if and only if $\sigma x \sigma y \in E'$ for all $x, y\in X$.
 We do not distinguish between isomorphic graphs.
 
 :::{.definition #auto}
-Suppose $\Gamma = \Gamma'$. Above isomorphism $\sigma$ is called an _automorphism_\index{automorphism} of $\Gamma$. Then set $\mathrm{Aut}(\Gamma)$ of all automorphisms of $\Gamma$ becomes a finite group under composition.
+Suppose $\Gamma = \Gamma'$. The above isomorphism $\sigma$ is called an _automorphism_\index{automorphism} of $\Gamma$. Then the set $\mathrm{Aut}(\Gamma)$ of all automorphisms of $\Gamma$ becomes a finite group under composition.
 :::
 
 :::{.definition #transitive}
-If $\mathrm{Aut}(\Gamma)$ acts transitive on $X$, $\Gamma$ is called _vertex transitive_\index{vertex transitive}.
+If $\mathrm{Aut}(\Gamma)$ acts transitively on $X$, $\Gamma$ is called _vertex transitive_\index{vertex transitive}.
 :::
 
 
 :::{.definition #cayley name="Cayley Graphs"}
 Let $G$ be any finite group, and $\Delta$ any generating set for $G$ such that $1_G \not\in \Delta$ and $g\in \Delta \to g^{-1}\in \Delta$.
-Then Cayley graph $\Gamma = \Gamma(G, \Delta)$ is defined on the vetex set $X = G$ with the edge set $E$ define by the following. \index{Cayley graph}
+Then the Cayley graph $\Gamma = \Gamma(G, \Delta)$ is defined on the vertex set $X = G$ with the edge set $E$ defined by the following. \index{Cayley graph}
 
 $$E = \{(h_1,h_2)\mid h_1, h_2\in G, h_1^{-1}h_2\in \Delta\} = \{(h, hg) \mid h\in G, g\in \Delta\}.$$
 :::
@@ -95,10 +95,10 @@ The following hold.
 $$G \to \mathrm{Aut}(\Gamma) \; (g\mapsto \hat{g})$$
 is an injective homomorphism of groups, where
 $$\hat{g}(x) = gx \quad \textrm{for all }\: g\in G \textrm{ and for all } x\in X (= G).$$
-Also, the image $\hat{G}$ is regular on $X$. i.e., the image $\hat{G}$ acts transitively on $X$ with trivial vertex stabilizers.
+Also, the image $\hat{G}$ is regular on $X$, i.e., the image $\hat{G}$ acts transitively on $X$ with trivial vertex stabilizers.
 
 | $(ii)$ For any graph $\Gamma = (X, E)$, suppose there exists a subgroup $G \subseteq \mathrm{Aut}(\Gamma)$ that is regular on $X$. Pick $x\in X$, and let 
-$$\Delta = \{g\in G\mid \langle x, g(x)\in E\}.$$
+$$\Delta = \{g\in G\mid (x, g(x))\in E\}.$$
 Then $1\not\in \Delta$, $g\in \Delta \to g^{-1}\in \Delta$, and $\Delta$ generates $G$. Moreover, $\Gamma \simeq \Gamma(G, \Delta)$.
 :::
 
@@ -120,7 +120,7 @@ $$\widehat{g_1} = \widehat{g_2} \to g_1 = \widehat{g_1}(1_G) = \widehat{g_2}(1_G
 
 Observe: $\hat{G}$ is regular on $X$: Clear by construction.
 
-| $(ii)$ $1_G\not\in \Delta$: Since $\Gamma$ has not loops, $(x, 1_Gx) \not\in E$.
+| $(ii)$ $1_G\not\in \Delta$: Since $\Gamma$ has no loops, $(x, 1_Gx) \not\in E$.
 
 $g\in \Delta \to g^{-1}\in \Delta$: 
 $$g\in \Delta \to (x, g(x))\in E \to E \ni (g^{-1}(x), g^{-1}(g(x))) = (g^{-1}(x), x).$$
@@ -129,9 +129,9 @@ $\Delta$ generates $G$: Suppose $\langle \Delta \rangle \subsetneq G$. Let $\hat
 
 Since $\Gamma$ is connected, there exists $y\in \hat{X}$ and $z\in X\setminus \hat{X}$ with $yz\in E$. 
 
-Let $y = g(x)$, $g\in \langle \Delta\rangle$, $z\in h(x)$, $h\in G\setminus \langle \Delta\rangle$. Then 
+Let $y = g(x)$, $g\in \langle \Delta\rangle$, $z = h(x)$, $h\in G\setminus \langle \Delta\rangle$. Then 
 $$(y,z)=(g(x),h(x))\in E \to (x,g^{-1}h(x))\in E \to g^{-1}h\in \langle \Delta \rangle \to h\in \langle \Delta \rangle. $$
-This is a contradition. Therefore, $\Delta$ generates $G$.
+This is a contradiction. Therefore, $\Delta$ generates $G$.
 
 Let $\Gamma' = (X', E')$ denote $\Gamma(G, \Delta)$. We shall show that 
 $$\theta: X' \to X \; (g\mapsto g(x))$$
@@ -149,7 +149,7 @@ $$(h_1,h_2)\in E' \leftrightarrow h_1^{-1}h_2\in \Delta \leftrightarrow (x, h_1^
 Therefore $\theta$ is an isomorphism between graphs $\Gamma(G, \Delta)$ and $\Gamma(X, E)$.
 :::
 
-How to compute the eigenvalues of the Cayley graph of and abelian group.
+How to compute the eigenvalues of the Cayley graph of an abelian group.
 
 Let $G$ be any finite abelian group. Let $\mathbb{C}^*$ be the multiplicative group on $\mathbb{C}\setminus \{0\}$.
 
@@ -168,10 +168,10 @@ $$
 \theta_2 & 1 & \omega^2 & \omega
 \end{array}, \quad \textrm{with }\; \omega = \frac{-1+\sqrt{-3}}{2}.
 $$
-Here $\omega$ is a primitive cube root of $q$ in $\mathbb{C}^*$, i.e., $1+\omega + \omega^2 = 0$.
+Here $\omega$ is a primitive cube root of $1$ in $\mathbb{C}^*$, i.e., $1+\omega + \omega^2 = 0$.
 :::
 
-For arbitraty group $G$, let $X(G)$ be the set of all characters of $G$.
+For an arbitrary group $G$, let $X(G)$ be the set of all characters of $G$.
 
 Observe: For $\theta_1, \theta_2\in X(G)$, one can define product $\theta_1\theta_2$:
 $$\theta_1\theta_2(g) = \theta_1(g)\theta_2(g) \quad \textrm{for all }\; g\in G.$$
@@ -186,7 +186,7 @@ The groups $G$ and $X(G)$ are isomorphic for all finite abelian groups $G$.
 :::{.proof}
 $G$ is a direct sum of cyclic groups;
 $$G = G_1\oplus G_2 \oplus \cdots \oplus G_m, \quad \textrm{where } \; G_i = \langle a_i\mid a_i^{d_i} = 1\rangle \quad (1\leq i\leq m).$$
-Pick any element $\omega_i$ of order $d_i$ in $\mathbb{C}^*$, i.e., a primitive $d_i$-the root of $1$. Define
+Pick any element $\omega_i$ of order $d_i$ in $\mathbb{C}^*$, i.e., a primitive $d_i$-th root of $1$. Define
 $$\theta_i: G \to \mathbb{C}^* \quad (a_1^{\varepsilon_1}\cdots a_m^{\varepsilon_m} \mapsto \omega_i^{\varepsilon_i} \quad \textrm{where }\; 0\leq \varepsilon_i < d_i, 1\leq i\leq m).$$
 Then $\theta_i\in X(G)$. (Exercise)
 
@@ -194,14 +194,14 @@ Claim: There exists an isomorphism of groups $G \to X(G)$ that sends $a_i$ to $\
 
 Observe: $\theta_i^{d_i} = 1$. For every $g = a_1^{\varepsilon_1}\cdots a_m^{\varepsilon_m} \in G$,
 $$\theta_i^{d_i}(g) = (\theta_i(g))^{d_i} = (\omega_i^{\varepsilon_i})^{d_i} = (\omega_i^{d_i})^{\varepsilon_i} = 1.$$
-Observe: If $\theta_1^{\varepsilon_1}\theta_2^{\varepsilon_2}\cdots \theta_m^{\varepsilon_m} = 1$ for some $0\leq \varepsilon_i < d_i, 1\leq i\leq m$. Then $\varepsilon_1 = \varepsilon_2 = \cdots = \varepsilon_m = 0$.
+Observe: If $\theta_1^{\varepsilon_1}\theta_2^{\varepsilon_2}\cdots \theta_m^{\varepsilon_m} = 1$ for some $0\leq \varepsilon_i < d_i, 1\leq i\leq m$, then $\varepsilon_1 = \varepsilon_2 = \cdots = \varepsilon_m = 0$.
 
-_Pf._ $1 = \theta_1^{\varepsilon_1}\theta_2^{\varepsilon_2}\cdots \theta_m^{\varepsilon_m}(a_i) = \omega_i^{\varepsilon_i}$, Since $\omega_i$ is a primitive $d_i$-th root of $1$, $\varepsilon_i = 0$ for $1\leq i\leq m$.
+_Pf._ $1 = \theta_1^{\varepsilon_1}\theta_2^{\varepsilon_2}\cdots \theta_m^{\varepsilon_m}(a_i) = \omega_i^{\varepsilon_i}$. Since $\omega_i$ is a primitive $d_i$-th root of $1$, $\varepsilon_i = 0$ for $1\leq i\leq m$.
 
 Observe: $\theta_1, \ldots, \theta_m$ generate $X(G)$. Pick $\theta\in X(G)$. Since
 $a_i^{d_i} = 1$, $1 = \theta(a_i^{d_i}) = \theta(a_i)^{d_i}$. 
 
-Hence $\theta(a_i) = \omega^{\varepsilon_i}$ for some $\varepsilon_i$ with $0\leq \varepsilon_i < d_i$.
+Hence $\theta(a_i) = \omega_i^{\varepsilon_i}$ for some $\varepsilon_i$ with $0\leq \varepsilon_i < d_i$.
 
 Now $\theta = \theta_1^{\varepsilon_1}\cdots \theta_m^{\varepsilon_m}$, since these are both equal to $\omega_i^{\varepsilon_i}$ at $a_i$ for $1\leq i \leq m$.
 

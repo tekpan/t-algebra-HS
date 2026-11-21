@@ -1,7 +1,7 @@
 # Perron-Frobenius Theorem {#lec2}
 **Friday, January 22, 1993**
 
-In this lecture, we use the Perron Frobenius theory of non-negative matrices to obtain information on eigenvalues of a graph.
+In this lecture, we use the Perron-Frobenius theory of non-negative matrices to obtain information on eigenvalues of a graph.
 
 Let $K = \mathbb{R}$. For $n\in \mathbb{Z}^{> 0}$, pick a symmetric matrix $C\in \mathrm{Mat}_n(\mathbb{R})$.
 
@@ -25,7 +25,7 @@ where $Ay = \theta x$ and $Bx = \theta y$.
 
 2. If $C$ is bipartite, $C^2$ is reducible. 
 
-3. The matrix $C$ is irreducible and $C^2$ is reducible, if $C_{ij} \geq 0$ for all $i,j$ and $C$ is bipartite. (Exercise)
+3. If the matrix $C$ is irreducible, $C^2$ is reducible, and $C_{ij} \geq 0$ for all $i,j$, then $C$ is bipartite. (Exercise)
 
 :::{.hs}
 **HS MEMO**
@@ -35,14 +35,14 @@ $$\begin{pmatrix} O & A \\ B & O \end{pmatrix} \begin{pmatrix}x\\y\end{pmatrix} 
 holds. So the geometric multiplicities of $\theta$ and $-\theta$ coincide. How about the algebraic multiplicities?
 
 Note 3. Set $x \sim y$ if and only if $C_{xy}>0$. So the graph may have loops. Then 
-$$(C^2)_{xy} > 0 \Leftrightarrow \textrm{ if there exists } z\in X \textrm{ such that } x\sim z \sim y.$$
+$$(C^2)_{xy} > 0 \Leftrightarrow \textrm{ there exists } z\in X \textrm{ such that } x\sim z \sim y.$$
 Note that $C$ is irreducible if and only if $\Gamma(C)$ is connected. Let
 \begin{align}
 X^+ & = \{y\mid \textrm{there is a path of even length from }x \textrm{ to }y\}\\
 X^- & = \{y\mid \textrm{there is no path of even length from }x \textrm{ to }y\} \neq \emptyset.
 \end{align}
-If there is an edge $y\sim z$ in $X^+$ and $w\in X^-$. Then there would be a path from $x$ to $y$ of even length.
-So $\mathrm{e}(X^+, X^+) = \mathrm{e}(X^-, X^-) = 0.$.
+If there is an edge $y\sim z$ in $X^+$ and $w\in X^-$, then there would be a path from $x$ to $w$ of even length.
+So $\mathrm{e}(X^+, X^+) = \mathrm{e}(X^-, X^-) = 0.$
 :::
 
 |
@@ -64,7 +64,7 @@ Let $\theta_0$ be the maximal eigenvalue of $C$ with eigenspace $V_0 \subseteq \
 
 | $(iii)$ $\theta_r \geq -\theta_0$.  
 
-| $(iv)$ $\theta_r = \theta_0$ if and only if $C$ is bipartite.
+| $(iv)$ $\theta_r = -\theta_0$ if and only if $C$ is bipartite.
 :::
 
 |
@@ -76,7 +76,7 @@ Let $\langle \;,\; \rangle$ be the dot product in $V = \mathbb{R}^n$. Pick a sym
 :::
 
 :::{.proof}
-By elementary linear algebra, there exists an orthonormal basis $w_1, w_2, \ldots, w_n$ of $V$ consisting of eigenvectors of $B$. Set the $i$-th column of $P$ is $w_i$ and $D = \mathrm{diag}(\theta_1,\ldots, \theta_n)$. Then $P^\top P = I$ and $BP = PD$.
+By elementary linear algebra, there exists an orthonormal basis $w_1, w_2, \ldots, w_n$ of $V$ consisting of eigenvectors of $B$. Let $P$ be the matrix whose $i$-th column is $w_i$, where $Bw_i = \theta_iw_i$, and $D = \mathrm{diag}(\theta_1,\ldots, \theta_n)$. Then $P^\top P = I$ and $BP = PD$.
 
 Hence,
 $$B = PDP^{-1} = PDP^\top = QQ^\top,$$
@@ -92,11 +92,11 @@ Now we start the proof of Theorem \@ref(thm:pf).
 :::{.proof} 
 $(i)$ Let $\langle \text{ }, \text{ }\rangle$ denote the dot product on $V = \mathbb{R}^n$. Set
 \begin{align}
-B & = \theta I - C\\
+B & = \theta_0 I - C\\
   & = \textrm{symmetric matrix with eigenvalues }\theta_0 - \theta_i \geq 0\\
   & = (\langle v_i, v_j\rangle)_{1\leq i,j\leq n}
 \end{align}
-with the same $v_1, \ldots, v_n \in V$ by Lemma \@ref(lem:pfl).
+with some $v_1, \ldots, v_n \in V$ by Lemma \@ref(lem:pfl).
 
 Observe: 
 $$\sum_{i = 1}^n \alpha_iv_i = 0.$$
@@ -120,7 +120,7 @@ $$ \rho = \alpha_1v_1 + \cdots + \alpha_sv_s = -\alpha_{s+1}v_{s+1} - \cdots - \
 Then, for $i = 1,\ldots, s$,
 \begin{align}
 \langle v_i, \rho \rangle & = \sum_{j = s+1}^n -\alpha_j\langle v_i, v_j\rangle \quad (\langle v_i, v_j\rangle = B_{ij}, B = \theta_0I - C)\\
-  & = \sum_{j = s+1}^n (-\alpha_{ij})(-C_{ij})\\
+  & = \sum_{j = s+1}^n (-\alpha_j)(-C_{ij})\\
   & \leq 0.
 \end{align}
 Hence 
@@ -157,12 +157,12 @@ Also we have $C^2w = \theta_r^2w$.
 
 Observe that $C^2$ is irreducible. (As otherwise, $C$ is bipartite by Note 3, and we must have $\theta_r = -\theta_0$.)
 Therefore, $\beta_i > 0$ for all $i$ or $\beta_i < 0$ for all $i$. We have
-$$\langle v, w\rangle = \sum_{i=1}^n\alpha_i\beta_j \neq 0.$$
+$$\langle v, w\rangle = \sum_{i=1}^n\alpha_i\beta_i \neq 0.$$
 This is a contradiction, as $V_0 \bot V_r$.
 
 |
 $(iv)$
-$\Rightarrow$: Let $\theta_r = -\theta_0$. Then $\theta = \theta_1^2 = \theta_0^2$ is the maximal eigenvalue of $C^2$, and $v$ and $w$ are linearly independent eigenvalues for  $\theta$ for $C^2$. Hence, for $C^2$, $\mathrm{mult}(\theta) \geq 2$.
+$\Rightarrow$: Let $\theta_r = -\theta_0$. Then $\theta = \theta_r^2 = \theta_0^2$ is the maximal eigenvalue of $C^2$, and $v$ and $w$ are linearly independent eigenvectors for  $\theta$ for $C^2$. Hence, for $C^2$, $\mathrm{mult}(\theta) \geq 2$.
 
 Thus by $(ii)$, $C^2$ must be reducible. Therefore, $C$ is bipartite by Note 3.
 
@@ -177,17 +177,17 @@ $\Gamma$ is said to be _bipartite_\index{bipartite graph} if the adjacency matri
 :::
 
 :::{.corollary #spec}
-For any (connected) graph $\Gamma$ with
-$$\mathrm{Spec}(\Gamma) = \begin{pmatrix}\theta_0 & \theta_1 &\cdots & \theta_r\\m_1 & m_1 & \cdots & m_r\end{pmatrix} \:\textrm{ with }\: \theta_0 > \theta_1 > \cdots > \theta_r.$$
-Let $V_i$ be the eigenspace of $\theta_i$. Then the following holds.
+Let $\Gamma$ be a connected graph with
+$$\mathrm{Spec}(\Gamma) = \begin{pmatrix}\theta_0 & \theta_1 &\cdots & \theta_r\\m_0 & m_1 & \cdots & m_r\end{pmatrix} \:\textrm{ with }\: \theta_0 > \theta_1 > \cdots > \theta_r.$$
+and let $V_i$ be the eigenspace of $\theta_i$. Then the following hold.
 
-1. Supppose $0\neq v = \begin{pmatrix} \alpha_1\\\vdots \\\alpha_n \end{pmatrix} \in V_0\in \mathbb{R}^n$. Then $\alpha_i > 0$ for all $i$, or $\alpha_i < 0$ for all $i$.
+1. Suppose $0\neq v = \begin{pmatrix} \alpha_1\\\vdots \\\alpha_n \end{pmatrix} \in V_0\subseteq \mathbb{R}^n$. Then $\alpha_i > 0$ for all $i$, or $\alpha_i < 0$ for all $i$.
 
 2. $m_0 = 1$.
 
-3. $\theta_r \geq -\theta_0$ if and only if $\Gamma$ is bipartite. In this case, 
+3. $\theta_r \geq -\theta_0$, with equality if and only if $\Gamma$ is bipartite. In this case, 
 $$-\theta_i = \theta_{r-i} \; \textrm{and} \; m_i = m_{r-i} \quad (0\leq i\leq r).$$
 :::
 :::{.proof}
-This is a direct consequences of Theorem \@ref(thm:pf) and Note 3.
+This is a direct consequence of Theorem \@ref(thm:pf) and Note 3.
 :::

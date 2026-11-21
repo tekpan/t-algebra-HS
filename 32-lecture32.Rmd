@@ -9,11 +9,11 @@ $$R^{-1}R v = \begin{cases} v & \text{if } i<d,\\
 0 & \text{if } i = d.
 \end{cases}$$
 
-| $(ii)$ Assume $\Gamma$ is distance regular and thin with respect to $x$. Pick $t$ $(0\leq i < D/2)$, and pick $v\in E^*_tV$. Then
+| $(ii)$ Assume $\Gamma$ is distance-regular and thin with respect to $x$. Pick $t$ $(0\leq t < D/2)$, and pick $v\in E^*_tV$. Then
 $$R^{-1}R^iv = R^{i-1}v\quad (1\leq i\leq D-2t).$$
 In particular, $R^{-1}R v = v$.
 
-| $(iii)$ Assume $\Gamma$ is distance regular and thin with respect to $x$. Then
+| $(iii)$ Assume $\Gamma$ is distance-regular and thin with respect to $x$. Then
 $$R: E^*_iV \to E^*_{i+1}V \quad (0\leq i< D/2)$$
 is one-to-one.
 :::
@@ -48,14 +48,14 @@ RLw_i & = Rx_i(W)w_{i-1} = x_i(W)w_i,\\
 LRw_i & = Lw_{i+1} = x_{i+1}(W)w_i,\\
 [L,R]w_i & = (x_{i+1}(W)-x_i(W))w_i, \quad (0\leq i\leq d),\\
 & \qquad x_0(W) = 0, \quad x_{d+1}(W) = 0, \\
-[L,R]|_W & = \sum_{i=0}^d(x_{i+1}-x_i(W))E^*_{r+i}|_W.
+[L,R]|_W & = \sum_{i=0}^d(x_{i+1}(W)-x_i(W))E^*_{r+i}|_W.
 \end{align}
 :::
 
 | $(ii)$ Let 
 $$V = \sum W \quad \text{orthogonal direct sum of thin irreducible $T$-modules.}$$
 Then, 
-$$E^*_tV = \sum_{r(W)\leq t}E^*_tW\quad (\text{orthognal direct sum}).$$
+$$E^*_tV = \sum_{r(W)\leq t}E^*_tW\quad (\text{orthogonal direct sum}).$$
 Without loss of generality, we may assume 
 $$v\in E^*_t W$$
 for some thin irreducible $T$-module with endpoint at most $t$.
@@ -86,9 +86,9 @@ by $(ii)$ with $t = i$ and $i=1$.
 :::{.definition #vix}
 Let $\Gamma = (X, E)$ denote any graph with the standard module $V$. Fix a vertex $x\in X$. Write $E^*_i \equiv E^*_i(x)$, $T \equiv T(x)$, $L\equiv L(x)$.
 
-1. For every $i$ $(0\leq i\leq D)$, define subspace $V_i := V_i(x) \subseteq V$ by
+1. For every $i$ $(0\leq i\leq D)$, define the subspace $V_i := V_i(x) \subseteq V$ by
 $$V_i = \sum W,$$
-where the sum begin over irreducible $T$-modules $W$ with endpoint $i$.
+where the sum being over irreducible $T$-modules $W$ with endpoint $i$.
 
 Observe:
 $$V = V_0 + V_1 + \cdots + V_D \quad (\text{orthogonal direct sum.})$$
@@ -97,7 +97,7 @@ $V_0$ is the trivial $T$-module.
 2. $(E^*_iV)_{new} \equiv E^*_iV_i \quad (0\leq i\leq D).$
 
 In general, 
-$$(E^*_iV)_{new} \subseteq \mathrm{Ker}L \cap E^*_iV \subseteq \mathrm{Ker}L \cap E^*_iV \subseteq \mathrm{Ker}(LE^*_i).$$
+$$(E^*_iV)_{new} \subseteq \mathrm{Ker}L \cap E^*_iV \subseteq \mathrm{Ker}(LE^*_i).$$
 
 If each irreducible $T$-module with endpoint strictly less than $i$ is thin,
 $$(E^*_iV)_{new} = \mathrm{Ker}L \cap E^*_iV \subseteq \mathrm{Ker}(L\cdot E^*_i).$$
@@ -107,7 +107,7 @@ We have the assertion.
 :::{.hs}
 **HS MEMO**
 
-$$E^*_iV = \sum_{j<i} V_j + V_i.$$
+$$E^*_iV = \sum_{j<i} E^*_iV_j + E^*_iV_i.$$
 For $V_j$ part, take $w_{i-j}\in W$ irreducible with endpoint $j<i$. Then,
 $$Lw_{i-j} = x_{i-j}(W)w_{i-j-1}\neq 0,$$
 and 
@@ -116,20 +116,20 @@ is one to one.
 :::
 
 :::{.lemma #action-on-estar1v-new}
-Let $\Gamma = (X, E)$ be distance regular of diameter $D\geq 3$. Fix a vertex $x\in X$, $R\equiv R(x)$. $L\equiv L(x)$, $F \equiv F(x)$. Pick $v\in (E^*_1V)_{new}$. Then,
+Let $\Gamma = (X, E)$ be distance-regular of diameter $D\geq 3$. Fix a vertex $x\in X$, $R\equiv R(x)$, $L\equiv L(x)$, $F \equiv F(x)$. Pick $v\in (E^*_1V)_{new}$. Then,
 
 | $(i)$ $RE^*_iA_{i-1}v = c_iE^*_{i+1}A_iv\quad (1\leq i\leq D)$.
 
-| $(ii)$ $FE^*_iA_{i-1}v = RE^*_{i-1}A_iV + (a_{i-1}-c_i+c_{i-1})E^*_iA_{i-1}v + c_{i}E^*_{i}A_{i+1}v$ $(1\leq i\leq D)$.
+| $(ii)$ $FE^*_iA_{i-1}v = RE^*_{i-1}A_iv + (a_{i-1}-c_i+c_{i-1})E^*_iA_{i-1}v - c_{i}E^*_{i}A_{i+1}v$ $(1\leq i\leq D)$.
 
-| $(iii)$ $LE^*_iA_{i-1}v = FE^*_{i-1}A_iV + (a_{i-1}-c_i+c_{i-1})E^*_{i-1}A_{i}v + b_{i-1}E^*_{i-1}A_{i-2}v$ $(2\leq i\leq D)$.
+| $(iii)$ $LE^*_iA_{i-1}v = FE^*_{i-1}A_iv - (a_{i-1}-c_i+c_{i-1})E^*_{i-1}A_{i}v + b_{i-1}E^*_{i-1}A_{i-2}v$ $(2\leq i\leq D)$.
 
 | $(iv)$ $LE^*_iA_{i+1}v = b_iE^*_{i-1}A_iv \quad (1\leq i\leq D-1)$.
 :::
 
 :::{.proof}
 | $(i)$ Let
-$$v = \sum_{y\in X, \partial(x,y)=1}\alpha_y \hat{y} \quad \text{for some }\{\alpha_g\}\subseteq \mathbb{C}.$$
+$$v = \sum_{y\in X, \partial(x,y)=1}\alpha_y \hat{y} \quad \text{for some }\{\alpha_y\}\subseteq \mathbb{C}.$$
 Then 
 $$Lv = \left(\sum_{y\in X, \partial(x,y)=1}\alpha_y\right)\hat{x} = 0.$$
 So,
@@ -143,14 +143,14 @@ Then
 \tilde{A}_iv & = \sum_{y\in X, \partial(x,y)=1}\alpha_y \tilde{A}_i(\hat{y}-\hat{x})\\
 & = \sum_{y\in X, \partial(x,y)=1}\alpha_y\left(\sum_{z\in X, \partial(y,z)=i, \partial(x,z)=i+1}\hat{z}-\sum_{z'\in X, \partial(y,z')=i+1, \partial(x,z')=i}\hat{z}'\right)\\
 & = \sum_{y\in X, \partial(x,y)=1}\alpha_y(E^*_{i+1}A_i\hat{y}- E^*_iA_{i+1}\hat{y})\\
-& = E^*_{i+1}A_iv - E^*_{i+1}A_{i+1}v.
+& = E^*_{i+1}A_iv - E^*_{i}A_{i+1}v.
 \end{align}
 
 Recall (Claim 1 in the proof of Theorem \@ref(thm:endpoint1).)
 $$A\tilde{A}_i = c_{i+1}\tilde{A}_{i+1}+ (a_i-c_{i+1}+c_i)\tilde{A}_i + b_i\tilde{A}_{i-1}\quad (0\leq i\leq D-1).$$
-(This is valid for $i=0$ as $A\tilde{A}_0 = AI = c_1\tilde{A}- \tilde{A}_0 = A$ by setting $\tilde{A}_{i-1} = O$.)
+(This is valid for $i=0$ as $A\tilde{A}_0 = AI = c_1\tilde{A}_1- \tilde{A}_0 = A$ by setting $\tilde{A}_{i-1} = O$.)
 
-Now $(i)-(iv)$ are obtained by applying this to $v$ on the right and multiplied by $E^*_j$ $(0\leq j\leq D)$ on the left.
+Now $(i)-(iv)$ are obtained by applying this to $v$ on the right and multiplying by $E^*_j$ $(0\leq j\leq D)$ on the left.
 :::
 
 :::{.hs}
@@ -179,11 +179,11 @@ LE^*_iA_{i-1}v & = E^*_{i-1}AE^*_{i}A_{i-1}v\\
 \end{align}
 (Even if $i=1$, this is valid by setting $A_{i-2}=O$.)
 
-| $(iv)$ For $1\leq i\leq D-1$, $LE^*_iA_{i+1}v = E^*_{i-1}AE^*_i A_{i+1} = b_iE^*_{i-1}A_iv$.
+| $(iv)$ For $1\leq i\leq D-1$, $LE^*_iA_{i+1}v = E^*_{i-1}AE^*_i A_{i+1}v = b_iE^*_{i-1}A_iv$.
 :::
 
 :::{.lemma #generator-endpoint1-mod}
-Let $\Gamma = (X, E)$ be distance regular of diameter $D\geq 3$. Fix a vertex $x\in X$, $T\equiv T(x)$, $E^*_i\equiv E^*_i(x)$, $R = R(x)$, $F = F(x)$, $L = L(x)$.
+Let $\Gamma = (X, E)$ be distance-regular of diameter $D\geq 3$. Fix a vertex $x\in X$, $T\equiv T(x)$, $E^*_i\equiv E^*_i(x)$, $R = R(x)$, $F = F(x)$, $L = L(x)$.
 
 For every $v\in (E^*_1V)_{new}$, the following are equivalent.
 
@@ -192,7 +192,7 @@ For every $v\in (E^*_1V)_{new}$, the following are equivalent.
 | $(ii)$ There exists a thin irreducible $T$-module $W$ with endpoint $1$ that contains $v$.
 
 If $(i)$, $(ii)$ hold then 
-$$W = \mathrm{Span}(E^*_1A_0v, E^*_2A_1v, \ldots, E^*_DA_{i-1}v).$$
+$$W = \mathrm{Span}(E^*_1A_0v, E^*_2A_1v, \ldots, E^*_DA_{D-1}v).$$
 :::
 
 
@@ -227,18 +227,18 @@ By Lemma \@ref(lem:action-on-estar1v-new) $(ii)$,
 \begin{align}
 FE^*_jA_{j-1}v & \in \mathrm{Span}(RE^*_{j-1}A_jv, E^*_jA_{j-1}v, E^*_jA_{j+1}v)\\
 & \subseteq \mathrm{Span}(RE^*_{j-1}A_{j-2}v, E^*_jA_{j-1}v)\\
-& \mathrm{Span}(E^*_{j-1}A_{j-1}v) \quad (1\leq j\leq n).
+& \subseteq \mathrm{Span}(E^*_{j}A_{j-1}v) \quad (1\leq j\leq n).
 \end{align}
 
 By Lemma \@ref(lem:action-on-estar1v-new) $(iii)$,
 \begin{align}
-FE^*_jA_{j-1}v & \in \mathrm{Span}(FE^*_{j-1}A_j v, E^*_{j-1}A_{j}v, E^*_{j-1}A_{j-2}v)\\
+LE^*_jA_{j-1}v & \in \mathrm{Span}(FE^*_{j-1}A_j v, E^*_{j-1}A_{j}v, E^*_{j-1}A_{j-2}v)\\
 & \subseteq \mathrm{Span}(FE^*_{j-1}A_{j-2}v, E^*_{j-1}A_{j-2}v)\\
 & \subseteq \mathrm{Span}(E^*_{j-1}A_{j-2}v) \quad (2\leq j\leq n).
 \end{align}
 
 Hence, 
-$$W = \mathrm{Span}(E^*_1A_0v, E^*_2A_1v, \ldots, E^*_nA_{n-1}v).$$
+$$W = \mathrm{Span}(E^*_1A_0v, E^*_2A_1v, \ldots, E^*_nA_{n-1}v)$$
 is $R$, $F$, $L$ invariant. 
 
 Therefore $W$ is a thin $T$-module with endpoint $1$ that contains $v$.

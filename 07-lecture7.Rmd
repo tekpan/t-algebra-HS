@@ -47,10 +47,10 @@ ST\in E & \Leftrightarrow  |S\cap T| = D-1\\
 Hence, without loss of generality, assume
 $$D\leq N/2 \quad \text{for} \quad J(D,N).$$
 
-We will need the eigenvalues of $J(D,N)$ for certain problem later in the course. We can get these eigenvalues from our study of $H(D,2)$.
+We will need the eigenvalues of $J(D,N)$ for a certain problem later in the course. We can get these eigenvalues from our study of $H(D,2)$.
 
 :::{.lemma #ev-johnson}
-The eigenvalues for $J(D,N)$ with $1\leq D \leq N/2$ are give by
+The eigenvalues for $J(D,N)$ with $1\leq D \leq N/2$ are given by
 \begin{align}
 \theta_i & = (N-D-i)(D-i) - i \quad (0\leq i\leq D),\\
 m_i & = \binom{N}{i} - \binom{N}{i-1}.
@@ -68,7 +68,7 @@ Set $x \equiv 11\cdots 1 \in X_H$.
 Define $\tilde{\Gamma} \equiv (\tilde{X}, \tilde{E})$, where
 \begin{align}
 \tilde{X} & = \{y\in X_H \mid \partial_H(x,y) = D\} \quad \partial_H:\text{distance in }\Gamma_H\\
-\tilde{E} & = \{yz\in X_H \mid \partial_H(y,z) = 2\}.
+\tilde{E} & = \{yz \mid y, z\in \tilde{X},\; \partial_H(y,z) = 2\}.
 \end{align}
 Observe
 \begin{align}
@@ -86,7 +86,7 @@ ST \in E_J &\Leftrightarrow |S\cap T| = D-1\\
 & \Leftrightarrow (\hat{S}, \hat{T})\in \tilde{E}.
 \end{align}
 
-Identify, $\Gamma_J$ with $\tilde{\Gamma}$. Then the standard module $V_J$ of $\Gamma_J$ becomes $\tilde{V} = E^*_DV_H$, where $V_H$ is the standard module of $\Gamma_H$, and $E^*_D \equiv E^*_D(x)$.
+Identify $\Gamma_J$ with $\tilde{\Gamma}$. Then the standard module $V_J$ of $\Gamma_J$ becomes $\tilde{V} = E^*_DV_H$, where $V_H$ is the standard module of $\Gamma_H$, and $E^*_D \equiv E^*_D(x)$.
 
 Let $R$ be the raising matrix with respect to $x$ in $\Gamma_H$, and 
 
@@ -120,7 +120,7 @@ V_J & = E_D^*V_H\\
 & = \text{a direct sum of 1 dimensional eigenspaces for }\tilde{A}.
 \end{align}
 The eigenspace for eigenvalue
-$$(N-D-r)(D-r)-r \quad (\text{monotonously decreasing with respec to }r)$$
+$$(N-D-r)(D-r)-r \quad (\text{monotonically decreasing with respect to }r)$$
 appears with multiplicity
 $$\binom{N}{r} - \binom{N}{r-1}$$
 in this sum by Theorem \@ref(thm:hd2-modules) $(iv)$.
@@ -149,7 +149,7 @@ Fix $i$ with $0\leq i\leq D$. Let
 $$V = \sum W. \; \text{The standard module written as a direct sum of irreducible $T$-modules}.$$
 Then, 
 $$E_i^*V = \sum E_i^*W. \; \text{The direct sum of 1-dimensional $E_i^*TE_i^*$-modules}.$$
-Since $\dim E_i^*W = 1$, for $a, b\in E_i^*TE_i^*$, ${ab - ba}_{| E_i^*W} = 0$. Hence $ab - ba = 0$.
+Since $\dim E_i^*W \leq 1$, for $a, b\in E_i^*TE_i^*$, $(ab - ba)|_{E_i^*W} = 0$. Hence $ab - ba = 0$.
 
 | (C) $\Rightarrow$ (TH)
 Suppose $\dim E_i^*W \geq 2$ for some irreducible $T$-module $W$ with some $i$ with $1\leq i\leq D$.

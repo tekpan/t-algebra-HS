@@ -16,13 +16,13 @@ Then there exists a basis $E_0, E_1, \ldots, E_D$ for $M$ such that
 :::
 
 :::{.proof}
-$M$ acts on Hermitean space $V = \mathbb{C}^n$ $(n = |X|)$. 
+$M$ acts on the Hermitean space $V = \mathbb{C}^n$ $(n = |X|)$. 
 
 If $W$ is an $M$-module, so is $W^\bot$.
 
-Each irreducible $M$-module is $1$ dimensional by commutativity of $M$. So $V$ is orthognal direct sum of $1$-dimensional $M$-modules. 
+Each irreducible $M$-module is $1$ dimensional by commutativity of $M$. So $V$ is an orthogonal direct sum of $1$-dimensional $M$-modules. 
 
-Let $v_1, \ldots, v_n$ be an orthonormal basis for $V$ consisiting of eigenvectors for all $m\in M$.
+Let $v_1, \ldots, v_n$ be an orthonormal basis for $V$ consisting of eigenvectors for all $m\in M$.
 
 Set $P\in \mathrm{Mat}_X(\mathbb{C})$ so that the $i$-th column of $P$ is equal to $v_i$. So,
 $$\bar{P}^\top P = I = P\bar{P}^\top = \bar{P}P^\top,$$
@@ -41,7 +41,7 @@ is a $\mathbb{C}$-algebra homomorphism.
 
 Observe: the $\theta_1, \ldots, \theta_n$ are not all distinct.
 
-Let $\sigma_0, \ldots, \sigma_r$ denote distinct elements of 
+Let $\sigma_0, \ldots, \sigma_r$ denote the distinct elements of 
 $$\theta_1, \ldots, \theta_n.$$
 Say $\sigma_i$ appears $m_i$ times.
 Without loss of generality, we may assume that
@@ -81,7 +81,7 @@ Set $m = m'-\sigma_j(m')I$. Then,
 Claim 2. $E_i\in M$ $\quad (0\leq i \leq D)$.
 
 _Pf of Claim 2._
-Fix a vertex $x\in X$. For all $j\neq i$, there exists $m_j\in M$ such that
+Fix $i$. For all $j\neq i$, there exists $m_j\in M$ such that
 $$\sigma_i(m_j)\neq 0, \quad \sigma_j(m_j) = 0, \quad i\neq j.$$
 Observe 
 $$s = \sigma_i\left(\prod_{\ell\neq i}m_\ell\right) \neq 0.$$
@@ -110,7 +110,7 @@ $$\overline{E_i}^\top = E_i.$$
 $E_0^\top, \ldots, E_D^\top$ are nonzero matrices satisfying 
 $$E_i^\top E_j^\top = \delta_{ij}E_i^\top,$$
 $$E_0^\top + E_1^\top + \cdots + E_D^\top = I.$$
-Each $E_i^\top$ is a linear combination of $E_0, \ldots, E_D$ with coefficientss that are $0$ or $1$, and for no two $E_i$'s are coefficients of any $E_j$ both $1$'s. 
+Each $E_i^\top$ is a linear combination of $E_0, \ldots, E_D$ with coefficients that are $0$ or $1$, and for no two $E_i$'s are coefficients of any $E_j$ both $1$'s. 
 
 So, $E_0^\top, \ldots, E_D^\top$ is a permutation of $E_0, \ldots, E_D$.
 
@@ -123,11 +123,11 @@ $$E_0 = \frac{1}{|X|}J.$$
 We have the assertions.
 :::
 
-Define entry-wise product $\circ$ on $\mathrm{Mat}_X(\mathbb{C})$.
+Define the entry-wise product $\circ$ on $\mathrm{Mat}_X(\mathbb{C})$.
 $$A_i \circ A_j = \delta_{ij}A_i.$$
 So, $M$ is closed under $\circ$.
 $$E_i \circ E_j = \frac{1}{|X|}\sum_{h=0}^D q^h_{ij}E_h.$$
-The numbers $q^h_{ij}$ is called Krein parameters of $Y$.
+The numbers $q^h_{ij}$ are called the Krein parameters of $Y$.
 
 Claim. $q^h_{ij}\in \mathbb{R}$.
 
@@ -148,14 +148,14 @@ E_i & = \frac{1}{|X|}\sum_{j=0}^D q_i(j)A_j.
 \end{align}
 Taking transpose and conjugate we find,
 \begin{align}
-\overline{p_i(j)} & =  p_i(j)  =  p_{i'}(\hat{j}) && (0\leq i,j\leq D)\\
-\overline{q_i(j)} & =  q_i(j)  =  q_{\hat{i}}({j}') && (0\leq i,j\leq D).
+\overline{p_i(j)} & =  p_i(\hat{j})  =  p_{i'}(j) && (0\leq i,j\leq D)\\
+\overline{q_i(j)} & =  q_{\hat{i}}(j)  =  q_i({j}') && (0\leq i,j\leq D).
 \end{align}
 
 Fix a vertex $x\in X$. Define
 $$E^*_i \equiv E^*_i(x) \in \mathrm{Mat}_X(\mathbb{C})$$
 to be a diagonal matrix such that
-$$(E^*_i)_{xy} = \begin{cases} 1 & \text{if } (x,y)\in R_i\\ 0 & \text{if } (x,y)\not\in R_i
+$$(E^*_i)_{yy} = \begin{cases} 1 & \text{if } (x,y)\in R_i\\ 0 & \text{if } (x,y)\not\in R_i
 \end{cases} \quad (0\leq i\leq D, y\in X.)$$
 Then,
 $$E^*_iE^*_j = \delta_{ij}E^*_i,$$
@@ -163,14 +163,14 @@ $$E^*_0 + \cdots + E^*_D = I,$$
 $$(E^*_i)^\top = \overline{E^*_i} = E^*_i.$$
 
 :::{.definition #dual-bose-mesner}
-Dual Bose-Mesner algebra \index{dual Bose-Mesner algebra}: $M^* \equiv M^*(x)$ with respect to $x$ is 
+The dual Bose-Mesner algebra \index{dual Bose-Mesner algebra} $M^* \equiv M^*(x)$ with respect to $x$ is 
 $$\mathrm{Span}(E^*_0, \ldots, E^*_D).$$
 :::
 
 Define dual associate matrices\index{dual associate matrix} $A_0^*, \ldots, A^*_D$.
 Indeed $A^*_i \equiv A^*_i(x)\in \mathrm{Mat}_X(\mathbb{C})$ is a diagonal matrix with 
 $$(A_i^*)_{yy} = |X|(E_i)_{xy}\quad (y\in X).$$
-$A^*_i$ is a diagonal matrix having the row $x$ of $E_i^*$ on the diagonal.
+$A^*_i$ is a diagonal matrix having the row $x$ of $|X|E_i$ on the diagonal.
 
 Observe
 \begin{align}
@@ -209,7 +209,7 @@ $$\overline{A^*_i} = \sum_{j=0}^D\overline{q_i(j)}E^*_j = \sum_{j=0}^D q_{\hat{i
 The following statements will be proved after a couple of lemmas in the next lecture.
 
 **Lemma.**
-Let $Y = (X, \{R_i\}_{0\leq i\leq D})$ be a commutative scheme. Fix a vertex $x\in X$, and set $E^*\equiv E^*_i(x)$ and $A^*_i \equiv A^*(x)$.
+Let $Y = (X, \{R_i\}_{0\leq i\leq D})$ be a commutative scheme. Fix a vertex $x\in X$, and set $E^*_i\equiv E^*_i(x)$ and $A^*_i \equiv A^*_i(x)$.
 Then the following hold.
 
 | $(i)$ $E^*_iA_jE^*_k = O$ if and only if $p^k_{ij} = 0$ for $0\leq i,j,k\leq D$.

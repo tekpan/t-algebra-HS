@@ -18,7 +18,7 @@ We may assume that
 $$\partial(x, y) = \partial(x,z) = i,$$
 otherwise 
 $$a_{yz} = a_{zy} = 0.$$
-By our assumption, there exists $g\in G$ such that
+By our assumption, there exists $g\in \mathrm{Aut}(\Gamma)$ such that
 $$g(y) = z, \quad g(z) = y, \quad g(x) = x.$$
 Let $\hat{g}$ denote the permutation matrix representing $g$, i.e., 
 $$\hat{g}\hat{y} =\widehat{g(y)} \quad \text{for all }\ y\in X, \quad \hat{y} = \begin{pmatrix}0\\\vdots \\ 1 \\\vdots \\0\end{pmatrix}\begin{matrix} \\ \\ \leftarrow y \\ \\ \text{ } \end{matrix}.$$
@@ -44,7 +44,7 @@ This proves Theorem  \@ref(thm:thin-condition).
 Find all the graphs that satisfy the condition (G) for every vertex $x$.
 
 $H(N, 2)$ is one example, because
-$$\mathrm{Aut}\Gamma_{1\cdots 1} \simeq S_\Omega, \quad x = (1\cdots 1), \quad \Gamma_i(x) = \{\hat{S} \mid |S| = i\}.$$
+$$\mathrm{Aut}(\Gamma)_{1\cdots 1} \simeq S_\Omega, \quad x = (1\cdots 1), \quad \Gamma_i(x) = \{\hat{S} \mid |S| = i\}.$$
 
 Property (G) is clearly related to the distance-transitive property.
 
@@ -57,25 +57,25 @@ $$g(x) = x',\quad g(y) = y'.$$
 :::
 
 :::{.lemma #property-g}
-Suppose a graph $\Gamma = (X, E)$ satisfies the property \textrm{(G) = (G($x$))} for every $x\in X$. Then, 
+Suppose a graph $\Gamma = (X, E)$ satisfies the property (G) = (G($x$)) for every $x\in X$. Then, 
 
 | $(i)$ either
 | $\quad (ia)$ $\Gamma$ is vertex transitive; or
-| $\quad (iia)$ $\Gamma$ is bipartite $(X = X^+ \cup X^-)$ with $X^+$, $X^-$ each an orbit of $\mathrm{Aut}(\Gamma)$.
+| $\quad (ib)$ $\Gamma$ is bipartite $(X = X^+ \cup X^-)$ with $X^+$, $X^-$ each an orbit of $\mathrm{Aut}(\Gamma)$.
 
 | $(ii)$ if $(ia)$ holds, then $\Gamma$ is distance-transitive.
 :::
 
 :::{.proof}
 $(i)$
-Claim. Suppose $y, z\in X$ are conneced by a path of even length. Then $y, z$ are in the same orbit of $\mathrm{Aut}(\Gamma)$.
+Claim. Suppose $y, z\in X$ are connected by a path of even length. Then $y, z$ are in the same orbit of $\mathrm{Aut}(\Gamma)$.
 
 _Pf of Claim._ 
-It suffices to assume that the path has lenght $2$, $y \sim w\sim z$. 
+It suffices to assume that the path has length $2$, $y \sim w\sim z$. 
 
-Now $\partial(y,w) = \partial(w,z) = 1$. So there exits $g\in \mathrm{Aut}(\Gamma)$ such that 
+Now $\partial(y,w) = \partial(w,z) = 1$. So there exists $g\in \mathrm{Aut}(\Gamma)$ such that 
 $$gw = w, \quad gy = z, \quad gz = y.$$
-This proves Claim.
+This proves the claim.
 
 Fix $x\in X$. Now suppose that $\Gamma$ is not vertex transitive, and we shall show $(ib)$.
 
@@ -88,7 +88,7 @@ Also, $X^+$ is contained in an orbit $O^+$ of $\mathrm{Aut}(\Gamma)$, and $X^-$ 
 
 Now $O^+\cap O^- = \emptyset$ (else $O^+ = O^- = X$ and vertex transitive).
 So,
-$X = O^+$, and $X^- = O^-$. 
+$X^+ = O^+$, and $X^- = O^-$. 
 
 Also $X^+ \cup X^- = X$ is a bipartition by construction.
 
@@ -98,8 +98,8 @@ By vertex transitivity, there exists an element
 $$g_1\in G \text{ such that } g_1x = x'.$$
 Observe that 
 $$\partial(x', y') = \partial(x,y) = \partial(g_1x, g_1y) = \partial(x', g_1y).$$
-Hence, there exisits an element 
-$$g_2\in G \text{ such that } g_1x' = x', g_2y' = g_1y, g_2g_1y = y'$$
+Hence, there exists an element 
+$$g_2\in G \text{ such that } g_2x' = x', g_2y' = g_1y, g_2g_1y = y'$$
 by (G($x'$)) property.
 
 Set $g = g_2g_1$. Then 
@@ -115,17 +115,16 @@ where
 \begin{align}
 X & = \{a_1\cdots a_D\mid a_i\in F, 1\leq i\leq D\}\\
 & \quad F: \text{ any set of cardinality $r$}\\
-E & = \{xy\mid y, x\in X, \; \text{$x$ and $y$ differ in exactly one coordiate}\}.
+E & = \{xy\mid y, x\in X, \; \text{$x$ and $y$ differ in exactly one coordinate}\}.
 \end{align}
 
 | $J_q(D, N)$:
 \begin{align}
-X & = \text{the set of all $D$-dimensional subspaces of $N$-dimensional vector space over $GF(q)$.}\\
-& \quad F: \text{ any set of cardinality $r$}\\
+X & = \text{the set of all $D$-dimensional subspaces of an $N$-dimensional vector space over $GF(q)$.}\\
 E & = \{xy\mid y, x\in X, \; \dim (x\cap y) = D-1\}.
 \end{align}
 
-The following graph is distance-transitive but does not satisify (G($x$)) for any $x\in G$.
+The following graph is distance-transitive but does not satisfy (G($x$)) for any $x\in X$.
 
 | $H_q(D,N)$: 
 \begin{align}
@@ -137,7 +136,7 @@ E & = \{xy\mid y, x\in X, \; \mathrm{rank}(x-y) = 1\}.
 **HS MEMO**
 
 | $H(D,r)$: $G = S_r \mathrm{wr} S_D$, $G_x = S_{r-1} \mathrm{wr} S_D$, 
-For $x, y\in X$ with $\partial(x, y) = \partial(x,z) = i$,
+For $y, z\in X$ with $\partial(x, y) = \partial(x,z) = i$,
 \begin{align}
 Y = \{j\in \Omega \mid x_j\neq y_j\} & \leftrightarrow Z = \{j\in \Omega \mid x_j\neq z_j\}\\
 (y_{j_1}, \ldots, y_{j_i}) & \leftrightarrow (z_{\ell_1}, \ldots, z_{\ell_i})

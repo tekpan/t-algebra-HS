@@ -19,16 +19,16 @@ The questions below are unsolved as of May, 1993 (to my knowledge). A complete s
 | _Bip_: $\Gamma$ is bipartite.
 
 |
-| _Th_: $\Gamma$ is thin (over the field of complex numbers).
+| _TH_: $\Gamma$ is thin (over the field of complex numbers).
 
 |
-| _Few1_: The subgraph induced on the first subconstituent of $\Gamma$ with respect to $x$ has at most $5$ distince eigenvalues.
+| _Few1_: The subgraph induced on the first subconstituent of $\Gamma$ with respect to $x$ has at most $5$ distinct eigenvalues.
 
 |
 | _Few2_: The subgraph induced on the second subconstituent of $\Gamma$ with respect to $x$ has at most $16$ distinct eigenvalues.
 
 |
-| _Z_: For all integers $i$ $(2\leq i\leq D)$, and all triples $u, v, w$ ($u,v, w\in X)$ such that $\partial(u,v) = 1$, $\partial(v,w) = i-1$, and $\partial(v,w) = i$, the number
+| _Z_: For all integers $i$ $(2\leq i\leq D)$, and all triples $u, v, w$ ($u,v, w\in X)$ such that $\partial(u,v) = 1$, $\partial(v,w) = i-1$, and $\partial(u,w) = i$, the number
 $$z_i:=|\{y\mid y\in X, \partial(y,u) = \partial(y,v) =1, \partial(y,w) = i-1\}|$$
 is a constant that does not depend on $u,v,w$.
 
@@ -43,29 +43,29 @@ $\quad$ _Q_ $+$ _Bip_ $\to$ _TH_, $\quad$ _Q_ $+$ _TH_ $\to$ _Few1_, _Few2_,  _Z
 | $(2)$ $\star\star$ Assume _Q_, _Bip_, and classify $\Gamma$.
 
 |
-| $(3)$ $\star$ Find generalization to the theorems of the course for non-regular, bipartite distance-regular graphs.
+| $(3)$ $\star$ Find generalizations of the theorems of the course for non-regular, bipartite distance-regular graphs.
 
 |
-| $(4)$ $\star$ Assume, _Q_, and let $W$ denote an irreducible $T$-module with endpoint $1$ that is not thin. Find a nice basis for $W$ and find the matrices representing the adjacency matrix $A$ and the dual adjacency matrix $A^*$ with respect to this basis. Perhaps assume classical parameters. Theorem \@ref(thm:rfl-relations), and Lemma \@ref(lem:inverse-of-r) should be useful.
+| $(4)$ $\star$ Assume _Q_, and let $W$ denote an irreducible $T$-module with endpoint $1$ that is not thin. Find a nice basis for $W$ and find the matrices representing the adjacency matrix $A$ and the dual adjacency matrix $A^*$ with respect to this basis. Perhaps assume classical parameters. Theorem \@ref(thm:rfl-relations), and Lemma \@ref(lem:inverse-of-r) should be useful.
 
 |
 | $(5)$ $\star$ Is it true that $\Gamma$ is thin over the field of complex numbers if and only if $\Gamma$ is thin over the field of real numbers? What does it mean for $\Gamma$ to be thin over the field of rational numbers? The examples suggest that if $\Gamma$ is thin over the complex numbers then it is already thin over the rational numbers. If this is true, it would be nice to have a proof. For the moment, suppose it is not true. Assume $\Gamma$ is thin over the field of complex numbers, and define the _splitting field_ of $\Gamma$ to be the minimal extension of the rational field over which $\Gamma$ is thin. Then the elements of the Galois group of the splitting field act on the standard module, and permute the isomorphism classes of irreducible $T$-modules. How are the isomorphism classes of $T$-modules involved related? Can the permutations be nontrivial?
 
 |
-| $(6)$ $\star\star$ Assume _Q_, and assume there is a second $Q$-polynomial ordering of the primitive idempotent. Prove _TH_. I believe in this case the first subconstituent has at most $4$ distinct eigenvalues, and the constant $\Psi$ from class if determined by the intersection numbers. It may be possible to classify all such $\Gamma$.
+| $(6)$ $\star\star$ Assume _Q_, and assume there is a second $Q$-polynomial ordering of the primitive idempotents. Prove _TH_. I believe in this case the first subconstituent has at most $4$ distinct eigenvalues, and the constant $\Psi$ from class is determined by the intersection numbers. It may be possible to classify all such $\Gamma$.
 
 |
 | $(7)$ $\star\star$ Assume _Q_, and assume there is a second $P$-polynomial ordering of the distance matrices. I believe the same thing happens as in $(6)$ above.
 
 |
 | $(8)$ $\star\star$ A path $y = y_0, y_1, \ldots, y_t = z$ in $\Gamma$ is said to be _geodetic_ whenever $\partial(y,z)=t$. Let us say a subset $\Delta$ of $X$ is _geodetically closed_ whenever all vertices on all geodetic paths with endpoints in $\Delta$ are also in $\Delta$. For any vertices $y,z\in X$, observe there exists a unique minimal geodetically closed subset containing $y,z$, denoted $[yz]$. 
-If the diameter of $[yz]$ equals $\partial(y,z)$, we say $[yz]$ is a subspace. Furthermore, show the subgraph induced on $[yz]$ is distance-regular, and satisfies _Q_, _TH_. If this proves not to be the case, find a simple additional assumption on $\Gamma$ under which it is true. (It seems to hold for the known examples). I believe these subspaces are the key to an eventual classification of the graphs satisfying _Q_, _TH_ (and possibly all distance-regular graphs with sufficiently large diameter). In the examples, the partially ordered set of all subspaces, ordered by reverse inclusion, is some classical geometry. There are many classification theorems in the area of finite projective geometry. My hope is that given any $\Gamma$, the partially ordered set of all subspaces is some highly regular geometry that can be classified using one of these theorems, leading us to a classification of the original $\Gamma$. (By the way, I intend to explore this area in the course I am teaching next fall on partiallly ordered sets).
+If the diameter of $[yz]$ equals $\partial(y,z)$, we say $[yz]$ is a subspace. Furthermore, show the subgraph induced on $[yz]$ is distance-regular, and satisfies _Q_, _TH_. If this proves not to be the case, find a simple additional assumption on $\Gamma$ under which it is true. (It seems to hold for the known examples). I believe these subspaces are the key to an eventual classification of the graphs satisfying _Q_, _TH_ (and possibly all distance-regular graphs with sufficiently large diameter). In the examples, the partially ordered set of all subspaces, ordered by reverse inclusion, is some classical geometry. There are many classification theorems in the area of finite projective geometry. My hope is that given any $\Gamma$, the partially ordered set of all subspaces is some highly regular geometry that can be classified using one of these theorems, leading us to a classification of the original $\Gamma$. (By the way, I intend to explore this area in the course I am teaching next fall on partially ordered sets).
 
 |
-| $(9)$ $\star\star$ Assume _Q_, _TH_. Find a nice basis for $E^*_2TE^*_2$ in a way that generalized what we did in class for $E^*_1TE^*_1$.
+| $(9)$ $\star\star$ Assume _Q_, _TH_. Find a nice basis for $E^*_2TE^*_2$ in a way that generalizes what we did in class for $E^*_1TE^*_1$.
 
 |
-| $(10)$ $\star$ Assume _B_, _TH_, and that the dimension of $E^*_2TE^*_2$ is at most $4$. Show that _Q_ holds. Find a nice basis for $E^*_2TE^*_2$.
+| $(10)$ $\star$ Assume _Bip_, _TH_, and that the dimension of $E^*_2TE^*_2$ is at most $4$. Show that _Q_ holds. Find a nice basis for $E^*_2TE^*_2$.
 
 |
 | $(11)$ It is not hard to show that in general
@@ -73,9 +73,9 @@ If the diameter of $[yz]$ equals $\partial(y,z)$, we say $[yz]$ is a subspace. F
 c_i\geq c_{i-1} & \quad (1\leq i\leq D),\\
 b_i \leq b_{i-1} & \quad (0\leq i\leq D-1).
 \end{align}
-It is known that if $\Gamma$ has at least one cyle $y1, y2, y3, y4, y1$ such that $\partial(y1,y3) = \partial(y2,y4)=2$ then
+It is known that if $\Gamma$ has at least one cycle $y_1, y_2, y_3, y_4, y_1$ such that $\partial(y_1,y_3) = \partial(y_2,y_4)=2$ then
 $$c_i - c_{i-1} + b_{i-1} - b_i \geq a_1 + 2 \quad (1\leq i\leq D).$$
-This bound has proved to be quite fndamental. For example, the graphs $\Gamma$ where equality holds for all $i$ all satisfy _Q_, and in fact they are precisely the graphs of type IIA or IIC (refereng to p.10, 11 in the thick paper I handed out in class). These graphs have all been classified. I have some papers describing some more general bounds of the above sort, but they are unsatisfactory in the sense that the class of graphs for which equality is attained is not interesting, and may even be empty. Hence one problem ($\star\star$) is to find a bound that controls the growth of the $c_i$'s and the decrease of the $b_i$'s, where equality is attained for some nice, large class of graphs. Ideally, this class would contain all the known examples of $\Gamma$ with sufficiently large diameter, or perhaps all the graphs $\Gamma$ satisfying _Q_ $+$ _TH_. Specific proble ($\star$): Assume _Z_ and redo the arguments in the above-mentioned papers. Dramatic improvements in the bounds obtained are expected (I did not realise the significance of _Z_ and redo the arguments in the above-mentioned papers). Since _Q_ $+$ _TH_ $\to$ _Z_, the new bounds are expected to give important feasibility conditions on the intersection numbers of any $\Gamma$ satisfying _Q_ and _TH_.
+This bound has proved to be quite fundamental. For example, the graphs $\Gamma$ where equality holds for all $i$ all satisfy _Q_, and in fact they are precisely the graphs of type IIA or IIC (referring to p.10, 11 in the thick paper I handed out in class). These graphs have all been classified. I have some papers describing some more general bounds of the above sort, but they are unsatisfactory in the sense that the class of graphs for which equality is attained is not interesting, and may even be empty. Hence one problem ($\star\star$) is to find a bound that controls the growth of the $c_i$'s and the decrease of the $b_i$'s, where equality is attained for some nice, large class of graphs. Ideally, this class would contain all the known examples of $\Gamma$ with sufficiently large diameter, or perhaps all the graphs $\Gamma$ satisfying _Q_ $+$ _TH_. Specific problem ($\star$): Assume _Z_ and redo the arguments in the above-mentioned papers. Dramatic improvements in the bounds obtained are expected (I did not realise the significance of _Z_ and redo the arguments in the above-mentioned papers). Since _Q_ $+$ _TH_ $\to$ _Z_, the new bounds are expected to give important feasibility conditions on the intersection numbers of any $\Gamma$ satisfying _Q_ and _TH_.
 
 |
 | $(12)$ $\star$ Explore the class of graphs that are $Q$-polynomial with respect to each vertex. but not assumed to be distance-regular. Are these graphs in fact distance-regular or bi-distance-regular? (This result would be very esthetically pleasing to me, since as we have seen, the sibling property of being thin does not imply distance-regularity or bi-distance-regularity). If the answer to the above question is "no", just what sort of regularity do these graphs have? For a graph that is $Q$-polynomial with respect to each vertex, how must the orderings of the primitive idempotents associated with adjacent vertices be related? Is it possible for a distance-regular graph to be $Q$-polynomial with respect to each vertex, but still not be $Q$-polynomial? (This is a completely new area. Up until now, the $Q$-polynomial property was only defined for distance-regular graphs.)
@@ -89,24 +89,24 @@ This bound has proved to be quite fndamental. For example, the graphs $\Gamma$ w
 
 | $\quad (iii)$ $RL^2E^*_i, LRLE^*_i, L^2RE^*_i, LF^2E^*_i, FLFE^*_i, LFE^*_i, F^2LE^*_i, FLE^*_i, LE^*_i$ are linearly dependent, for all $i$ $(1\leq i \leq D)$.
 
-Then does _Q_ hold? what if we assume _TH_? If not, what other graphs can one get? are they "almost" $Q$-polynomial in some sense (pserhaps many Krein parameters vanish, but not quite enough to imply $Q$). What is the essential assumption about the coefficients in the above dependencies that is needed to insure _Q_.
+Then does _Q_ hold? What if we assume _TH_? If not, what other graphs can one get? Are they "almost" $Q$-polynomial in some sense (perhaps many Krein parameters vanish, but not quite enough to imply $Q$). What is the essential assumption about the coefficients in the above dependencies that is needed to ensure _Q_.
 
 |
-| $(14)$ $\star\star$$\star$ Assume _Q_ and _TH_. Find the abstract structure of the Norton algebra $N$. My intuition says that this structure can be computed in terms of the intersection numbers and a small list of additional parameters such as $\psi$. The examples suggest that $N$ is "almost associative" in some sense. Specific problem ($\star$) Find the precise structure of the Norton algebra for the examples $J(d,n)$, $J_q(d,n)$, $\ldots$, and find some pattern. The dual of Theorem \@ref(thm:rfl-relations) is relevent to this problem. My intuition says that the idempotents of $N$ should correspond to the subspaces of $\Gamma$ referred to in problem 8, and that somehow the multiplication operation in $N$ should be related to the meet and join operations in the geometry of subspaces referred to in that problem.
+| $(14)$ $\star\star$$\star$ Assume _Q_ and _TH_. Find the abstract structure of the Norton algebra $N$. My intuition says that this structure can be computed in terms of the intersection numbers and a small list of additional parameters such as $\psi$. The examples suggest that $N$ is "almost associative" in some sense. Specific problem ($\star$) Find the precise structure of the Norton algebra for the examples $J(d,n)$, $J_q(d,n)$, $\ldots$, and find some pattern. The dual of Theorem \@ref(thm:rfl-relations) is relevant to this problem. My intuition says that the idempotents of $N$ should correspond to the subspaces of $\Gamma$ referred to in problem 8, and that somehow the multiplication operation in $N$ should be related to the meet and join operations in the geometry of subspaces referred to in that problem.
 
 |
 | $(15)$ $\star\star$ Assume _Q_ and _TH_, and pick $y\in X$. Show
 $$T(x)\hat{y} = T(y)\hat{x}.$$
-(I can show this for $\partial(x,y)=1$.) If the above line holds, then apparently $H:=T(x)\hat{y} = T(y)\hat{x}$ is a module for the algebra $T(x,y)$ generated by the Bose-Mesner algebra $M$, the dual Bose-Mesner algebra $M^*(x)$, and $M^*(y)$. Observe the elements of $M^*(x)$, $M^*(y)$ mutually commute, and in fact that the maximal common engenspaces of $M^*(x)$, $M^*(y)$ are the $E^*_{ij}V$ $(0\leq i,j\leq D)$, where $E^*_{ij} = E^*_i(x)E^*_j(y)$. Find a nice orthogonal basis for each $E^*_{ij}H$. Observe the union $B$ of these bases is a basis for $H$. Find the matrices representing $A$, $A^*(x)$, $A^*(y)$ with respect to $B$. Choose $B$ so that the entries in these matrices are nice, factorable expressions in the intersection numbers and whatever other parameters are needed. In the case $\partial(x,y)=1$, these entries can be deteermined from the intersection numbers and the parameter $\psi$. If $\partial(x,y)\geq 2$, presumably there are some more free parameters analoguous to $\psi$ that play a role. My intuition says that as a $T(x,y)$-module, $H$ is determined from the intersection numbers of $\Gamma$ and $t$ free parameters, where $t = \partial(x,y)$.
+(I can show this for $\partial(x,y)=1$.) If the above line holds, then apparently $H:=T(x)\hat{y} = T(y)\hat{x}$ is a module for the algebra $T(x,y)$ generated by the Bose-Mesner algebra $M$, the dual Bose-Mesner algebra $M^*(x)$, and $M^*(y)$. Observe the elements of $M^*(x)$, $M^*(y)$ mutually commute, and in fact that the maximal common eigenspaces of $M^*(x)$, $M^*(y)$ are the $E^*_{ij}V$ $(0\leq i,j\leq D)$, where $E^*_{ij} = E^*_i(x)E^*_j(y)$. Find a nice orthogonal basis for each $E^*_{ij}H$. Observe the union $B$ of these bases is a basis for $H$. Find the matrices representing $A$, $A^*(x)$, $A^*(y)$ with respect to $B$. Choose $B$ so that the entries in these matrices are nice, factorable expressions in the intersection numbers and whatever other parameters are needed. In the case $\partial(x,y)=1$, these entries can be determined from the intersection numbers and the parameter $\psi$. If $\partial(x,y)\geq 2$, presumably there are some more free parameters analogous to $\psi$ that play a role. My intuition says that as a $T(x,y)$-module, $H$ is determined from the intersection numbers of $\Gamma$ and $t$ free parameters, where $t = \partial(x,y)$.
 
 |
-| $(16)$ $\star\star$  Does _TH_ and _Few1_ imply _Z_? If not, what extra assumption is needes?
+| $(16)$ $\star\star$  Does _TH_ and _Few1_ imply _Z_? If not, what extra assumption is needed?
 
 |
 | $(17)$ $\star\star$ Does _TH_, _Few1_, _Few2_, imply _Q_? If not, what extra assumption is needed?
 
 |
-| $(18)$ $\star\star$ Let $\Gamma$ be an arbitrary grarph, not assumed to be distance-regular. Conjecture: $\Gamma$ is thin if and only if for all integers $i,j,k$, and all vertices $x,y,z\in X$ such that $\partial(x,y) = \partial(x,z) = i$, the number of vertices $w\in X$ with $\partial(w,x) = j$, $\partial(w,y) = 1$, $\partial(w,z) = k$ equals the number of vertices $w'\in X$ with $\partial(w',x) = j$, $\partial(w',z)=1$, $\partial(w',y)=k$. If $\Gamma$ assumed to be distance-regular, then the conjecrure is true and there is a long proof in the thick paper I handed out in class (Theorem 5.1 (iii)) . A short, slick proof (assuming distance-regularity or not) is very much needed. If  the conjecture turns out not to be true in the bi-distance-regular case, find some similar combinatorial characterization of the thin property.
+| $(18)$ $\star\star$ Let $\Gamma$ be an arbitrary graph, not assumed to be distance-regular. Conjecture: $\Gamma$ is thin if and only if for all integers $i,j,k$, and all vertices $x,y,z\in X$ such that $\partial(x,y) = \partial(x,z) = i$, the number of vertices $w\in X$ with $\partial(w,x) = j$, $\partial(w,y) = 1$, $\partial(w,z) = k$ equals the number of vertices $w'\in X$ with $\partial(w',x) = j$, $\partial(w',z)=1$, $\partial(w',y)=k$. If $\Gamma$ is assumed to be distance-regular, then the conjecture is true and there is a long proof in the thick paper I handed out in class (Theorem 5.1 (iii)) . A short, slick proof (assuming distance-regularity or not) is very much needed. If  the conjecture turns out not to be true in the bi-distance-regular case, find some similar combinatorial characterization of the thin property.
 
 |
 There are a number of additional problems in section 7 of the thick paper I handed out in class. Essentially all the known examples of thin, $Q$-polynomial distance-regular graphs are listed in section 6 of that paper.

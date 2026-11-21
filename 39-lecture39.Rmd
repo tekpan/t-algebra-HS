@@ -1,22 +1,22 @@
 # $A^+$ and $A^-$ {#lec39}
 **Wednesday, May 5, 1993** 
 
-Assume $\Gamma = (X, E)$ is thin, distance regular of diameter $D\geq 5$, and $Q$-polynomial with respect to $E_0, E_1, \ldots, E_D$.
+Assume $\Gamma = (X, E)$ is thin, distance-regular of diameter $D\geq 5$, and $Q$-polynomial with respect to $E_0, E_1, \ldots, E_D$.
 
 Fix a vertex $x\in X$, write $E^*_i\equiv E^*_i(x)$, $R\equiv R(x)$, $T\equiv T(x)$. 
 
-Pick $y\in X$ with $\partial(x,y) = 1$. Write $E^*_{i,j} \equiv E^*(x)E^*(y)$, $\delta_{ij} = E^*_{ij}\delta$, and $\tilde{A} = E^*_1AE^*_1$.
+Pick $y\in X$ with $\partial(x,y) = 1$. Write $E^*_{ij} \equiv E^*_i(x)E^*_j(y)$, $\delta_{ij} = E^*_{ij}\delta$, and $\tilde{A} = E^*_1AE^*_1$.
 
 Recall that $\delta^+_{11}\in E^*_{11}V$ and
 $$R^{-1}E^*_2A_2E^*_1\hat{y} = \delta^+_{11} + \Psi(x,y)\hat{y}.$$
-We saw $\Psi(x,y) = \Psi(y,x)$. We shall show below that $\Psi(x,y)$ is independent of edge $xy$.
+We saw $\Psi(x,y) = \Psi(y,x)$. We shall show below that $\Psi(x,y)$ is independent of the edge $xy$.
 
 :::{.lemma #delta-minus11}
 With the above notation, set $\Psi:=\Psi(x,y)$. Then the following hold.
 
 | $(i)$ $\delta^-_{11} = \tilde{A}\delta^+_{11} - \left( \frac{a_2}{c_2} - \Psi\right)\hat{y} + \Psi \delta_{12}\in E^*_{11}V$.
 
-| $(ii)$ $\delta^-_{11}(x,y) = \delta^{-1}_{11}(y,x)$.
+| $(ii)$ $\delta^-_{11}(x,y) = \delta^{-}_{11}(y,x)$.
 :::
 
 :::{.proof}
@@ -40,16 +40,16 @@ Also, $\delta^-_{10} = \sigma\hat{y}$ for some $\sigma\in \mathbb{C}$, where
 Solving for $\delta^-_{11}$ in \@ref(eq:tildea-deltaplus11), using \@ref(eq:delta-minus12) and \@ref(eq:sigma), we have
 \begin{align}
 \delta^-_{11} & = \tilde{A}\delta^+_{11} - \delta^-_{12} - \delta^-_{10}\\
-& = A\delta^+_{11} + \Psi \delta_{12} - \left(\frac{a_2}{c_2} - \Psi\right)\hat{y}.
+& = \tilde{A}\delta^+_{11} + \Psi \delta_{12} - \left(\frac{a_2}{c_2} - \Psi\right)\hat{y}.
 \end{align}
 
 | $(ii)$ Since
 $$\delta^-_{11} = E^*_{11}AE^*_{11}\delta^+_{11},$$
-we have $\delta^+_{11}(x,y) = \delta^+_{11}(y,x)$.
+and $\delta^+_{11}(x,y) = \delta^+_{11}(y,x)$, we have $\delta^-_{11}(x,y) = \delta^-_{11}(y,x)$.
 :::
 
 :::{.lemma #psi}
-With the above noation, $\Psi = \Psi(u,v)$ is independent of $u, v$, where
+With the above notation, $\Psi = \Psi(u,v)$ is independent of $u, v$, where
 $u,v\in X$, with $\partial(u,v)=1$.
 :::
 
@@ -61,7 +61,7 @@ Case: $\partial(y,z) = 2$.
 
 Set $\Delta: = \tilde{A}R^{-1}E^*_2A_2E^*_1$.
 
-Observe: $\Delta \in E^*_1TE^*_1$ and $E^*_1TE^*_1$ is symmetrix by Lemma \@ref(lem:e1starte1star).
+Observe: $\Delta \in E^*_1TE^*_1$ and $E^*_1TE^*_1$ is symmetric by Lemma \@ref(lem:e1starte1star).
 
 Hence, $\Delta_{yz} = \Delta_{zy}$.
 
@@ -69,12 +69,12 @@ Since $\Delta\in \mathrm{Mat}_X(\mathbb{R})$,
 $$\langle \Delta\hat{y}, \hat{z}\rangle = \langle \Delta \hat{z}, \hat{y}\rangle.$$
 But,
 \begin{align}
-\langle \Delta\hat{y}, \hat{z}\rangle & = \langle \tilde{A}\delta^+_{11} + \Psi(x,y)\hat{y}, \hat{z}\rangle \\
+\langle \Delta\hat{y}, \hat{z}\rangle & = \langle \tilde{A}\delta^+_{11} + \Psi(x,y)\tilde{A}\hat{y}, \hat{z}\rangle \\
 & = \langle \tilde{A}\delta^+_{11}, \hat{z}\rangle\\
 & = \Bigl\langle \delta^-_{11} + \left(\frac{a_2}{c_2}-\Psi\right)\hat{y} - \Psi(x,y)\delta_{12}, \hat{z}\Bigr\rangle\\
 & = -\Psi(x,y).
 \end{align}
-Note that $\partial(x,y) = 2$ by Lemma \@ref(lem:delta-minus11) $(i)$.
+Note that $\partial(y,z) = 2$ by Lemma \@ref(lem:delta-minus11) $(i)$.
 
 Similarly, 
 $$\langle\Delta\hat{z}, \hat{y}\rangle = -\Psi(x,z).$$
@@ -83,7 +83,7 @@ Hence, $\Psi(x,y) = \Psi(x,z)$.
 Case: $\partial(y,z) = 1$.
 
 By Lemma \@ref(lem:e11star-to-e22star) $(ii)$, there exists $w\in X$ such that
-$$\partial(x,z) = 1, \; \partial(w,y)=2, \; \partial(w,z)=2.$$
+$$\partial(x,w) = 1, \; \partial(w,y)=2, \; \partial(w,z)=2.$$
 
 ```{r echo=FALSE, fig.width=1.5, fig.height=1.5, message=FALSE, fig.align="center"}
 library(tidyverse)
@@ -116,7 +116,7 @@ Pick vertices $y,z\in X$ such that $\partial(x,y) = \partial(x,z) = 1$.
 
 Show that $A^+_{yz}$, $A^-_{yz}$ are both $0$ if $\partial(y,z) = 0$ or $2$.
 
-Since $A^+_{yz} = R^{-1}E^*_2A_2E^*_1\hat{y} - \Psi E^*_1\hat{y} = \delta^+_{11}$,
+Since $A^+\hat{y} = R^{-1}E^*_2A_2E^*_1\hat{y} - \Psi E^*_1\hat{y} = \delta^+_{11}$,
 $$A^+_{yz} = \langle A^+\hat{y}, \hat{z}\rangle = \langle \delta^+_{11},\hat{z}\rangle = 0,$$
 if $\partial(y,z) = 0$ or $2$.
 
@@ -129,9 +129,9 @@ A^-\hat{y} & = \tilde{A}A^+\hat{y} - \left(\frac{a_2}{c_2}-\Psi\right)E^*_1\hat{
 $$A^-_{yz} = \langle A^-\hat{y}, \hat{z}\rangle = \langle \delta^-_{11}, \hat{z}\rangle = 0,$$
 if $\partial(y,z) = 0$ or $2$.
 
-Since $E^*_1TE^*_1 = \mathrm{Span}(\tilde{J},E^*_1, \tilde{A}, \tilde{A}^2, \ldots)$ by Lemma \@ref(lem:e1starte1star).
+We have $E^*_1TE^*_1 = \mathrm{Span}(\tilde{J},E^*_1, \tilde{A}, \tilde{A}^2, \ldots)$ by Lemma \@ref(lem:e1starte1star).
 
-$A^+, A^-$ are both generalized matrices for the adjacency subgraph induced on the first subconstituent concerning $x$.
+Hence $A^+, A^-$ are both generalized adjacency matrices for the subgraph induced on the first subconstituent with respect to $x$.
 :::
 
 Similarly,
@@ -144,12 +144,12 @@ $$E^*_1TE^*_1 = \mathrm{Span}(\tilde{J}, E^*_1, \tilde{A}, A^+, A^-)$$
 
 :::{.lemma #tyx-equals-txy}
 If $\partial(x,y) = 1$, then 
-$$T(y)\hat{y} = T(x)\hat{y}.$$
+$$T(y)\hat{x} = T(x)\hat{y}.$$
 :::
 
 :::{.proof}
 \begin{align}
-T(x)\hat{x} & = T(x)E^*_1\hat{y}\\
+T(x)\hat{y} & = T(x)E^*_1\hat{y}\\
 & = M(E^*_0+E^*_1)T(x)E^*_1\hat{y} \quad (\text{as $\Gamma$ is thin})\\
 & = M\hat{x} + ME^*_1TE^*_1\hat{y}\\
 & = M\hat{x} + M\mathrm{Span}(\tilde{J}, E^*_1, \tilde{A}, A^+, A^-)\hat{y}\\
@@ -160,7 +160,7 @@ T(x)\hat{x} & = T(x)E^*_1\hat{y}\\
 But the identity of these conditions does not change if we interchange $x$ and $y$.
 
 Hence,
-$$T(y)\hat{y} = T(x)\hat{y}.$$
+$$T(y)\hat{x} = T(x)\hat{y}.$$
 This proves the lemma.
 :::
 

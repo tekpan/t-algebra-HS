@@ -1,4 +1,4 @@
-# $P$-and $Q$-Polynomial Schemes {#lec27}
+# $P$- and $Q$-Polynomial Schemes {#lec27}
 **Friday, April 2, 1993** 
 
 :::{.theorem #p-and-q}
@@ -35,7 +35,7 @@ $i=1$:
 
 $i=2$:
 \begin{align}
-\mathrm{LHS} & = b_1\left(\theta^*_2-\theta^*_1 - \frac{(\theta^*_1-\theta^*_0)^2}{\theta^*_0-\theta^*_1}\right)\\
+\mathrm{LHS} & = b_1\left(\theta^*_2-\theta^*_1 - \frac{(\theta^*_1-\theta^*_2)^2}{\theta^*_0-\theta^*_1}\right)\\
 & = b_1\frac{(\theta^*_2-\theta^*_1)(\theta^*_0-\theta^*_1-\theta^*_2+\theta^*_1)}{\theta^*_0-\theta^*_1}\\
 & = b_1\frac{(\theta^*_2-\theta^*_1)(\theta^*_0-\theta^*_2)}{\theta^*_0-\theta^*_1}\\
 \mathrm{RHS} & = -(\theta+1)(\theta^*_0-\theta^*_2).
@@ -63,8 +63,8 @@ Immediate from the proof of Theorem 2.1 in 'A new inequality for distance-regula
 
 **Note.** Suppose $(i)-(iii)$ hold. In particular, $\theta^*_0, \theta^*_1, \ldots, \theta^*_D$ are distinct. Then,
 $$c_i + a_i + b_i = k\quad (0\leq i\leq D).$$
-$$c_i\theta^*_{i-1} + a_i\theta^*_i + b_i\theta^*_{i+1} = \theta \theta^*_j \quad (0\leq i\leq D).$$
-$$\frac{\theta^*_i-\theta^*_{i+1}+\theta^*_{i+2}-\theta^*_{i-3}}{\theta^*_{i+1}-\theta^*_{i+2}}\quad \text{is independent of $i$}\quad (0\leq i\leq D-3).$$
+$$c_i\theta^*_{i-1} + a_i\theta^*_i + b_i\theta^*_{i+1} = \theta \theta^*_i \quad (0\leq i\leq D).$$
+$$\frac{\theta^*_i-\theta^*_{i+1}+\theta^*_{i+2}-\theta^*_{i+3}}{\theta^*_{i+1}-\theta^*_{i+2}}\quad \text{is independent of $i$}\quad (0\leq i\leq D-3).$$
 \begin{align}
 & c_i\left(\theta^*_2 - \theta^*_i - \frac{(\theta^*_1-\theta^*_{i-1})^2}{\theta^*_0-\theta^*_i}\right) + b_{i-1}\left(\theta^*_2 - \theta^*_{i-1} - \frac{(\theta^*_1-\theta^*_{i})^2}{\theta^*_0-\theta^*_{i-1}}\right)\\
 & = (k-\theta)(\theta^*_1+\theta^*_2-\theta^*_{i-1}-\theta^*_i)-(\theta+1)(\theta^*_0-\theta^*_2).
@@ -80,11 +80,11 @@ b_i & = \frac{h(1-q^{i-D})(1-s^*q^{i+1})(1-r_1q^{i+1})(1-r_2q^{i+1})}{(1-s^*q^{2
 c_i & = \frac{h(1-q^{i})(1-s^*q^{D+i+1})(r_1-s^*q^{i})(r_2-s^*q^{i})}{s^*q^D(1-s^*q^{2i})(1-s^*q^{2i+1})} \quad (0\leq i\leq D),\\
 a_i & = b_0 - c_i - b_i \quad (0\leq i\leq D),
 \end{align}
-where $h$ variable is chosen so that $c_1 = 1$.
+where $h$ is chosen so that $c_1 = 1$.
 
-(We must also consider limiting cases $h\to 0$, $s^*\to 0$, $q^*\to \pm 1$.)
+(We must also consider limiting cases $h\to 0$, $s^*\to 0$, $q\to \pm 1$.)
 
-See Theorem 2.1 in "The subconstituent algebra of an association scheme, I, II, III, [@terwilliger:1992], [@terwilliger:1993-1], [@terwilliger:1993-2].
+See Theorem 2.1 in "The subconstituent algebra of an association scheme, I, II, III", [@terwilliger:1992], [@terwilliger:1993-1], [@terwilliger:1993-2].
 
 
 :::{.definition #qbinomial}
@@ -106,12 +106,12 @@ for some $\sigma, \alpha\in \mathbb{R}$.
 
 
 :::{.lemma #classical-parameters}
-With above notation, suppose \@ref(eq:ci), \@ref(eq:bi) hold.
+With the above notation, suppose \@ref(eq:ci), \@ref(eq:bi) hold.
 Then,
 
 | $(i)$ $\theta = \frac{b_1}{q}-1$ is an eigenvalue of $\Gamma$ with $\theta\neq k$.
 
-| $(ii)$ Let $E = |X|^{-1}\sum_{i=0}^D \theta^*_i A_i$ be associated primitive idempotent. Then
+| $(ii)$ Let $E = |X|^{-1}\sum_{i=0}^D \theta^*_i A_i$ be the associated primitive idempotent. Then
 $$\frac{\theta^*_i}{\theta^*_0} = 1 + \left(\frac{\theta}{k}-1\right)\begin{bmatrix}{i}\\{1}\end{bmatrix} q^{1-i} \quad (0\leq i\leq D).$$
 In particular, $\theta^*_i \neq \theta^*_0$ for all $i\in \{1, 2 \ldots, D\}$.
 
@@ -125,7 +125,7 @@ where $a_i = k-c_i - b_i$ $\quad (0\leq i \leq D)$.
 
 (equivalently: check
 \begin{equation}
-c_i(\theta^*_{i-1}-\theta^*_i) + b_i(\theta^*_i -\theta^*_{i+1}) = (\theta-k) \theta^*_i \quad (0\leq i\leq D),(\#eq:cibithetak)
+c_i(\theta^*_{i-1}-\theta^*_i) + b_i(\theta^*_{i+1} -\theta^*_i) = (\theta-k) \theta^*_i \quad (0\leq i\leq D),(\#eq:cibithetak)
 \end{equation}
 where $c_i, b_i, \theta^*_i, \theta$ are as given.)
 
@@ -134,11 +134,11 @@ where $c_i, b_i, \theta^*_i, \theta$ are as given.)
 
 $$\theta = \frac{b_1}{q}-1, \; \frac{\theta^*_i}{\theta^*_0} = 1 + \left(\frac{\theta}{k}-1\right)\begin{bmatrix}{i}\\{1}\end{bmatrix} q^{1-i}, \; b_0 = \begin{bmatrix}{D}\\{1}\end{bmatrix}\sigma.$$
 $i=0$. 
-$$\frac{\theta^*_i}{\theta^*_0} = \frac{\theta}{k}, \quad - k\left(1-\frac{\theta^*_1}{\theta^*_0}\right)= -k\left(1-\frac{\theta}{k}\right) = \theta -k.$$
+$$\frac{\theta^*_1}{\theta^*_0} = \frac{\theta}{k}, \quad - k\left(1-\frac{\theta^*_1}{\theta^*_0}\right)= -k\left(1-\frac{\theta}{k}\right) = \theta -k.$$
 $$\frac{\theta^*_{i-1}-\theta^*_i}{\theta^*_0} = \left(\frac{\theta}{k}-1\right)\left(\begin{bmatrix}{i-1}\\{1}\end{bmatrix}q^{2-i}-\begin{bmatrix}{i}\\{1}\end{bmatrix}q^{1-i}\right)=-\left(\frac{\theta}{k}-1\right)q^{1-i}.$$
 $$\theta-k=\left(\begin{bmatrix}{D}\\{1}\end{bmatrix}-1\right)(\sigma-\alpha)/q-1 - \begin{bmatrix}{D}\\{1}\end{bmatrix}\sigma = \begin{bmatrix}{D-1}\\{1}\end{bmatrix}(\sigma-\alpha)-1-\begin{bmatrix}{D}\\{1}\end{bmatrix}\sigma.$$
 \begin{align}
-& (c_i(\theta^*_{i-1}-\theta^*_i) + b_i(\theta^*_i -\theta^*_{i+1}) - (\theta-k) \theta^*_i)/\theta^*_0\\
+& (c_i(\theta^*_{i-1}-\theta^*_i) + b_i(\theta^*_{i+1} -\theta^*_i) - (\theta-k) \theta^*_i)/\theta^*_0\\
 & \quad = -\begin{bmatrix}{i}\\{1}\end{bmatrix}\left(1+\alpha \begin{bmatrix}{i-1}\\{1}\end{bmatrix}\right)\left(\frac{\theta}{k}-1\right)q^{1-i} + \left(\begin{bmatrix}{D}\\{1}\end{bmatrix}-\begin{bmatrix}{i}\\{1}\end{bmatrix}\right)\left(\sigma- \alpha \begin{bmatrix}{i}\\{1}\end{bmatrix}\right)\left(\frac{\theta}{k}-1\right)q^{-i}\\
 & \qquad\qquad -(\theta-k)\left(1+\left(\frac{\theta}{k}-1\right)\begin{bmatrix}{i}\\{1}\end{bmatrix}q^{1-i}\right)\\
 & \quad = \left(\frac{\theta}{k}-1\right)\left(-\begin{bmatrix}{i}\\{1}\end{bmatrix}\left(1+
@@ -168,7 +168,7 @@ With the notation of Lemma \@ref(lem:classical-parameters), we have the above eq
 & \quad = \left(q\begin{bmatrix}{i}\\{1}\end{bmatrix}-q^2\begin{bmatrix}{i-1}\\{1}\end{bmatrix}\right) \\
 & \qquad\qquad + \alpha\left(q\begin{bmatrix}{i}\\{1}\end{bmatrix}\begin{bmatrix}{i-1}\\{1}\end{bmatrix}+\begin{bmatrix}{D}\\{1}\end{bmatrix}\begin{bmatrix}{i}\\{1}\end{bmatrix}-\begin{bmatrix}{i}\\{1}\end{bmatrix}\begin{bmatrix}{i}\\{1}\end{bmatrix}\right.\\
 & \qquad\qquad \left.-q^2\begin{bmatrix}{i-1}\\{1}\end{bmatrix}\begin{bmatrix}{i-2}\\{1}\end{bmatrix}-q\begin{bmatrix}{D}\\{1}\end{bmatrix}\begin{bmatrix}{i-1}\\{1}\end{bmatrix}+q\begin{bmatrix}{i-1}\\{1}\end{bmatrix}\begin{bmatrix}{i-1}\\{1}\end{bmatrix}\right)\\
-& \qquad\qquad + \sigma\left(-\begin{bmatrix}{D}\\{1}\end{bmatrix}+\begin{bmatrix}{i}\\{1}\end{bmatrix} + q\begin{bmatrix}{i-1}\\{1}\end{bmatrix}\right)\\
+& \qquad\qquad + \sigma\left(-\begin{bmatrix}{D}\\{1}\end{bmatrix}+\begin{bmatrix}{i}\\{1}\end{bmatrix} + q\begin{bmatrix}{D}\\{1}\end{bmatrix} - q\begin{bmatrix}{i-1}\\{1}\end{bmatrix}\right)\\
 & \quad = q+\alpha\left(-\begin{bmatrix}{i}\\{1}\end{bmatrix}+\begin{bmatrix}{D}\\{1}\end{bmatrix}+q\begin{bmatrix}{i-1}\\{1}\end{bmatrix}\right)+\sigma(q^D-1+1)\\
 & \quad = q\left(1 + \begin{bmatrix}{D-1}\\{1}\end{bmatrix}\alpha + q^{D-1}\sigma\right)\\
 & \quad = q\left(\begin{bmatrix}{D}\\{1}\end{bmatrix}\sigma - \begin{bmatrix}{D-1}\\{1}\end{bmatrix}\sigma + \begin{bmatrix}{D-1}\\{1}\end{bmatrix}\alpha + 1\right)\\
@@ -219,7 +219,7 @@ has classical parameters: $(q,\alpha, \sigma) = (1, 0, 1)$.
 $c_i = i^2$, $b_i = (D-i)(N-D-i)$
 has classical parameters $(q,\alpha, \sigma) = (1, 1, N-D)$.
 
-| $q$-analogue of Johnson graph $J_q(D,N)$ $(D\geq 2D)$:
+| $q$-analogue of Johnson graph $J_q(D,N)$ $(N\geq 2D)$:
 $$c_i = \left(\frac{q^i-1}{q-1}\right)^2 = \begin{bmatrix}{i}\\{1}\end{bmatrix}^2, \quad b_i = \frac{q(q^D-q^i)(q^{N-D}-q^i)}{(q-1)^2}$$
 has classical parameters 
 $$(q,\alpha, \sigma) = \left(q, q, \left(\frac{q^{N-D+1}-1}{q-1}\right)-1\right) = \left(q, q, \begin{bmatrix}{N-D+1}\\{1}\end{bmatrix}-1\right).$$

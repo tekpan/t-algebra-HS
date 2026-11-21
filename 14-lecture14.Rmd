@@ -12,7 +12,7 @@ $$\begin{array}{|c|c|c|}
 \hline
 & \text{Case DR}  & \text{Case DBR} \\
 \hline
-\text{valency} k_x & k & \begin{cases} k^+ & \text{ if } x\in X^+\\
+\text{valency } k_x & k & \begin{cases} k^+ & \text{ if } x\in X^+\\
 k^- & \text{ if } x\in X^-\end{cases}\\
 x\text{-diameter } D_x & D & \begin{cases} D^+ & \text{ if } x\in X^+\\
 D^- & \text{ if } x\in X^-\end{cases}\\
@@ -26,7 +26,7 @@ b_i^- & \text{ if } x\in X^-\end{cases}\\
 \hline
 \end{array}$$
 
-Call $m$, $m^{\pm 1}$ the measure of $\Gamma$.
+Call $m$, $m^{\pm}$ the measure of $\Gamma$.
 :::
 
 Assume $\Gamma = (X, E)$ is distance-regular.
@@ -45,12 +45,12 @@ Assume $\Gamma = (X, E)$ is distance-regular. Pick $x\in X$. Let $W$ be a thin i
 Moreover, $f_W\in \mathbb{R}[\lambda]$, and 
 
 | $(ii)$ $\deg f_W \leq 2r$.
-| $(iii)$ For all eigenvalues $\theta_i$ of $\Gamma$, $\lambda - \theta_i$ is a factor of $f_W$ whenever, $E_iW = 0$. 
+| $(iii)$ For all eigenvalues $\theta_i$ of $\Gamma$, $\lambda - \theta_i$ is a factor of $f_W$ whenever $E_iW = 0$. 
 In particular, $2r-D+d\geq 0$.
 :::
 
 :::{.proof}
-Let $\theta_0, \ldots, \theta_D$ denote distinct eigenvalues of $\Gamma$. Then $m(\theta_i) \neq 0$ $(0\leq i\leq D)$ by Proposition \@ref(prp:dim-diameter).
+Let $\theta_0, \ldots, \theta_D$ denote the distinct eigenvalues of $\Gamma$. Then $m(\theta_i) \neq 0$ $(0\leq i\leq D)$ by Proposition \@ref(prp:dim-diameter).
 
 There exists a unique $f_W\in \mathbb{C}[\lambda]$ with $\deg f_W\leq D$ such that
 $$f_W(\theta_i) = \frac{m_W(\theta_i)}{m(\theta_i)} \quad (0\leq i\leq D)$$
@@ -62,13 +62,13 @@ $$\theta_0, \ldots, \theta_D\in \mathbb{R} \quad \text{and}\quad f_W(\theta_0), 
 $(ii)$ Without loss of generality, we may assume $r < D/2$, else trivial.
 
 Pick $0\neq w \in E^*_r(x)W$.
-$$w = \sum_{y\in W, \partial(x,y) = r}\alpha_y\hat{y} \quad \text{ for some } \; \alpha_y\in \mathbb{C}.$$
+$$w = \sum_{y\in X, \partial(x,y) = r}\alpha_y\hat{y} \quad \text{ for some } \; \alpha_y\in \mathbb{C}.$$
 Pick $y\in X$ such that $\alpha_y\neq 0$.
 
-Set $W'$ be the trivial $T(y)$-module. ($\langle w, \hat{y}\rangle \neq 0, \text{ as } W\not\bot W'$.)
+Let $W'$ be the trivial $T(y)$-module. ($W\not\bot W'$, as $\langle w, \hat{y}\rangle \neq 0$.)
 $$r' = 0, \quad m' = m, \quad \Delta = r.$$
 
-Apply Theorem \@ref(thm:two-thin-modules), we have
+Applying Theorem \@ref(thm:two-thin-modules), we have
 \begin{align}
 \deg p & \leq \Delta - r' + r = 2r, \quad p\neq 0\\
 \deg p' & \leq \Delta - r + r' = 0 , \quad p'\neq 0.
@@ -81,7 +81,7 @@ $$\left(\frac{p(\theta)}{\bar{p}'(\theta)} = \frac{m_W(\theta)}{m(\theta)}\right
 
 $(iii)$ 
 $$E_iW = 0 \Rightarrow m_W(\theta_i) = 0 \Rightarrow f_W(\theta_i) = 0.$$
-that is, $E_iW = 0$. Hence $\theta_i$ is a root of $f_W(\lambda) = 0$.
+Hence $\theta_i$ is a root of $f_W(\lambda) = 0$.
 So,
 $$2r \geq \deg f_W \geq |\{\theta_i\mid E_iW = 0\}| = D-d.$$
 Hence, 
@@ -95,7 +95,7 @@ Let $\Gamma = (X, E)$ be any distance-regular graph with valency $k$, diameter $
 $$k = \theta_0 > \theta_1 > \cdots > \theta_D.$$
 Pick $x\in X$. Let 
 $W$ be a thin irreducible $T(x)$-module with endpoint $r = 1$, diameter $d$ and measure $m_W = mf_W$.
-Then one fo the following cases $(i)-(iv)$ occurs.
+Then one of the following cases $(i)-(iv)$ occurs.
 
 $$\begin{array}{|c|c|c|c|}
 \hline
@@ -111,7 +111,7 @@ for some $\beta\in \mathbb{R}$ with $\beta\in (-\infty, \theta_D) \cup (\theta_1
 Moreover, the isomorphism class of $W$ is determined by $a_0(W)$.
 :::
 
-**Note.** By $(iii)$, the possible "shapes" of a thin irreducible $T(x)$-modules are:
+**Note.** By $(iii)$, the possible "shapes" of thin irreducible $T(x)$-modules are:
 \begin{align}
 r = 0 & \quad d = D,\\
 r = 1 & \quad d = D-1,\\

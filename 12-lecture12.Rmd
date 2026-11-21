@@ -55,7 +55,7 @@ $(ii)\to (iii)$
 Fix $x\in X$, and let $T \equiv T(x)$, $E^*_i\equiv E^*_i(x)$, and $d \equiv d(x)$.
 
 \begin{align}
-A\sum_{y\in X, \partial(x.y)=i}\hat{y} & = \sum_{z\in X} |\{y\in X \mid \partial(y,z) = 1, \; \partial(x,y) = i\}|\hat{z}\\
+A\sum_{y\in X, \partial(x,y)=i}\hat{y} & = \sum_{z\in X} |\{y\in X \mid \partial(y,z) = 1, \; \partial(x,y) = i\}|\hat{z}\\
 & = \sum_{z\in X, \partial(x,z) = i-1}b_{i-1}(x,z)\hat{z} \\
 & \qquad + \sum_{z\in X, \partial(x,z) = i} a_{i}(x,z)\hat{z} \\
 & \qquad + \sum_{z\in X, \partial(x,z) = i+1} c_{i+1}(x,z)\hat{z}\\
@@ -67,7 +67,7 @@ Therefore, $\Gamma$ is distance-regular with respect to $x$.
 
 $(iii)\to (i)$
 Fix $x\in X$, and let $T \equiv T(x)$, $E^*_i\equiv E^*_i(x)$, and $d \equiv d(x)$.
-By defintion of distance-regularity, for every $i$ $(0\leq i\leq d)$, 
+By definition of distance-regularity, for every $i$ $(0\leq i\leq d)$, 
 \begin{align}
 A\left(\sum_{y\in X, \partial(x,y)=i}\hat{y}\right) & = 
 b_{i-1}(x)\sum_{y\in X, \partial(x,y) = i-1}\hat{y} \\
@@ -83,7 +83,7 @@ Next, we show more is true if $(i)-(iii)$ hold in Lemma \@ref(lem:distance-regua
 
 In fact, $d(x)$, $a_i(x)$, $c_i(x)$, and $b_i(x)$ are 
 $$\begin{cases} 
-\text{independent of $X$} & \text{if $\Gamma$ is regular; or}\\
+\text{independent of $x$} & \text{if $\Gamma$ is regular; or}\\
 \text{constant over $X^+$ and $X^-$} & \text{if $\Gamma$ is biregular.}
 \end{cases}$$
 
@@ -93,7 +93,7 @@ Let $W$ be a thin, irreducible $T(x)$-module, and
 measure $m: \mathbb{R} \to \mathbb{R}$ determined by $W$.
 
 Let $W'$ be a thin, irreducible $T(y)$-module, and 
-measure $m: \mathbb{R} \to \mathbb{R}$ determined by $W'$.
+measure $m': \mathbb{R} \to \mathbb{R}$ determined by $W'$.
 
 Recall $W$, $W'$ are orthogonal if 
 $$\langle w, w'\rangle = 0 \quad \text{for all }w\in W, w'\in W'.$$
@@ -109,7 +109,7 @@ $V$: standard module of $\Gamma$.
 $H$: any subspace of $V$.
 
 $$V = H + H^\bot \quad \text{orthogonal direct sum},$$
-and for $v = v_1 + v_2$ $\mathrm{proj}_H: V\to H \; (v\mapsto v_1)$: linear transformation.
+and for $v = v_1 + v_2$ $(v_1\in H, v_2\in H^\bot)$, $\mathrm{proj}_H: V\to H \; (v\mapsto v_1)$: linear transformation.
 
 Observe:
 For every $v\in V$, 
@@ -125,10 +125,10 @@ $W$: thin irreducible $T(x)$-module with endpoint $r$, diameter $d$, and measure
 
 $W'$: thin irreducible $T(y)$-module with endpoint $r'$, diameter $d'$, and measure $m'$.
 
-$W$ and $W'$ are not orghotonal. 
+$W$ and $W'$ are not orthogonal. 
 
 Now pick
-$$0\neq w\in E^*_r(x)W, \quad 0\neq w\in E^*_{r'}(x)W'.$$
+$$0\neq w\in E^*_r(x)W, \quad 0\neq w'\in E^*_{r'}(y)W'.$$
 Then,
 
 | $(i)$ ${\displaystyle \mathrm{proj}_{W'}w = p(A)\frac{\|w\|}{\|w'\|}w'}$
@@ -137,22 +137,22 @@ for some $0\neq p\in \mathbb{C}[\lambda]$ with $\deg p \leq \Delta - r' + r, d'$
 
 ${\displaystyle \mathrm{proj}_{W}w' = p'(A)\frac{\|w'\|}{\|w\|}w}$
 
-for some $0\neq p'\in \mathbb{C}[\lambda]$ with $\deg p \leq \Delta - r + r', d$.
+for some $0\neq p'\in \mathbb{C}[\lambda]$ with $\deg p' \leq \Delta - r + r', d$.
 
 | $(ii)$ For all eigenvalues $\theta_i$ of $\Gamma$, 
 $$\frac{\langle E_iw, E_iw'\rangle}{\|w\|\|w'\|} = m(\theta_i)\overline{p'(\theta_i)} = m'(\theta_i)p(\theta_i).$$
 
 | $(iii)$ For all eigenvalues $\theta_i$ of $\Gamma$,
 $$p(\theta_i)p'(\theta_i)$$
-is a real number in interval $[0,1]$.
+is a real number in the interval $[0,1]$.
 :::
 
 :::{.proof}
 $(i)$ Since $W$, $W'$ are not orthogonal, there exist
-$$v\in W, \; v'\in W' \; \text{ sich that }\; \langle v, v'\rangle \neq 0.$$
+$$v\in W, \; v'\in W' \; \text{ such that }\; \langle v, v'\rangle \neq 0.$$
 Then there exists $a\in M$ such that 
 $$v' = aw'.$$
-(This is because $w'_i = p'_i(A)w_0'$ and hence for every $v'\in W'$, there is a polynomial $q\in \mathbb{C}[\lambda]$, $q(A)w_0' = v$.)
+(This is because $w'_i = p'_i(A)w_0'$ and hence for every $v'\in W'$, there is a polynomial $q\in \mathbb{C}[\lambda]$, $q(A)w_0' = v'$.)
 
 We have 
 $$0\neq \langle v', v\rangle = \langle aw', v\rangle = \langle w', a^*v\rangle$$
@@ -216,10 +216,10 @@ $(ii)$ We have
 \begin{align}
 \frac{\langle E_iw, E_iw'\rangle}{\|w\|\|w'\|}
 & = \frac{\langle E_iw, w'\rangle}{\|w\|\|w'\|}\\
-& = \frac{\langle E_iw, \mathrm{proj}_W w'\rangle}{\|w\|\|w'\|} && \text{as }\; \mathrm{proj}_Ww' = p'(A)\frac{\|w\|}{\|w'\|}w\\
+& = \frac{\langle E_iw, \mathrm{proj}_W w'\rangle}{\|w\|\|w'\|} && \text{as }\; \mathrm{proj}_Ww' = p'(A)\frac{\|w'\|}{\|w\|}w\\
 & = \frac{\langle E_iw, p'(A) w\rangle}{\|w\|^2}\\
 & = \frac{\langle E_iw, E_ip'(A) w\rangle}{\|w\|^2}\\
-& = \overline{p'(\theta_i)}\frac{\|E_iW\|^2}{\|w\|^2}\\
+& = \overline{p'(\theta_i)}\frac{\|E_iw\|^2}{\|w\|^2}\\
 & = \overline{p'(\theta_i)}m(\theta_i).
 \end{align}
 Moreover, as $m(\theta_i)$, $m'(\theta_i)\in \mathbb{R}$, 
@@ -227,15 +227,15 @@ $$\frac{\langle E_iw, E_iw'\rangle}{\|w\|\|w'\|}  = \frac{\overline{\langle E_iw
  = \overline{\overline{p(\theta_i)}m'(\theta_i)} 
  = p(\theta_i)m'(\theta_i).$$
  
-$(iii)$ Sicne,
-$$\frac{|\langle E_iw, E_iw'\rangle\|^2}{\|w\|^2\|w'\|^2} = p(\theta_i)p'(\theta_i)m(\theta_i)m'(\theta_i),$$
+$(iii)$ Since,
+$$\frac{|\langle E_iw, E_iw'\rangle|^2}{\|w\|^2\|w'\|^2} = p(\theta_i)p'(\theta_i)m(\theta_i)m'(\theta_i),$$
 \begin{align}
-p(\theta_i)p'(\theta_i) & = \frac{|\langle E_iw, E_iw'\rangle\|^2}{m(\theta_i)m'(\theta_i)\|w\|^2\|w'\|^2} \in \mathbb{R}\\
-& = \frac{|\langle E_iw, E_iw'\rangle\|^2}{\frac{\|E_iw\|^2}{\|w\|^2}\frac{\|E_iw'\|^2}{\|w'\|^2}\|w\|^2\|w'\|^2}.
+p(\theta_i)p'(\theta_i) & = \frac{|\langle E_iw, E_iw'\rangle|^2}{m(\theta_i)m'(\theta_i)\|w\|^2\|w'\|^2} \in \mathbb{R}\\
+& = \frac{|\langle E_iw, E_iw'\rangle|^2}{\frac{\|E_iw\|^2}{\|w\|^2}\frac{\|E_iw'\|^2}{\|w'\|^2}\|w\|^2\|w'\|^2}.
 \end{align}
 
-By Cauchy-Schwartz inequality, 
+By the Cauchy-Schwarz inequality, 
 $$(|\langle a, b\rangle | \leq \|a\|\|b\|,)$$
-$$\frac{|\langle E_iw, E_iw'\rangle\|^2}{\|E_iw\|^2\|E_iw'\|^2} \leq 1.$$
+$$\frac{|\langle E_iw, E_iw'\rangle|^2}{\|E_iw\|^2\|E_iw'\|^2} \leq 1.$$
 Hence, we have the assertion.
 :::

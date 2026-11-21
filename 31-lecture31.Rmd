@@ -3,7 +3,7 @@
 
 Let $\Gamma = (X, E)$ be any graph of diameter $D\geq 2$. Fix a vertex $x\in X$. Let $E^*_i\equiv E^*_i(x)$, and $T \equiv T(x)$.
 
-Recall adjacency matrix
+Recall the adjacency matrix
 \begin{align}
 A & = R + L + F\\
 R & = \sum_{i=0}^D E^*_{i+1}AE^*_i,\\
@@ -17,13 +17,13 @@ So, $R^{-1}$ does not exist.
 Below we find a matrix "$R^{-1}$"$\in T(x)$ such that $R^{-1}Rv = v$ for "almost all" $v\in V$.
 
 :::{.lemma #inverse-of-r}
-Let $\Gamma = (X, E)$ denote any graph, and the standard module $V$ over $\mathbb{C}$.
+Let $\Gamma = (X, E)$ denote any graph, and $V$ the standard module over $\mathbb{C}$.
 
 Fix a vertex $x\in X$, write
 $$R\equiv R(x), \quad L \equiv L(x), \quad E^*_i\equiv E^*_i(x) \quad \text{for all }i.$$
 Then,
 
-| $(i)$ There exists unique "$R^{-1}$"$\in \mathrm{Mat}_X(\mathbb{C})$ such that;
+| $(i)$ There exists a unique "$R^{-1}$"$\in \mathrm{Mat}_X(\mathbb{C})$ such that
 
 | $\quad (ia)$ $R^{-1}v = 0$ if $Lv = 0$ for $v\in V$.
 
@@ -54,7 +54,7 @@ $$\langle RLv, w\rangle = \langle Lv, \bar{R}^\top w\rangle = \langle Lv, Lw\ran
 | Claim 2. $RL: (\mathrm{Ker}L)^\bot \to (\mathrm{Ker}L)^\bot$ is an isomorphism of vector spaces.
 
 _Proof of Claim 2._
-It suffices to show above map is one-to-one.
+It suffices to show that the above map is one-to-one.
 
 Suppose there is  a vector $v\in (\mathrm{Ker}L)^\bot$ such that $RLv = 0$.
 
@@ -66,7 +66,7 @@ Hence $v\in \mathrm{Ker}L \cap (\mathrm{Ker}L)^\bot = 0$.
 
 This proves Claim 2.
 
-Now "$R^{-1}$ denote the unique matrix in $\mathrm{Mat}(\mathbb{C})$ such that
+Now let "$R^{-1}$" denote the unique matrix in $\mathrm{Mat}_X(\mathbb{C})$ such that
 \begin{equation}
 R^{-1}v = \begin{cases}
 0 & \text{if } v\in \mathrm{Ker}L \\
@@ -84,7 +84,7 @@ It suffices to check
 $$R^{-1}RLv = Lv$$
 for $v\in \mathrm{Ker}L$ and $v\in (\mathrm{Ker}L)^\bot$.
 
-The case $v\in \mathrm{Ker}L$ is clear. So assume $v\in (\mathrm{Ker}L)^\bot$ by Claim 1.
+The case $v\in \mathrm{Ker}L$ is clear. So assume $v\in (\mathrm{Ker}L)^\bot$. Then $RLv\in (\mathrm{Ker}L)^\bot$ by Claim 1.
 So,
 $$R^{-1}(RLv) = L(RL)^{-1}RLv = Lv$$
 as desired.
@@ -92,7 +92,7 @@ as desired.
 Uniqueness: 
 Suppose a matrix $\hat{R}^{-1}\in \mathrm{Mat}_X(\mathbb{C})$ satisfies $(ia), (ib)$. Then, $\hat{R}^{-1}$ satisfies \@ref(eq:rinversev) above.
 
-(_Pf._ The first part is clear. Let $v\in (\mathrm{Ker}L)^\bot$. By Claim 2, there exists $w\in (\mathrm{Ker}L)^\bot$ such that $v\in RLw$. So $\hat{R}^{-1}v = \hat{R}^{-1}RLw = Lw = L(RL)^{-1}v$.)
+(_Pf._ The first part is clear. Let $v\in (\mathrm{Ker}L)^\bot$. By Claim 2, there exists $w\in (\mathrm{Ker}L)^\bot$ such that $v = RLw$. So $\hat{R}^{-1}v = \hat{R}^{-1}RLw = Lw = L(RL)^{-1}v$.)
 
 Therefore, $\hat{R}^{-1}$ agrees with $R^{-1}$ on a basis for $V$, and $\hat{R}^{-1} = R^{-1}$.
 
@@ -107,9 +107,9 @@ $$R^{-1}v = L(RL)^{-1}v \in LE^*_iV \subseteq E^*_{i-1}V.$$
 
 | $(iii)$ Observe $R, L\in \mathrm{Mat}_X(\mathbb{Q})$. 
 
-So $V$, $\mathrm{Ker}L$, each has basis consisting of vectors in $\mathbb{Q}^{|X|}$.
+So $V$, $\mathrm{Ker}L$, each have a basis consisting of vectors in $\mathbb{Q}^{|X|}$.
 
-Replacing the construction of $R^{-1}$ with the base field replaced by $\mathbb{Q}$, we find a matrix $\tilde{R}^{-1}\in \mathrm{Mat}_X(\mathbb{Q})$ satisfying $(ia)$, $(ib)$.
+Repeating the construction of $R^{-1}$ with the base field replaced by $\mathbb{Q}$, we find a matrix $\tilde{R}^{-1}\in \mathrm{Mat}_X(\mathbb{Q})$ satisfying $(ia)$, $(ib)$.
 
 Now $R^{-1}$ and $\tilde{R}^{-1}$ agree on a basis, and hence $R^{-1} = \tilde{R}^{-1}$.
 
@@ -130,12 +130,12 @@ $E_\theta$ is real. Since $RL$ is an integral matrix, every eigenvalue of $RL$ i
 
 Claim 4. We have
 \begin{equation}
-R^{-1} = \sum_{\theta: \text{eigenvalue of }RL}\theta^{-1}LE_\theta. (\#eq:rinverse)
+R^{-1} = \sum_{\theta\neq 0: \text{eigenvalue of }RL}\theta^{-1}LE_\theta. (\#eq:rinverse)
 \end{equation}
 In particular, $R^{-1}\in T(x)$.
 
 _Proof of Claim 4._
-Show two sides of \@ref(eq:rinverse) agree, when applied to arbitrary $v\in V$.
+Show the two sides of \@ref(eq:rinverse) agree, when applied to an arbitrary $v\in V$.
 
 Without loss of generality, we may assume that $v\in V_\theta$ for some eigenvalue $\theta$ of $RL$.
 

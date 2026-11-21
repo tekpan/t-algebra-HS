@@ -25,11 +25,11 @@ Case $h\geq 3$.
 
 Pick a vertex $x'\in X$ such that 
 $$\partial(x,x') = h-3, \quad \partial(x',y) = 3.$$
-By Theorem \@ref(thm:balanced). 
-$$\sum_{z\in X, (x,z)\in R_1, (y,z)\in R_2}E_1\hat{z} - \sum_{z'\in X, (x,z')\in R_2, (y,z')\in R_1}E_1\hat{z'} = r^3_{12}(E_1\hat{x'}-E_1\hat{y}),$$
+By Theorem \@ref(thm:balanced),
+$$\sum_{z\in X, (x',z)\in R_1, (y,z)\in R_2}E_1\hat{z} - \sum_{z'\in X, (x',z')\in R_2, (y,z')\in R_1}E_1\hat{z'} = r^3_{12}(E_1\hat{x'}-E_1\hat{y}),$$
 $$r^3_{12} = \frac{c_3(\theta^*_1-\theta^*_2)}{\theta^*_0-\theta^*_3} \neq 0.$$
 So, $E_1\hat{y}\in \mathrm{Span}\{f, g, E_1\hat{x'}\}$, where
-$$f = \sum_{z\in X, (x,z)\in R_1, (y,z)\in R_2}E_1\hat{z}, \quad g = \sum_{z'\in X, (x,z')\in R_2, (y,z')\in R_1}E_1\hat{z'}.$$
+$$f = \sum_{z\in X, (x',z)\in R_1, (y,z)\in R_2}E_1\hat{z}, \quad g = \sum_{z'\in X, (x',z')\in R_2, (y,z')\in R_1}E_1\hat{z'}.$$
 Observe that each $z$ in the $f$-sum satisfies $\partial(x,z)=h-2$.
 
 So, by induction hypothesis 
@@ -51,7 +51,7 @@ Let $\Gamma$, $E_1$, $x$ be as in Lemma \@ref(lem:EV).
 Assume $D\geq 4$.
 
 Observe that there are many linear dependences among
-$$\{E\hat{y}\mid y\in \Delta\},$$
+$$\{E_1\hat{y}\mid y\in \Delta\},$$
 where $\Delta = \{y\in X\mid \partial(x,y)\leq 2\}$.
 
 Take any $y\in X$ such that $\partial(x,y)\geq 4$.

@@ -2,7 +2,7 @@
 **Monday, April 26, 1993** 
 
 :::{.theorem #dim5}
-Let $\Gamma = (X, E)$ be distance regular of diameter $D\geq 3$.
+Let $\Gamma = (X, E)$ be distance-regular of diameter $D\geq 3$.
 Assume $\Gamma$ is $Q$-polynomial with respect to 
 $E_0, E_1, \ldots, E_D$.
 Fix a vertex $x\in X$, and write $E^*_i\equiv E^*_i(x)$, $T\equiv T(x)$.
@@ -22,7 +22,7 @@ Claim 1. $E^*_1ME^*_1 = \mathrm{Span}(\tilde{J}, E^*_1, \tilde{A})$.
 
 _Proof of Claim 1._
 $$E^*_1ME^*_1 = \mathrm{Span}\{E^*_1, E^*_1AE^*_1, E^*_1A_2E^*_1, E^*_1A_3E^*_1, \ldots\}.$$
-But $E^*_1A_hE^*_h = O$ if $h >2$ (by Lemma \@ref(def:ith-incidence)).
+But $E^*_1A_hE^*_1 = O$ if $h >2$ (by Definition \@ref(def:ith-incidence)).
 So,
 $$E^*_1ME^*_1 = \mathrm{Span}\{E^*_1, E^*_1AE^*_1, E^*_1A_2E^*_1\}.$$
 Also, 
@@ -40,13 +40,13 @@ Claim 2. $E^*_1MM^*ME^*_1 = \mathrm{Span}(\tilde{J}, E^*_1, \tilde{A}, \tilde{A}
 _Proof of Claim 2._
 $\supseteq$: Clear.
 
-$\subseteq$: In Lemma \@ref(lem:e1starte1star) $(i)$, we say
-$$E^*_1T = E^*_1E_0M^* + E^*_1M + E^*_1E_1M^* + E^*E_1E^*_1M + \cdots.$$
+$\subseteq$: In Lemma \@ref(lem:e1starte1star) $(i)$, we saw
+$$E^*_1T = E^*_1E_0M^* + E^*_1M + E^*_1E_1M^* + E^*_1E_1E^*_1M + \cdots.$$
 In fact, the proof of that lemma gives a sequence;
 \begin{align}
 E^*_1MM^* & = E^*_1E_0M^* + E^*_1M + E^*_1E_1M^*,\\
-E^*_1MM^*M & = E^*_1E_0M^* + E^*_1M + E^*_1E_1M^* + E^*E_1E^*_1M, (\#eq:e1starmmstarm)\\
-E^*_1MM^*MM^* & = E^*_1E_0M^* + E^*_1M + E^*_1E_1M^* + E^*E_1E^*_1M + E^*E_1E^*_1MM^*,\\
+E^*_1MM^*M & = E^*_1E_0M^* + E^*_1M + E^*_1E_1M^* + E^*_1E_1E^*_1M, (\#eq:e1starmmstarm)\\
+E^*_1MM^*MM^* & = E^*_1E_0M^* + E^*_1M + E^*_1E_1M^* + E^*_1E_1E^*_1M + E^*_1E_1E^*_1MM^*,\\
 & \qquad \vdots
 \end{align}
 
@@ -68,7 +68,7 @@ with equality if and only if $v^+_i, v^-_i$ are linearly dependent,
 
 Let $i$ be an integer in $\{2, \ldots, D-1\}$.
 
-Claim 3. There exists $p^{++}\in \mathrm{C}[\lambda]$, $\deg p^{++}\leq 2$ (that depends only on the intersection numbers)
+Claim 3. There exists $p^{++}\in \mathbb{C}[\lambda]$, $\deg p^{++}\leq 2$ (that depends only on the intersection numbers)
 such that 
 $$\|v^+_i\|^2 = \|v\|^2 p^{++}(a_0(W)).$$
 
@@ -87,7 +87,7 @@ since $\tilde{J}v = 0$, and $\tilde{A}v = a_0(W)v$.
 This proves Claim 3.
 
 Similarly, there exist $p^{--}, p^{+-}\in \mathbb{C}[\lambda]$ with $\deg p^{--}, \deg p^{+-}\leq 2$ such that
-$$\|v^-_i\|^2 = \|v\|^2p^{--}p(a_0(W)), \; \langle v^+_i, v^-_i\rangle = \|v\|^2 p^{+-}(a_0(W)).$$
+$$\|v^-_i\|^2 = \|v\|^2p^{--}(a_0(W)), \; \langle v^+_i, v^-_i\rangle = \|v\|^2 p^{+-}(a_0(W)).$$
 
 Claim 4. $E^*_1A_{i-1}E^*_iA_{i+1}E^*_1 = (\tilde{J}-\tilde{A}-E^*_1)p^2_{i-1,i+1}$. In particular,
 $$p^{+-}(\lambda) = -p^2_{i-1,i+1}(\lambda +1).$$
@@ -134,14 +134,14 @@ Conclusion.
 \begin{align}
 \Phi_i & = \det \begin{pmatrix}\|v^+_i\|^2 & \langle v^+_i, v^-_i\rangle\\
 \langle v^+_i,v^-_i\rangle & \|v^-_i\|^2 \end{pmatrix} \geq 0\\
-& = \|v\|^4(p^{++}(\lambda)p^{--}(\lambda) - (p^2_{i-1,i+1})^2(\lambda+1)^2\\
+& = \|v\|^4(p^{++}(\lambda)p^{--}(\lambda) - (p^2_{i-1,i+1})^2(\lambda+1)^2)\\
 & \geq 0,
 \end{align}
 where $\lambda = a_0(W)$.
 
 $W$ is thin if and only if $\Phi_i(\lambda) = 0$ for all $i\in \{2, \ldots, D-1\}$.
 
-Each $\Phi_i$ is degree $4$ solutions for $\lambda$. Since $\lambda$ determines the isomorphism class of $W$ by Lemma \@ref(lem:tv-thin) (iii), there are at most $4$ different thin irreducible modules $W$ of endpoint $1$ up to isomorphism.
+Each $\Phi_i$ has degree $4$ in $\lambda$, so $\Phi_i(\lambda) = 0$ has at most $4$ solutions. Since $\lambda$ determines the isomorphism class of $W$ by Lemma \@ref(lem:tv-thin) (iii), there are at most $4$ different thin irreducible modules $W$ of endpoint $1$ up to isomorphism.
 :::
 
 **Note.**

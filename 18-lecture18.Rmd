@@ -2,7 +2,7 @@
 **Wednesday, March 3, 1993** 
 
 :::{.lemma #dr-scheme}
-Let $Y = (X, \{R_i\}_{0\leq i\leq D})$ denote the symmetric scheme with associated matrices $A_0, A_1, \ldots, A_D$. Then the following are equivalent.
+Let $Y = (X, \{R_i\}_{0\leq i\leq D})$ denote a symmetric scheme with association matrices $A_0, A_1, \ldots, A_D$. Then the following are equivalent.
 
 | $(i)$ The graph $\Gamma = (X, R_1)$ is distance-regular, and $R_0, \ldots, R_D$ are labelled so that 
 $$R_i = \{xy\mid \partial(x,y) = i\}.$$
@@ -22,7 +22,7 @@ $$k_i \equiv p^0_{ii} = |\{z\mid z\in X, \; \partial(x,z) = i, \; ((x,z)\in R_i)
 for any $x\in X$.
 Then $k_i \neq 0$ $(0\leq i\leq D)$, $k_0 = 1$.
 
-(By symmetricity, $(x,y)\in R_i$ if and only if $(y,x)\in R_i$.)
+(By symmetry, $(x,y)\in R_i$ if and only if $(y,x)\in R_i$.)
 
 Claim.
 \begin{align}
@@ -31,7 +31,7 @@ k_hp^h_{ij} & = k_ip^i_{hj} = k_jp^j_{ih}\\
 \end{align}
 _Pf._ 
 The number of $xyz\in X^3$, $\partial(x,y) = h, \partial(x,z) = i, \partial(y,z) = j$ is equal to
-$$|X|k_hp^h_{ij} = |X|k_ip^i_{hj} = k_jp^j_{ih}.$$
+$$|X|k_hp^h_{ij} = |X|k_ip^i_{hj} = |X|k_jp^j_{ih}.$$
 
 In particular, 
 $$p^h_{ij} = 0 \leftrightarrow p^i_{hj} =0 \leftrightarrow p^j_{ih} = 0.$$
@@ -70,5 +70,5 @@ Hence, by induction,
 \begin{align}
 R_i(x) & = \{y\mid \partial(x,y) = i \text{ in }\Gamma\} && (0\leq i\leq D),
 \end{align}
-and $\Gamma$ is distance regular.
+and $\Gamma$ is distance-regular.
 :::

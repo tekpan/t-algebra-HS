@@ -4,7 +4,7 @@
 :::{.proof name="Proof of Lemma \@ref(lem:vector-function-product)"}
 | $(i)$ Suppose 
 $$v = \sum_{x\in X}\alpha_x \hat{x}.$$
-Pick a vertex $z\in X$ and compare $z$-coordinate of each side in $(i)$.
+Pick a vertex $z\in X$ and compare the $z$-coordinate of each side in $(i)$.
 \begin{align}
 (A^*_j(x)v)_z & = (A^*_j(x))_{zz}v_z = |X|(E_j)_{xz}\alpha_z.\\
 |X|(E_{\hat{j}}\hat{x}\circ v)_z & = |X|(E_{\hat{j}}\hat{x})_z\cdot \alpha_z  = |X|(E_j)_{xz}\alpha_z.
@@ -18,7 +18,7 @@ Claim. $E_h(E_iV \circ E_jV) = 0$.
 \begin{align}
 E_h(E_iV \circ E_jV) & = E_h(\mathrm{Span}(v\circ w\mid v\in E_iV, w\in E_jV))\\
 & = E_h(\mathrm{Span}(E_i\hat{y}\circ E_j\hat{z}\mid y,z\in X))\\
-& = \mathrm{Span}(E_h(E_j\hat{z}\circ E_i\hat{y}\mid y,z\in X)\\
+& = \mathrm{Span}(E_h(E_j\hat{z}\circ E_i\hat{y})\mid y,z\in X)\\
 & = \mathrm{Span}((E_hA^*_{\hat{j}}(z)E_i)\hat{y}\mid y,z\in X) && \text{by $(i)$.}
 \end{align}
 But $q^h_{ij} = 0$ implies $q^{\hat{h}}_{\hat{j}\hat{i}} = 0$.
@@ -72,13 +72,13 @@ In particular, the vector space $E_jV$ together with $\ast$ is a commutative $\m
 | $(iv)$ Immediate from Lemma \@ref(lem:vector-function-product) $(ii)$, $(iii)$.
 :::
 
-Let $Y$, $j$, $N_j$ be as in Lemma \@ref(lem:norton-algebra), and $M$ Bose-Mesner algebra of $Y$.
+Let $Y$, $j$, $N_j$ be as in Lemma \@ref(lem:norton-algebra), and $M$ the Bose-Mesner algebra of $Y$.
 Let 
 \begin{align}
-\mathrm{Aut}Y & = \{\sigma\in \mathrm{Mat}_X(\mathbb{C}) \mid \sigma: \text{ permutation matrix }, \sigma \cdot m = m\cdot \sigma \;\text{ for all }m\in M\}\\
+\mathrm{Aut}(Y) & = \{\sigma\in \mathrm{Mat}_X(\mathbb{C}) \mid \sigma: \text{ permutation matrix }, \sigma \cdot m = m\cdot \sigma \;\text{ for all }m\in M\}\\
 & = \{\sigma\in \mathrm{Mat}_X(\mathbb{C}) \mid \sigma: \text{ permutation matrix },\\
 & \qquad (x,y)\in R_i \to (\sigma x, \sigma y)\in R_i, \text{ for all } i, \text{ and for all } x,y\in X\}\\
-\mathrm{Aut}(N_j) & = \{\sigma: E_jV \to E_jV \mid \sigma \text{ is a  $\mathbb{C}$-algebra isomorphim},i.e.,\\
+\mathrm{Aut}(N_j) & = \{\sigma: E_jV \to E_jV \mid \sigma \text{ is a  $\mathbb{C}$-algebra isomorphism}, i.e.,\\
 & \qquad \sigma(v\ast w) = \sigma(v)\ast\sigma(w) \text{ for all }v, w\in E_jV\}.
 \end{align}
 
@@ -90,31 +90,31 @@ Let $Y, j, \ast$ be as in Lemma \@ref(lem:norton-algebra).
 
 | $(ii)$ $\sigma|_{E_jV}\in \mathrm{Aut}(N_j)$ for all $\sigma \in \mathrm{Aut}(Y)$.
 
-| $(iii)$ $\mathrm{Aut}Y \longrightarrow \mathrm{Aut}(N_j), \; (\sigma \mapsto \sigma|_{E_j})$ is a homomorphism of groups,
+| $(iii)$ $\mathrm{Aut}(Y) \longrightarrow \mathrm{Aut}(N_j), \; (\sigma \mapsto \sigma|_{E_jV})$ is a homomorphism of groups,
 (i.e., a representation of $\mathrm{Aut}(Y)$).
 
-| $(iv)$ Suppose $R_0, \ldots, R_D$ are orbits of $\mathrm{Aut}(Y)$ acting on $X\times X$, (so, we are in Example \@ref(exm:gen-tr)) then above representation is irreducible.
+| $(iv)$ Suppose $R_0, \ldots, R_D$ are orbits of $\mathrm{Aut}(Y)$ acting on $X\times X$, (so, we are in Example \@ref(exm:gen-tr)) then the above representation is irreducible.
 :::
 
 :::{.proof}
-| $(i)$ Pick $\sigma\in \mathrm{Aut}Y$ and $v\in V$. Then,
+| $(i)$ Pick $\sigma\in \mathrm{Aut}(Y)$ and $v\in V$. Then,
 $$\sigma E_j v = E_j\sigma v,$$
 since $\sigma$ commutes with each element of $M$.
 
-| $(ii)$ $\sigma|_{E_jV}: E_jV \to E_jV$ is an isomorphism of a vector space. Since $\sigma$ is invertible,for all $v,w\in E_jV$, 
+| $(ii)$ $\sigma|_{E_jV}: E_jV \to E_jV$ is an isomorphism of vector spaces, since $\sigma$ is invertible. For all $v,w\in E_jV$, 
 $$\sigma(v\ast w) = \sigma(E_j(E_jv\circ E_jw)) = E_j\sigma(E_jv\circ E_jw) = E_j(E_j\sigma v\circ E_j\sigma w) = \sigma(v)\ast \sigma(w).$$
 
 | $(iii)$ Immediate from $(i)$ and $(ii)$.
 
-| $(iv)$ Here, Bose-Mesner algebra $M$ is the full commuting algebra, i.e.,
+| $(iv)$ Here, the Bose-Mesner algebra $M$ is the full commuting algebra, i.e.,
 $$M = \{m\in \mathrm{Mat}_X(\mathbb{C})\mid \sigma\cdot m = m\cdot \sigma, \text{ for all }\sigma\in \mathrm{Aut}(Y)\}.$$
-Suppose there sia a nonzero proper subspace $0\neq W\subsetneq E_jV$ that is $\mathrm{Aut}(Y)$-invariant.
+Suppose there is a nonzero proper subspace $0\neq W\subsetneq E_jV$ that is $\mathrm{Aut}(Y)$-invariant.
 
 Set
 $$W^\bot = \{v\in E_jV\mid \langle w, v\rangle = 0, \text{ for all }w\in W\}.$$
 Then, $W^\bot$ is a module for $\mathrm{Aut}(Y)$, since $\mathrm{Aut}(Y)$ is closed under transpose conjugate.
 
-Let $e: V\to W$ and $f: V\to W^\bot$ be the orthogonal projection such that $e + f = E_j$,
+Let $e: V\to W$ and $f: V\to W^\bot$ be the orthogonal projections such that $e + f = E_j$,
 $$e^2 = e, f^2 = f, ef = fe = 0, eE_h = 0, \text{ if } h\neq j.$$
 
 Since $e$ commutes with all $\sigma\in \mathrm{Aut}(Y)$, $e\in M$ and 
@@ -125,7 +125,7 @@ $e=0$ or $f=0$.
 A contradiction.
 :::
 
-Norton algebras were used in original construction of Monster, a finite simple group $G$.
+Norton algebras were used in the original construction of the Monster, a finite simple group $G$.
 
 Compute character table of $G$,
 
@@ -133,7 +133,7 @@ $\quad\to$ $p^h_{ij}$, $q^h_{ij}$ of group scheme on $G$,
 
 $\quad\to$ find $j$ where $m_j = \dim E_jV$ is small and $q^j_{jj}\neq 0$,
 
-$\quad\to$ guess abstract structure of $N_j$ using the knowlege of $p^h_{ij}$'s and $q^h_{ij}$'s,
+$\quad\to$ guess abstract structure of $N_j$ using the knowledge of $p^h_{ij}$'s and $q^h_{ij}$'s,
 
 $\quad\to$ compute $\mathrm{Aut}(N_j)$,
 
