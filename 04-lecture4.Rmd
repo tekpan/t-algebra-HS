@@ -161,4 +161,6 @@ Observe $0\subsetneq \widetilde{W} \subsetneq W$.
 Also $A\widetilde{W} \subseteq \widetilde{W}$ by $(ii)$, and $E_i^*\widetilde{W} \subseteq \widetilde{W}$ for every $i$ by construction.
 
 Thus, $T\widetilde{W} \subseteq \widetilde{W}$, contradicting $W$ being irreducible.
+
+| $(iv)$ This is proved at the beginning of Lecture \@ref(lec5).
 :::
